@@ -9,6 +9,8 @@ import {MatCardModule} from "@angular/material/card";
 
 import { AboutPageComponent } from './about-page/about-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
     BrowserModule,
     MatIconModule,
     AppRoutingModule,
-    MatCardModule
+    MatCardModule,
+    MatSidenavModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
