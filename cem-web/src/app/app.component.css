@@ -103,5 +103,7 @@ body {
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   transform: translateX(1px);
-  box-shadow: 10px 1px 10px #ff0000;
+  padding: 8px 8px 8px 2px;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0 1px 17px #ff0000;
 }
