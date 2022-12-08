@@ -7,6 +7,7 @@ import { NotFoundPageComponent } from "./not-found-page/not-found-page.component
 
 const routes: Routes = [
   { path: '', component: AboutPageComponent },
+  { path: 'about', component: AboutPageComponent},
   { path: 'notfound', component: NotFoundPageComponent },
   { path: '**', redirectTo: 'notfound' }
 ];

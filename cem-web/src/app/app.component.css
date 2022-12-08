@@ -6,7 +6,7 @@
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: rgba(63, 63, 63, 0.96);
+  background-color: #3F3F3FF4;
   color: white;
   font-weight: 600;
 }
@@ -30,7 +30,6 @@
 }
 
 .button-animatic:not([disabled]):hover {
-  background-color: #ff0000;
   transform: translateX(1px);
   box-shadow: 0 4px 17px #ff0000;
 }
@@ -86,9 +85,9 @@ body {
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #111; /* Black */
+  background-color: #3F3F3FF4;
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 80px;
+  padding-top: 5px;
 }
 
 /* The navigation menu links */
@@ -103,7 +102,6 @@ body {
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-  color: #f1f1f1;
   transform: translateX(1px);
   box-shadow: 10px 1px 10px #ff0000;
 }
