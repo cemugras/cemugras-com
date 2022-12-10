@@ -1,5 +1,4 @@
-<div>
-
+<div fxLayout="row wrap" style="margin-top: 100px; margin-left: 100px;">
 <!-- Mia Instagram -->
   <mat-card class="content-card">
     <mat-card-header>
@@ -23,17 +22,19 @@
       </p>
     </mat-card-content>
     <mat-card-actions style="text-align: center">
-      <button class="button-animatic">Instagram</button>
+      <button class="button-animatic" onclick=" window.open('https://www.instagram.com/mia.thesmokin/','_blank')">
+        Instagram
+      </button>
     </mat-card-actions>
   </mat-card>
 
   <!-- Cyprus Vacation -->
-  <mat-card class="content-card">
+  <mat-card class="content-card" >
     <mat-card-header>
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/1200px-Instagram-Icon.png"
+        src="/assets/icons/vacation-icon.png"
         alt="image"
-        mat-card-avatar />
+        mat-card-avatar style="height: 50px; width: 40px"/>
       <mat-card-title style="font-family: fantasy">Cyprus Vacation</mat-card-title>
       <mat-card-subtitle style="font-weight: bold">
         October 2022

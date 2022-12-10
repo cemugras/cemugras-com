@@ -7,6 +7,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatCardModule} from "@angular/material/card";
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 /*Page imports*/
 import { AppComponent } from './app.component';
@@ -27,7 +28,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     AppRoutingModule,
     MatCardModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
