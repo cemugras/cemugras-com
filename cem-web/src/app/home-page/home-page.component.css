@@ -11,9 +11,17 @@
   margin-left: 16px;
 }
 
+.font-features {
+  font-family: fantasy;
+}
+
 .button-animatic {
   background-color: rgba(63, 63, 63, 0.96);
   padding: 10px 30px 10px 30px;
+  position: absolute;
+  right: 30%;
+  left: 30%;
+  bottom: 10px;
   border-radius: 20px 20px 20px 20px;
   font-size: 12px;
   cursor: pointer;
