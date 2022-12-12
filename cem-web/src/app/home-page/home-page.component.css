@@ -11,10 +11,6 @@
   margin-left: 16px;
 }
 
-.new-line {
-  white-space: pre-line;
-}
-
 .button-animatic {
   background-color: rgba(63, 63, 63, 0.96);
   padding: 10px 30px 10px 30px;
@@ -27,4 +23,9 @@
 .button-animatic:not([disabled]):hover {
   transform: translateX(1px);
   box-shadow: 1px 0 10px white;
+}
+
+.card-subtitles {
+  font-weight: bold;
+  color: white
 }

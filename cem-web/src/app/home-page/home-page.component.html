@@ -7,7 +7,7 @@
         alt="image"
         mat-card-avatar />
       <mat-card-title style="font-family: fantasy">Mia</mat-card-title>
-      <mat-card-subtitle style="font-weight: bold">
+      <mat-card-subtitle class="card-subtitles">
         The Fly Hunter
       </mat-card-subtitle>
     </mat-card-header>
@@ -21,7 +21,7 @@
         leave some likes. Thanks..
       </p>
     </mat-card-content>
-    <mat-card-actions style="text-align: center">
+    <mat-card-actions style="text-align: center;">
       <button class="button-animatic" onclick=" window.open('https://www.instagram.com/mia.thesmokin/','_blank')">
         Instagram
       </button>
@@ -36,7 +36,7 @@
         alt="image"
         mat-card-avatar style="height: 50px; width: 40px"/>
       <mat-card-title style="font-family: fantasy">Cyprus Vacation</mat-card-title>
-      <mat-card-subtitle style="font-weight: bold">
+      <mat-card-subtitle class="card-subtitles">
         October 2022
       </mat-card-subtitle>
     </mat-card-header>
@@ -45,8 +45,10 @@
         <span class="tab"></span>Here some photos of Cyprus Vacation
       </p>
     </mat-card-content>
-    <mat-card-actions>
-      <button class = "button-animatic">Instagram</button>
+    <mat-card-actions class="lightbox-example">
+      <button class="button-animatic" style="margin-right: 1em;" (click)="lightbox.open(0, 'lightbox', {panelClass: 'fullscreen'})" >
+        Photos
+      </button>
     </mat-card-actions>
   </mat-card>
 </div>
