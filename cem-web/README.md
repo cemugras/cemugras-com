@@ -14,4 +14,5 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 [ngx-gallery](github.com/murhafsousli/ngx-gallery) |
 [flex-layout](https://github.com/angular/flex-layout) |
-[platform-browser](https://www.npmjs.com/package/@angular/platform-browser)
+[platform-browser](https://www.npmjs.com/package/@angular/platform-browser) |
+[youtube-player](https://github.com/angular/components/tree/main/src/youtube-player)

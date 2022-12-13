@@ -10,33 +10,39 @@ import { Lightbox } from 'ng-gallery/lightbox';
 })
 export class HomePageComponent implements OnInit {
 
+  // Gallery variables
   imageData = data;
-
   items: GalleryItem[] | undefined;
+
+  // Video variables
+  videoId = 'bgEe5nfFT9g';
+  height = 180;
+  width = 280;
+  apiLoaded = false;
 
   constructor(public gallery: Gallery, public lightbox: Lightbox) {
   }
 
   ngOnInit(): void {
-    /** Basic Gallery Example */
-
     // Creat gallery items
     this.items = this.imageData.map(item => new ImageItem({ src: item.srcUrl, thumb: item.srcUrl }));
-
-
-    /** Lightbox Example */
-
-      // Get a lightbox gallery ref
+    // Get a lightbox gallery ref
     const lightboxRef = this.gallery.ref('lightbox');
-
     // Add custom gallery config to the lightbox (optional)
     lightboxRef.setConfig({
       imageSize: ImageSize.Cover,
       thumbPosition: ThumbnailsPosition.Bottom
     });
-
     // Load items into the lightbox gallery ref
     lightboxRef.load(this.items);
+
+    // Youtube video
+    if (!this.apiLoaded) {
+      const tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      document.body.appendChild(tag);
+      this.apiLoaded = true;
+    }
   }
 
 }
