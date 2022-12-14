@@ -21,4 +21,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 $ firebase init
 -> select related options
 
+$ npm run build (if any node.js version issue occurs -> $ nvm use 14.20)
+
 $ firebase deploy
