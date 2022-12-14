@@ -16,3 +16,9 @@ Run `ng generate component component-name` to generate a new component. You can 
 [flex-layout](https://github.com/angular/flex-layout) |
 [platform-browser](https://www.npmjs.com/package/@angular/platform-browser) |
 [youtube-player](https://github.com/angular/components/tree/main/src/youtube-player)
+
+## Firebase Deployment
+$ firebase init
+-> select related options
+
+$ firebase deploy
