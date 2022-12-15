@@ -16,8 +16,8 @@ export class HomePageComponent implements OnInit {
 
   // Video variables
   videoId = 'bgEe5nfFT9g';
-  height = 180;
-  width = 280;
+  height = 200;
+  width = 300;
   apiLoaded = false;
 
   constructor(public gallery: Gallery, public lightbox: Lightbox) {
