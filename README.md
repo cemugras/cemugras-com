@@ -12,15 +12,21 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Used Libraries
 
-[ngx-gallery](github.com/murhafsousli/ngx-gallery) |
+[ngx-gallery](https://github.com/murhafsousli/ngx-gallery) |
 [flex-layout](https://github.com/angular/flex-layout) |
 [platform-browser](https://www.npmjs.com/package/@angular/platform-browser) |
 [youtube-player](https://github.com/angular/components/tree/main/src/youtube-player)
 
+## Known Issues
+`npm audit fix` -> 1 moderate severity vulnerability
+
+`npm audit fix --force` -> if above command not works
+
 ## Firebase Deployment
-$ firebase init
--> select related options
+`firebase init` then select related options
 
-$ npm run build (if any node.js version issue occurs -> $ nvm use 14.20)
+`npm run build`
 
-$ firebase deploy
+`nvm use 14.20` -> if any node.js version issue occurs
+
+`firebase deploy`
