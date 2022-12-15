@@ -23,10 +23,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 `npm audit fix --force` -> if above command not works
 
 ## Firebase Deployment
-`firebase init` then select related options
-
-`npm run build`
-
-`nvm use 14.20` -> if any node.js version issue occurs
-
-`firebase deploy`
+If environment is setting first time, start with #1 otherwise start with #3
+1) `npm install -g firebase-tools`
+2) `firebase login`
+3) `firebase init` then select related options
+4) `npm run build`
+5) `nvm use 14.20` -> if any node.js version issue occurs
+6) `firebase deploy`
