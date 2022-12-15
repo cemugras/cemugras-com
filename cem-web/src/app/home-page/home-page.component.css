@@ -1,6 +1,7 @@
 .content-card {
   margin-right: 20px;
-  max-width: 300px;
+  width: 300px;
+  height: 500px;
   background-color: #3F3F3FF4;
   color: white;
   border-radius: 50px;
@@ -12,7 +13,7 @@
 }
 
 .font-features {
-  font-family: fantasy;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .button-animatic {
