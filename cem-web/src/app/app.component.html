@@ -5,7 +5,12 @@
   <span class = "filler"></span>
   <button class = "button-animatic-web toolbar-button-margin-color" routerLink="/about">
     <mat-icon class= "mat-icon-borders" aria-hidden="false" fontIcon="mark_unread_chat_alt"></mat-icon>
-    About</button>
+    About
+  </button>
+  <button class = "button-animatic-web toolbar-button-margin-color" routerLink="/contact">
+    <mat-icon class= "mat-icon-borders" aria-hidden="false" fontIcon="contact_mail"></mat-icon>
+    Contact
+  </button>
   <img src="/assets/icons/gifs/crow-fly.gif" alt="image" style="max-width: 40px">
 </div>
 
@@ -16,7 +21,7 @@
   </button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item routerLink="/about">About Me</button>
-    <button mat-menu-item>Contact</button>
+    <button mat-menu-item routerLink="/contact">Contact</button>
   </mat-menu>
   <span class = "filler"></span>
   <a style="font-family: 'Orbitron', sans-serif; font-size: 20px">Cem Ugras</a>

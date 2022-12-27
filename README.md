@@ -15,6 +15,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 [flex-layout](https://github.com/angular/flex-layout) |
 [platform-browser](https://www.npmjs.com/package/@angular/platform-browser) |
 [youtube-player](https://github.com/angular/components/tree/main/src/youtube-player)
+[angular-table](https://material.angular.io/components/table)
 
 ## Known Issues
 `npm audit fix` -> 1 moderate severity vulnerability

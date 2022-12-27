@@ -1,22 +1,27 @@
 <div>
-  <div style="display: flex; align-items: center; padding-top: 100px">
+  <div [ngClass]="{XSmall : 'img-mobile', Small : 'img-mobile',
+     Medium : 'img-web', Large : 'img-web', XLarge : 'img-web'}[currentScreenSize]">
     <span class = "filler"></span>
     <img src="/assets/icons/profile-icon.png" alt="image" style="max-width: 140px">
     <span class = "filler"></span>
   </div>
 
-  <p class="content">
+  <p [ngClass]="{XSmall : 'content-mobile', Small : 'content-mobile',
+     Medium : 'content-web', Large : 'content-web', XLarge : 'content-web'}[currentScreenSize]">
     Meet with Cem, a software engineer graduated from Maltepe University Software (50% Scholarship) (English) Department who is chilling with creating free open source applications for web & mobile platforms.
   </p>
 
-  <p class="content">Knows Java, Android(Java), Javascript, SQL, PL\SQL languages very well,  worked with them in business life also.
+  <p [ngClass]="{XSmall : 'content-mobile', Small : 'content-mobile',
+     Medium : 'content-web', Large : 'content-web', XLarge : 'content-web'}[currentScreenSize]">
+    Knows Java, Android(Java), Javascript, SQL, PL\SQL languages very well,  worked with them in business life also.
     Done many projects up to this time and have used libraries as much. Knows somethings about many other languages.</p>
 
-  <p class="content">
+  <p [ngClass]="{XSmall : 'content-mobile', Small : 'content-mobile',
+     Medium : 'content-web', Large : 'content-web', XLarge : 'content-web'}[currentScreenSize]">
     Enjoy it :)
   </p>
 
-
+  <!--
   <div style="display: flex; align-items: center; padding-top: 50px">
     <span class = "filler"></span>
     <img src="/assets/icons/gifs/linkedin-icon.gif" alt="image">
@@ -40,5 +45,5 @@
     </a>
     <span class = "filler"></span>
   </div>
-
+  -->
 </div>

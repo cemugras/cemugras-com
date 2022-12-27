@@ -17,7 +17,8 @@ Run `ng generate component component-name` to generate a new component. You can 
 [ngx-gallery](https://github.com/murhafsousli/ngx-gallery) |
 [flex-layout](https://github.com/angular/flex-layout) |
 [platform-browser](https://www.npmjs.com/package/@angular/platform-browser) |
-[youtube-player](https://github.com/angular/components/tree/main/src/youtube-player)
+[youtube-player](https://github.com/angular/components/tree/main/src/youtube-player) |
+[angular-table](https://material.angular.io/components/table)
 
 ## Known Issues
 `npm audit fix` -> 1 moderate severity vulnerability

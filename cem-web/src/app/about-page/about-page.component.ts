@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {GlobalFile} from "../global-file";
 
 @Component({
   selector: 'app-about-page',
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-page.component.css']
 })
 export class AboutPageComponent implements OnInit {
+  currentScreenSize!: string;
 
-  constructor() { }
+  constructor() {
+    this.currentScreenSize = GlobalFile.screenSize;
+    console.log("[AboutPageComponent]Local var screenSize ", this.currentScreenSize);
+  }
 
   ngOnInit(): void {
   }
