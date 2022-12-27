@@ -28,8 +28,11 @@ If environment is setting first time, start with #1 otherwise start with #3
 2) `firebase login`
 3) `firebase init` then select related options
 4) `npm run build`
-5) `nvm use 14.20` -> if any node.js version issue occurs
-6) `firebase deploy`
+5) `firebase deploy`
+
+## Fixes For Deployment
+1) `nvm use 14.20` -> if any node.js version issue occurs
+2) `npm install -g firebase-tools` -> if command not found: firebase
 
 
 ## Features Inprogress
