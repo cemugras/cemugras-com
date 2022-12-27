@@ -38,6 +38,6 @@ If environment is setting first time, start with #1 otherwise start with #3
 2) `npm install -g firebase-tools` -> if command not found: firebase
 
 ## Features Inprogress
-1) Mobile responsive styles
-2) Language Support (TR/EN)
-3) Epic Games Free Games Component (Will include free games list with dates.)
+- [x] Mobile responsive styles
+- [ ] Language Support (TR/EN)
+- [ ] Epic Games Free Games Component (Will include free games list with dates.)

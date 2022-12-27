@@ -56,7 +56,7 @@
       mat-card-image
       src="https://www.schengenvisainfo.com/news/wp-content/uploads/2021/04/Cyprus.jpg"
       alt="image"
-      style="margin-bottom: auto; margin-top: auto; border-radius: 50px 50px 50px 50px">
+      style="border-radius: 50px 50px 50px 50px; margin: auto;">
     <mat-card-actions class="lightbox-example">
       <button class="button-animatic" style="margin-right: 1em;" (click)="lightbox.open(0, 'lightbox', {panelClass: 'fullscreen'})" >
         Photos
@@ -89,5 +89,37 @@
     <div style="margin: auto">
       <youtube-player [videoId]="videoId" [height]="height" [width]="width" ></youtube-player>
     </div>
+  </mat-card>
+
+  <!-- Troy Vacation -->
+  <mat-card [ngClass]="{XSmall : 'content-card-mobile', Small : 'content-card-mobile',
+     Medium : 'content-card-web', Large : 'content-card-web', XLarge : 'content-card-web'}[currentScreenSize]"
+  style="">
+    <mat-card-header>
+      <img
+        src="/assets/icons/vacation-icon.png"
+        alt="image"
+        mat-card-avatar
+        class="card-icon"/>
+      <mat-card-title class="font-features">Troy Vacation</mat-card-title>
+      <mat-card-subtitle class="card-subtitles">
+        December 2022
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="font-features">
+        <span class="tab"></span>Some photos of Troy Ancient Site Vacation
+      </p>
+    </mat-card-content>
+    <img
+      mat-card-image
+      src="https://images.immediate.co.uk/production/volatile/sites/7/2019/11/51.-BKH3D2-5ef1f90-e1574436043662.jpg?quality=90&resize=980,654"
+      alt="image"
+      style="border-radius: 50px 50px 50px 50px; margin: auto;">
+    <mat-card-actions class="lightbox-example">
+      <button class="button-animatic" style="margin-right: 1em;" (click)="lightbox.open(0, 'lightbox-2', {panelClass: 'fullscreen'})" >
+        Photos
+      </button>
+    </mat-card-actions>
   </mat-card>
 </div>

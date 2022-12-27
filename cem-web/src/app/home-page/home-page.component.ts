@@ -13,7 +13,9 @@ export class HomePageComponent implements OnInit {
 
   // Gallery variables
   imageData = data;
+  imageData2 = data2;
   items: GalleryItem[] | undefined;
+  items2: GalleryItem[] | undefined;
 
   // Video variables
   videoId = 'bgEe5nfFT9g';
@@ -42,6 +44,17 @@ export class HomePageComponent implements OnInit {
     // Load items into the lightbox gallery ref
     lightboxRef.load(this.items);
 
+    this.items2 = this.imageData2.map(item => new ImageItem({ src: item.srcUrl, thumb: item.srcUrl }));
+    // Get a lightbox gallery ref
+    const lightboxRef2 = this.gallery.ref('lightbox-2');
+    // Add custom gallery config to the lightbox (optional)
+    lightboxRef.setConfig({
+      imageSize: ImageSize.Cover,
+      thumbPosition: ThumbnailsPosition.Bottom
+    });
+    // Load items into the lightbox gallery ref
+    lightboxRef2.load(this.items2);
+
     // Youtube video
     if (!this.apiLoaded) {
       const tag = document.createElement('script');
@@ -69,5 +82,24 @@ const data = [
   {
     srcUrl: 'https://i.hizliresim.com/pzoexii.jpg',
     previewUrl: 'https://i.hizliresim.com/pzoexii.jpg'
+  }
+];
+
+const data2 = [
+  {
+    srcUrl: 'https://media.sciencephoto.com/c0/55/14/67/c0551467-800px-wm.jpg',
+    previewUrl: 'https://media.sciencephoto.com/c0/55/14/67/c0551467-800px-wm.jpg'
+  },
+  {
+    srcUrl: 'https://i.hizliresim.com/ns0wjzb.jpg',
+    previewUrl: 'https://i.hizliresim.com/ns0wjzb.jpg'
+  },
+  {
+    srcUrl: 'https://i.hizliresim.com/c9i36d5.jpg',
+    previewUrl: 'https://i.hizliresim.com/c9i36d5.jpg'
+  },
+  {
+    srcUrl: 'https://i.hizliresim.com/39bkeb2.jpg',
+    previewUrl: 'https://i.hizliresim.com/39bkeb2.jpg'
   }
 ];

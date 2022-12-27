@@ -1,6 +1,7 @@
 .card-container-web {
   margin-top: 100px;
-  margin-left: 100px
+  margin-left: 100px;
+  justify-content: center;
 }
 
 .card-container-mobile {
@@ -10,6 +11,7 @@
 
 .content-card-web {
   margin-right: 20px;
+  margin-bottom: 20px;
   width: 350px;
   height: 500px;
   background-color: #3F3F3FF4;
@@ -64,4 +66,5 @@
 
 img {
   max-height: 250px;
+  max-width: 300px;
 }

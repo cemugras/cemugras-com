@@ -1,0 +1,36 @@
+.filler {
+  flex: 1 1 auto;
+}
+
+.filler2 {
+  flex: 3rem 0;
+}
+
+.table-div-web {
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  padding-left: 100px;
+}
+
+.table-div-mobile {
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.tables-content-mobile {
+  font-size: 10px;
+}
+
+img {
+  width: 100%;
+  max-width: 30px;
+  height: auto;
+}
+
+th, td {
+  overflow: hidden;
+  max-width: 20px;
+  text-overflow: ellipsis;
+}
