@@ -19,18 +19,13 @@
     <button mat-menu-item>Contact</button>
   </mat-menu>
   <span class = "filler"></span>
-  <a style="padding-left: 20px; font-family: 'Orbitron', sans-serif; font-size: 15px; padding-top: 5px">Cem Ugras</a>
+  <a style="font-family: 'Orbitron', sans-serif; font-size: 20px">Cem Ugras</a>
   <span class = "filler"></span>
-  <button routerLink="/" mat-fab color="warn">
-  <mat-icon>home</mat-icon>
-  </button>
-  <!--
-  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-  <mat-menu #menu="matMenu" yPosition="below" xPosition="before">
-    <button mat-menu-item routerLink="/about">About Me</button>
-  </mat-menu>
-  -->
-</div>
+
+  <button class = "button-animatic-mobile toolbar-button-margin-color" routerLink="/">
+    <mat-icon class= "mat-icon-borders" style="margin-top: 0.2px" fontIcon="home"></mat-icon>
+   </button>
+</div>x
 
 <!--Sidenav[Responsive] for Web environments -->
 <div *ngIf="!(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" class="sidenav" style="text-align: center">
