@@ -1,6 +1,9 @@
-<div fxLayout="row wrap" style="margin-top: 100px; margin-left: 100px;">
+<div fxLayout="row wrap"
+     [ngClass]="{XSmall : 'card-container-mobile', Small : 'card-container-mobile',
+     Medium : 'card-container-web', Large : 'card-container-web', XLarge : 'card-container-web'}[currentScreenSize]">
 <!-- Mia Instagram -->
-  <mat-card class="content-card">
+  <mat-card [ngClass]="{XSmall : 'content-card-mobile', Small : 'content-card-mobile',
+     Medium : 'content-card-web', Large : 'content-card-web', XLarge : 'content-card-web'}[currentScreenSize]">
     <mat-card-header>
       <img
         src="/assets/icons/mia-icon.png"
@@ -31,7 +34,8 @@
   </mat-card>
 
   <!-- Cyprus Vacation -->
-  <mat-card class="content-card" >
+  <mat-card [ngClass]="{XSmall : 'content-card-mobile', Small : 'content-card-mobile',
+     Medium : 'content-card-web', Large : 'content-card-web', XLarge : 'content-card-web'}[currentScreenSize]">
     <mat-card-header>
       <img
         src="/assets/icons/vacation-icon.png"
@@ -61,7 +65,8 @@
   </mat-card>
 
   <!-- MzM Team Star Wars -->
-  <mat-card class="content-card" >
+  <mat-card [ngClass]="{XSmall : 'content-card-mobile', Small : 'content-card-mobile',
+     Medium : 'content-card-web', Large : 'content-card-web', XLarge : 'content-card-web'}[currentScreenSize]">
     <mat-card-header>
       <img
         src="/assets/icons/mzm-icon.png"

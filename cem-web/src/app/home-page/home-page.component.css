@@ -1,10 +1,28 @@
-.content-card {
+.card-container-web {
+  margin-top: 100px;
+  margin-left: 100px
+}
+
+.card-container-mobile {
+  margin-top: 80px;
+  justify-content: center;
+}
+
+.content-card-web {
   margin-right: 20px;
   width: 350px;
   height: 500px;
   background-color: #3F3F3FF4;
   color: white;
   border-radius: 50px;
+  box-shadow: 1px 1px 1px black;
+}
+
+.content-card-mobile {
+  margin-bottom: 10px;
+  max-width: 300px;
+  background-color: #3F3F3FF4;
+  color: white;
   box-shadow: 1px 1px 1px black;
 }
 

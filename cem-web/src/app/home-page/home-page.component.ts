@@ -1,6 +1,7 @@
 import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { Gallery, GalleryItem, ImageItem, ThumbnailsPosition, ImageSize } from 'ng-gallery';
 import { Lightbox } from 'ng-gallery/lightbox';
+import {GlobalFile} from "../global-file";
 
 @Component({
   selector: 'app-home-page',
@@ -20,7 +21,12 @@ export class HomePageComponent implements OnInit {
   width = 300;
   apiLoaded = false;
 
+  // Global variable
+  currentScreenSize!: string;
+
   constructor(public gallery: Gallery, public lightbox: Lightbox) {
+    this.currentScreenSize = GlobalFile.screenSize;
+    console.log("[HomePageComponent]Local var screenSize ", this.currentScreenSize);
   }
 
   ngOnInit(): void {
