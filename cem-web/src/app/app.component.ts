@@ -1,4 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import{ GlobalFile } from './global-file';
 
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 
@@ -10,7 +11,7 @@ import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 })
 export class AppComponent {
   title = 'cem-web';
-  currentScreenSize: string | undefined;
+  currentScreenSize!: string;
 
   // Browser window size map
   displayNameMap = new Map([
@@ -33,7 +34,8 @@ export class AppComponent {
       .subscribe(result => {
         for (const query of Object.keys(result.breakpoints)) {
           if (result.breakpoints[query]) {
-            this.currentScreenSize = this.displayNameMap.get(query) ?? 'Unknown';
+            GlobalFile.screenSize = this.displayNameMap.get(query) ?? 'Unknown';
+            this.currentScreenSize = GlobalFile.screenSize;
           }
         }
       });
@@ -41,6 +43,7 @@ export class AppComponent {
 
   ngOnInit() {
     //For test purposes window size logger
-    console.log("Screens matches Web ", this.currentScreenSize);
+    console.log("Local var screenSize ", this.currentScreenSize);
+    console.log("Global var screenSize ", this.currentScreenSize);
   }
 }

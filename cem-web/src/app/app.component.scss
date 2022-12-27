@@ -4,7 +4,7 @@ $general-red-color: rgba(255, 0, 0, 0.96);
 $general-white-color: #ffffff;
 $general-black-color: #000000;
 
-.toolbar {
+.toolbar-web {
   position: absolute;
   top: 0;
   left: 0;
@@ -12,9 +12,24 @@ $general-black-color: #000000;
   height: 60px;
   display: flex;
   align-items: center;
+  font-weight: bold;
+  font-size: 25px;
   background-color: #3F3F3FF4;
   color: $general-white-color;
-  font-weight: 600;
+}
+
+.toolbar-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 25px;
+  background-color: #3F3F3FF4;
+  color: $general-white-color;
 }
 
 .toolbar-button-margin-color {
@@ -28,11 +43,17 @@ $general-black-color: #000000;
   margin-block: -3px;
 }
 
-.button-animatic {
+.button-animatic-web {
   background-color: rgba(63, 63, 63, 0.96);
+  cursor: pointer;
   border-radius: 20px 20px 20px 20px;
   font-size: 25px;
-  cursor: pointer;
+}
+
+.button-animatic-mobile{
+  background-color: rgba(63, 63, 63, 0.96);
+  border-radius: 15px 15px 15px 15px;
+  font-size: 10px;
 }
 
 .button-animatic:not([disabled]):hover {

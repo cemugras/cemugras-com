@@ -12,6 +12,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { GalleryModule } from 'ng-gallery';
 import { LightboxModule } from 'ng-gallery/lightbox';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import {MatMenuModule} from "@angular/material/menu";
 
 /*Page imports*/
 import { AppComponent } from './app.component';
@@ -39,7 +40,8 @@ import {MatButtonModule} from "@angular/material/button";
     GalleryModule.withConfig({}),
     LightboxModule,
     MatButtonModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
