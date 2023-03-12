@@ -41,9 +41,12 @@ export class AppComponent {
       });
   }
 
+  /*
+  //-- Window size logger for test purposes --//
   ngOnInit() {
     //For test purposes window size logger
     console.log("Local var screenSize ", this.currentScreenSize);
     console.log("Global var screenSize ", this.currentScreenSize);
   }
+  */
 }

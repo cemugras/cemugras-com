@@ -28,7 +28,9 @@ export class HomePageComponent implements OnInit {
 
   constructor(public gallery: Gallery, public lightbox: Lightbox) {
     this.currentScreenSize = GlobalFile.screenSize;
-    console.log("[HomePageComponent]Local var screenSize ", this.currentScreenSize);
+
+    //-- Window size logger for test purposes --//
+    //console.log("[HomePageComponent]Local var screenSize ", this.currentScreenSize);
   }
 
   ngOnInit(): void {

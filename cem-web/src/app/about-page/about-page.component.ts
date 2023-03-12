@@ -11,7 +11,9 @@ export class AboutPageComponent implements OnInit {
 
   constructor() {
     this.currentScreenSize = GlobalFile.screenSize;
-    console.log("[AboutPageComponent]Local var screenSize ", this.currentScreenSize);
+
+    //-- Window size logger for test purposes --//
+    //console.log("[AboutPageComponent]Local var screenSize ", this.currentScreenSize);
   }
 
   ngOnInit(): void {

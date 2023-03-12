@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<div *ngIf="!(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')">
+
+</div>
+
+<div *ngIf="(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" style="text-align: center">
+  <span style="font-size: 200px; padding-top: 50px;" class="material-symbols-outlined">
+    warning
+  </span>
+  <p style="font-size: 50px; font-weight: bold">
+    Oops ! Earthquake feature only can be use in web browsers.
+  </p>
+</div>

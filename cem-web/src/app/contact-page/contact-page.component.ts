@@ -32,7 +32,9 @@ export class ContactPageComponent {
 
   constructor() {
     this.currentScreenSize = GlobalFile.screenSize;
-    console.log("[ContactPageComponent]Local var screenSize ", this.currentScreenSize);
+
+    //-- Window size logger for test purposes --//
+    //console.log("[ContactPageComponent]Local var screenSize ", this.currentScreenSize);
   }
 
   goToLink(siteUrl: string) {
