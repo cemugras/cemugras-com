@@ -23,6 +23,7 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
 import { HomePageComponent } from './home-page/home-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { EarthquakesPageComponent } from './earthquakes-page/earthquakes-page.component';
+import { AgmCoreModule } from "@agm/core";
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { EarthquakesPageComponent } from './earthquakes-page/earthquakes-page.co
     MatButtonModule,
     YouTubePlayerModule,
     MatMenuModule,
-    MatTableModule
+    MatTableModule,
+    AgmCoreModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
