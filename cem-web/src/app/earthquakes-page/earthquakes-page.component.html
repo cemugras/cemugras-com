@@ -19,6 +19,43 @@
       </agm-info-window>
     </agm-marker>
   </agm-map>
+
+  <table mat-table
+         [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Date Column -->
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef style="font-weight: bold"> Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+    </ng-container>
+
+    <!-- Latitude Column -->
+    <ng-container matColumnDef="latitude">
+      <th mat-header-cell *matHeaderCellDef style="font-weight: bold"> Latitude </th>
+      <td mat-cell *matCellDef="let element"> {{element.latitude}} </td>
+    </ng-container>
+
+    <!-- Longitude Column -->
+    <ng-container matColumnDef="longitude">
+      <th mat-header-cell *matHeaderCellDef style="font-weight: bold"> Latitude </th>
+      <td mat-cell *matCellDef="let element"> {{element.longitude}} </td>
+    </ng-container>
+
+    <!-- Magnitude Column -->
+    <ng-container matColumnDef="mag">
+      <th mat-header-cell *matHeaderCellDef style="font-weight: bold"> Magnitude </th>
+      <td mat-cell *matCellDef="let element"> {{element["mag"]}} </td>
+    </ng-container>
+
+    <!-- Location Column -->
+    <ng-container matColumnDef="location">
+      <th mat-header-cell *matHeaderCellDef style="font-weight: bold"> Location </th>
+      <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
 </div>
 
 <div *ngIf="(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" style="text-align: center">
@@ -26,6 +63,6 @@
     warning
   </span>
   <p style="font-size: 50px; font-weight: bold">
-    Oops ! Earthquake feature only can be use in web browsers.
+    Oops ! Earthquake feature is usable in web browsers.
   </p>
 </div>
