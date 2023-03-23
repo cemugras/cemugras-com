@@ -5,7 +5,11 @@
     style="height: 500px; width: 100%"
     [latitude]="lat"
     [longitude]="lng"
-    [zoom]="zoom">
+    [zoom]="zoom"
+           [disableDoubleClickZoom]="true"
+           [mapTypeId]="'hybrid'"
+    [zoomControl]="false"
+    [draggable]="false">
     <agm-marker
       *ngFor="let m of markers; let i = index"
       [latitude]="m.lat"

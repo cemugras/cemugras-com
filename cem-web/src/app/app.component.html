@@ -1,14 +1,15 @@
 <!--Toolbar[Responsive] for Web environments -->
 <div *ngIf="!(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" class="toolbar-web" role="dialog">
   <a style="padding-left: 100px; font-weight: bold; font-size: 25px">Cem Ugras</a>
-  <a style="padding-left: 20px; font-family: 'Orbitron', sans-serif; font-size: 15px; padding-top: 5px">Software Engineer | Gamer</a>
-  <span class = "filler"></span>
-  <button class = "button-animatic-web toolbar-button-margin-color" routerLink="/about">
-    <mat-icon class= "mat-icon-borders" aria-hidden="false" fontIcon="mark_unread_chat_alt"></mat-icon>
+  <a style="padding-left: 20px; font-family: 'Orbitron', sans-serif; font-size: 15px; padding-top: 5px">Software
+    Engineer | Gamer</a>
+  <span class="filler"></span>
+  <button class="button-animatic-web toolbar-button-margin-color" routerLink="/about">
+    <mat-icon class="mat-icon-borders" aria-hidden="false" fontIcon="mark_unread_chat_alt"></mat-icon>
     About
   </button>
-  <button class = "button-animatic-web toolbar-button-margin-color" routerLink="/contact">
-    <mat-icon class= "mat-icon-borders" aria-hidden="false" fontIcon="contact_mail"></mat-icon>
+  <button class="button-animatic-web toolbar-button-margin-color" routerLink="/contact">
+    <mat-icon class="mat-icon-borders" aria-hidden="false" fontIcon="contact_mail"></mat-icon>
     Contact
   </button>
   <img src="/assets/icons/gifs/crow-fly.gif" alt="image" style="max-width: 40px">
@@ -23,19 +24,21 @@
     <button mat-menu-item routerLink="/about">About Me</button>
     <button mat-menu-item routerLink="/contact">Contact</button>
   </mat-menu>
-  <span class = "filler"></span>
+  <span class="filler"></span>
   <a style="font-family: 'Orbitron', sans-serif; font-size: 20px">Cem Ugras</a>
-  <span class = "filler"></span>
+  <span class="filler"></span>
 
-  <button class = "button-animatic-mobile toolbar-button-margin-color" routerLink="/">
-    <mat-icon class= "mat-icon-borders" style="margin-top: 0.2px" fontIcon="home"></mat-icon>
-   </button>
-</div>x
+  <button class="button-animatic-mobile toolbar-button-margin-color" routerLink="/">
+    <mat-icon class="mat-icon-borders" style="margin-top: 0.2px" fontIcon="home"></mat-icon>
+  </button>
+</div>
 
 <!--Sidenav[Responsive] for Web environments -->
-<div *ngIf="!(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" class="sidenav" style="text-align: center">
-  <button class = "button-animatic-web" style="color: white; padding: 10px 30px 10px 30px; margin-bottom: 10px" routerLink="/">
-    <mat-icon class= "mat-icon-borders" aria-hidden="false" fontIcon="home"></mat-icon>
+<div *ngIf="!(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" class="sidenav"
+     style="text-align: center">
+  <button class="button-animatic-web" style="color: white; padding: 10px 30px 10px 30px; margin-bottom: 10px"
+          routerLink="/">
+    <mat-icon class="mat-icon-borders" aria-hidden="false" fontIcon="home"></mat-icon>
   </button>
   <a href="https://www.linkedin.com/in/cemugras/" target="_blank">
     <img src="/assets/sidebar/linkedin-icon.png" alt="image" style="height: 20px">
@@ -67,8 +70,6 @@
   </a>
 </div>
 
-<div class="bg"></div>
-
-<div class="container">
+<div>
   <router-outlet></router-outlet>
 </div>

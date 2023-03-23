@@ -1,11 +1,14 @@
 .card-container-web {
-  margin-top: 100px;
-  margin-left: 100px;
+  padding-top: 100px;
+  padding-left: 100px;
   justify-content: center;
+  background-size: 100% 100%;
+  background-position: top center;
+  background-image: url('https://i.stack.imgur.com/SvWWN.png');
 }
 
 .card-container-mobile {
-  margin-top: 80px;
+  padding-top: 80px;
   justify-content: center;
 }
 
