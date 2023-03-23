@@ -4,6 +4,29 @@ $general-red-color: rgba(255, 0, 0, 0.96);
 $general-white-color: rgba(255, 255, 255, 0.96);
 $general-black-color: rgba(0, 0, 0, 0.96);
 
+img.bg {
+  z-index: -1;
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  img.bg {
+    left: 50%;
+    margin-left: -512px;
+  }
+}
+
 .toolbar-web {
   position: absolute;
   top: 0;
@@ -50,7 +73,7 @@ $general-black-color: rgba(0, 0, 0, 0.96);
   font-size: 25px;
 }
 
-.button-animatic-mobile{
+.button-animatic-mobile {
   background-color: rgba(63, 63, 63, 0.96);
   border-radius: 15px 15px 15px 15px;
   transform: scale(2);
@@ -87,6 +110,7 @@ $general-black-color: rgba(0, 0, 0, 0.96);
   left: 0; /* Stay at the left */
   background: rgb(64, 64, 64);
   padding-top: 5px;
+
   a {
     padding: 8px 8px 8px 8px;
     text-decoration: none;
@@ -94,6 +118,7 @@ $general-black-color: rgba(0, 0, 0, 0.96);
     color: $general-black-color;
     display: block;
     text-align: center;
+
     .tooltip {
       display: inline-block;
       position: absolute;
@@ -106,6 +131,7 @@ $general-black-color: rgba(0, 0, 0, 0.96);
       font-size: 13px;
       letter-spacing: 0.2px;
       font-family: 'orbitron', sans-serif;
+
       &:before {
         content: "";
         display: grid;
@@ -119,11 +145,13 @@ $general-black-color: rgba(0, 0, 0, 0.96);
       }
     }
   }
+
   a:hover {
     transform: translateX(1px);
     padding: 8px 8px 8px 2px;
     border-radius: 20px 20px 20px 20px;
     box-shadow: 0 1px 17px $general-white-color;
+
     .tooltip {
       visibility: visible;
       box-shadow: 0 1px 17px $general-black-color;
