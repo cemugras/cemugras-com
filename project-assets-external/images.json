@@ -1,5 +1,6 @@
 {
   "images": {
-    "background-image": "https://i.stack.imgur.com/SvWWN.png"
+    "background.image": "https://i.stack.imgur.com/SvWWN.png",
+    "mail-icon.image": "https://cdn-icons-png.flaticon.com/512/6806/6806987.png"
   }
 }

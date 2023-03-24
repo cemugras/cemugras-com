@@ -1,16 +1,26 @@
-.filler {
-  flex: 1 1 auto;
+.gifs-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 50px;
+  margin-left: 20%;
+  margin-right: 10%;
 }
 
-.filler2 {
-  flex: 3rem 0;
+.gifs-items {
+  display: flex;
+  align-items: center;
+}
+
+.link-text {
+  font-weight: bold;
+  color: rgb(255, 0, 0);
 }
 
 .table-div-web {
-  display: flex;
-  align-items: center;
-  padding-top: 50px;
-  padding-left: 100px;
+  margin-top: 1%;
+  margin-left: 20%;
+  margin-right: 10%;
 }
 
 .table-div-mobile {
