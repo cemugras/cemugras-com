@@ -1,0 +1,49 @@
+$table-background-color: rgb(64, 64, 64);
+$general-white-color: rgb(255, 255, 255);
+$general-green-color: rgba(32, 73, 18, 0.73);
+
+.main-container {
+  border: black solid;
+  margin-left: 10%;
+  margin-right: 5%;
+}
+
+.selector {
+  margin-bottom: 2%;
+  margin-left: 30%;
+  border-radius: 20px 5px 20px 5px;
+  height: 30px;
+  align-items: center;
+  max-width: 100%;
+}
+
+.mat-button-toggle-checked {
+  color: $general-white-color;
+  font-size: x-large;
+  background-color: $general-green-color;
+}
+
+.sub-container {
+  border-radius: 20px 20px 20px 20px;
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: center;
+}
+
+.container-background {
+  background-color: $table-background-color;
+}
+
+.container-text {
+  color: $general-white-color;
+  font-family: 'orbitron', sans-serif;
+}
+
+.earthquake-table-title {
+  font-weight: bold;
+  color: $general-white-color;
+}
+
+.earthquake-table-content {
+  color: $general-white-color;
+}

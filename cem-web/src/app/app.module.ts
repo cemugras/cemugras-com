@@ -24,6 +24,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { EarthquakesPageComponent } from './earthquakes-page/earthquakes-page.component';
 import { AgmCoreModule } from "@agm/core";
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { AgmCoreModule } from "@agm/core";
     YouTubePlayerModule,
     MatMenuModule,
     MatTableModule,
-    AgmCoreModule.forRoot()
+    AgmCoreModule.forRoot(),
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,65 +1,81 @@
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
 
-<div *ngIf="!(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" style="padding-left: 100px; padding-top: 100px">
-  <agm-map #gm
-    style="height: 500px; width: 100%"
-    [latitude]="lat"
-    [longitude]="lng"
-    [zoom]="zoom"
-           [disableDoubleClickZoom]="true"
-           [mapTypeId]="'hybrid'"
-    [zoomControl]="false"
-    [draggable]="false">
-    <agm-marker
-      *ngFor="let m of markers; let i = index"
-      [latitude]="m.lat"
-      [longitude]="m.lng"
-      (mouseOver)="onMouseOver(infoWindow, gm)"
+<div *ngIf="!(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" class="main-container">
+  <mat-button-toggle-group #group="matButtonToggleGroup" [value]="selectorVal" (change)="onValChange(group.value)"
+                           class="selector">
+    <mat-button-toggle value="table">Table</mat-button-toggle>
+    <mat-button-toggle value="map">Map</mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <!-- Google Maps for Earthquakes -->
+  <div *ngIf="selectorVal=='map'">
+    <div class="sub-container">
+      <span class="container-text container-background">This page is under construction right now.</span>
+    </div>
+    <agm-map #gm
+             style="height: 500px; width: 100%"
+             [latitude]="lat"
+             [longitude]="lng"
+             [zoom]="zoom"
+             [disableDoubleClickZoom]="true"
+             [mapTypeId]="'hybrid'"
+             [zoomControl]="false"
+             [draggable]="false">
+      <agm-marker
+        *ngFor="let m of markers; let i = index"
+        [latitude]="m.lat"
+        [longitude]="m.lng"
+        (mouseOver)="onMouseOver(infoWindow, gm)"
       >
-      <agm-info-window #infoWindow>
-        <div>
-          {{m.label}}
-        </div>
-      </agm-info-window>
-    </agm-marker>
-  </agm-map>
+        <agm-info-window #infoWindow>
+          <div>
+            {{m.label}}
+          </div>
+        </agm-info-window>
+      </agm-marker>
+    </agm-map>
+  </div>
 
-  <table mat-table
-         [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- Table for Earthquakes -->
+  <div *ngIf="selectorVal=='table'">
+    <table mat-table
+           [dataSource]="dataSource" class="mat-elevation-z8 container-background">
 
-    <!-- Date Column -->
-    <ng-container matColumnDef="date">
-      <th mat-header-cell *matHeaderCellDef style="font-weight: bold"> Date </th>
-      <td mat-cell *matCellDef="let element"> {{element.date}} </td>
-    </ng-container>
+      <!-- Date Column -->
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef class="earthquake-table-title"> Date</th>
+        <td mat-cell *matCellDef="let element" class="earthquake-table-content"> {{element.date}} </td>
+      </ng-container>
 
-    <!-- Latitude Column -->
-    <ng-container matColumnDef="latitude">
-      <th mat-header-cell *matHeaderCellDef style="font-weight: bold"> Latitude </th>
-      <td mat-cell *matCellDef="let element"> {{element.latitude}} </td>
-    </ng-container>
+      <!-- Latitude Column -->
+      <ng-container matColumnDef="latitude">
+        <th mat-header-cell *matHeaderCellDef class="earthquake-table-title"> Latitude</th>
+        <td mat-cell *matCellDef="let element" class="earthquake-table-content"> {{element.latitude}} </td>
+      </ng-container>
 
-    <!-- Longitude Column -->
-    <ng-container matColumnDef="longitude">
-      <th mat-header-cell *matHeaderCellDef style="font-weight: bold"> Latitude </th>
-      <td mat-cell *matCellDef="let element"> {{element.longitude}} </td>
-    </ng-container>
+      <!-- Longitude Column -->
+      <ng-container matColumnDef="longitude">
+        <th mat-header-cell *matHeaderCellDef class="earthquake-table-title"> Latitude</th>
+        <td mat-cell *matCellDef="let element" class="earthquake-table-content"> {{element.longitude}} </td>
+      </ng-container>
 
-    <!-- Magnitude Column -->
-    <ng-container matColumnDef="mag">
-      <th mat-header-cell *matHeaderCellDef style="font-weight: bold"> Magnitude </th>
-      <td mat-cell *matCellDef="let element"> {{element["mag"]}} </td>
-    </ng-container>
+      <!-- Magnitude Column -->
+      <ng-container matColumnDef="mag">
+        <th mat-header-cell *matHeaderCellDef class="earthquake-table-title"> Magnitude</th>
+        <td mat-cell *matCellDef="let element" class="earthquake-table-content"> {{element["mag"]}} </td>
+      </ng-container>
 
-    <!-- Location Column -->
-    <ng-container matColumnDef="location">
-      <th mat-header-cell *matHeaderCellDef style="font-weight: bold"> Location </th>
-      <td mat-cell *matCellDef="let element"> {{element.location}} </td>
-    </ng-container>
+      <!-- Location Column -->
+      <ng-container matColumnDef="location">
+        <th mat-header-cell *matHeaderCellDef class="earthquake-table-title"> Location</th>
+        <td mat-cell *matCellDef="let element" class="earthquake-table-content"> {{element.location}} </td>
+      </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
 </div>
 
 <div *ngIf="(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" style="text-align: center">

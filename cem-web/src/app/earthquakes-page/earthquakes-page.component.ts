@@ -18,12 +18,13 @@ const ELEMENT_DATA: EarthquakeListElement[] = [
 @Component({
   selector: 'app-earthquakes-page',
   templateUrl: './earthquakes-page.component.html',
-  styleUrls: ['./earthquakes-page.component.css']
+  styleUrls: ['./earthquakes-page.component.scss']
 })
 
 export class EarthquakesPageComponent {
 
   currentScreenSize!: string;
+  public selectorVal: string;
   lat: number = 39.1461;
   lng: number = 34.1595;
   zoom: number = 6;
@@ -53,6 +54,13 @@ export class EarthquakesPageComponent {
     }
   ]
 
+  public onValChange(val: string) {
+    this.selectorVal = val;
+
+    //-- Selector logger for test purposes --//
+    //console.log("you selected value: " + this.selectorVal);
+  }
+
   onMouseOver(infoWindow: any, gm: any) {
 
     if (gm.lastOpen != null) {
@@ -65,6 +73,7 @@ export class EarthquakesPageComponent {
 
   constructor() {
     this.currentScreenSize = GlobalFile.screenSize;
+    this.selectorVal ='table';
 
     //-- Window size logger for test purposes --//
     //console.log("[EarthquakesPageComponent]Local var screenSize ", this.currentScreenSize);
