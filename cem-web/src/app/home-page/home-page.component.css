@@ -1,11 +1,11 @@
 .card-container-web {
-  margin-top: 100px;
-  margin-left: 100px;
+  padding-top: 100px;
+  padding-left: 100px;
   justify-content: center;
 }
 
 .card-container-mobile {
-  margin-top: 80px;
+  padding-top: 80px;
   justify-content: center;
 }
 

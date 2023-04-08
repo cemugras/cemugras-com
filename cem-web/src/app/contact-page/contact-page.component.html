@@ -1,40 +1,14 @@
-<!--Content[Responsive] for Web environments -->
-<div *ngIf="!(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')"
-     style="display: flex; align-items: center; padding-top: 50px">
-  <span class = "filler"></span>
-  <img src="/assets/icons/gifs/linkedin-icon.gif" alt="image">
-  <a href="https://www.linkedin.com/in/cemugras/" target="_blank">LinkedIn
-  </a>
-  <span class = "filler2"></span>
-  <img src="/assets/icons/gifs/github-icon.gif" alt="image">
-  <a href="https://github.com/cemugras" target="_blank">GitHub
-  </a>
-  <span class = "filler2"></span>
-  <img src="/assets/icons/gifs/hackerrank-icon.gif" alt="image" style="max-width: 40px">
-  <a href="https://www.hackerrank.com/cemugrs" target="_blank">HackerRank
-  </a>
-  <span class = "filler2"></span>
-  <img src="/assets/sidebar/googleplay-icon.png" alt="image" style="max-width: 35px">
-  <a href="https://play.google.com/store/apps/developer?id=Cem+Ugras" target="_blank">GooglePlay
-  </a>
-  <span class = "filler2"></span>
-  <img src="/assets/icons/gifs/donate-icon.gif" alt="image" style="max-width: 40px">
-  <a href="https://www.buymeacoffee.com/cemugras" target="_blank">Donate
-  </a>
-  <span class = "filler"></span>
-</div>
-
-<!--Content[Responsive] for !Web environments -->
+<!--Content Table Environments -->
 <div [ngClass]="{XSmall : 'table-div-mobile', Small : 'table-div-mobile',
                       Medium : 'table-div-web', Large : 'table-div-web', XLarge : 'table-div-web'}[currentScreenSize]">
 
   <table mat-table
-         [dataSource]="dataSource" class="mat-elevation-z8">
+         [dataSource]="dataSource" class="mat-elevation-z8 table-background-color">
 
     <!-- Icon Column -->
     <ng-container matColumnDef="icon">
       <th mat-header-cell *matHeaderCellDef></th>
-      <td mat-cell *matCellDef="let element" style="font-weight: bold">
+      <td mat-cell *matCellDef="let element">
         <img src="{{element.icon}}" alt="image">
       </td>
     </ng-container>
@@ -42,14 +16,14 @@
     <!-- Name Column -->
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef></th>
-      <td mat-cell *matCellDef="let element" style="font-weight: bold"> {{element.name}} </td>
+      <td mat-cell *matCellDef="let element" class="table-content-color"> {{element.name}} </td>
     </ng-container>
 
     <!-- Url Column -->
     <ng-container matColumnDef="url">
-      <th mat-header-cell *matHeaderCellDef style="font-weight: bold"> Cem Ugras </th>
+      <th mat-header-cell *matHeaderCellDef></th>
       <td mat-cell *matCellDef="let element">
-        <a href="" (click)="goToLink(element.url)" target="_blank"> {{element.url}} </a>
+        <a href="" (click)="goToLink(element.url)" target="_blank" class="table-content-color"> {{element.url}} </a>
       </td>
     </ng-container>
 
@@ -58,3 +32,4 @@
   </table>
 
 </div>
+

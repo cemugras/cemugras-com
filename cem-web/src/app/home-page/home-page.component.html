@@ -1,7 +1,46 @@
 <div fxLayout="row wrap"
      [ngClass]="{XSmall : 'card-container-mobile', Small : 'card-container-mobile',
      Medium : 'card-container-web', Large : 'card-container-web', XLarge : 'card-container-web'}[currentScreenSize]">
-<!-- Mia Instagram -->
+
+  <!-- Earthquakes -->
+  <mat-card [ngClass]="{XSmall : 'content-card-mobile', Small : 'content-card-mobile',
+     Medium : 'content-card-web', Large : 'content-card-web', XLarge : 'content-card-web'}[currentScreenSize]">
+    <mat-card-header>
+      <img
+        src="/assets/icons/earthquake-icon.png"
+        alt="image"
+        mat-card-avatar
+        class="card-icon"/>
+      <mat-card-title class="font-features">Earthquakes</mat-card-title>
+      <mat-card-subtitle class="card-subtitles">
+        in Turkey
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="font-features">
+        <span class="tab"></span>Latest earthquakes in Turkey.
+      </p>
+      <p class="font-features">
+        <span class="tab"></span>This page is still in progress.
+      </p>
+      <p class="font-features">
+        <span class="tab"></span>You can check the project with below button.
+      </p>
+      <p class="font-features">
+        <span class="tab"></span>Please contact if any errors/ideas occur while the feature is using.
+      </p>
+      <p class="font-features">
+        <span class="tab"></span>The function should be use in desktop web. Mobile web usage is not supported right now.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="button-animatic" routerLink="/earthquakes">
+        Earthquakes
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+  <!-- Mia Instagram -->
   <mat-card [ngClass]="{XSmall : 'content-card-mobile', Small : 'content-card-mobile',
      Medium : 'content-card-web', Large : 'content-card-web', XLarge : 'content-card-web'}[currentScreenSize]">
     <mat-card-header>

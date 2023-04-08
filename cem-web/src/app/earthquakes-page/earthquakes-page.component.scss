@@ -1,0 +1,65 @@
+$table-background-color: rgba(0, 0, 0, 0.2);
+$general-white-color: rgb(255, 255, 255);
+$general-green-color: rgba(32, 73, 18, 0.73);
+
+.main-container {
+  margin-left: 10%;
+  margin-right: 5%;
+}
+
+.selector {
+  margin-bottom: 2%;
+  margin-left: 30%;
+  border-radius: 20px 5px 20px 5px;
+  height: 30px;
+  align-items: center;
+  max-width: 100%;
+}
+
+.mat-button-toggle-checked {
+  color: $general-white-color;
+  font-size: x-large;
+  background-color: $general-green-color;
+}
+
+.sub-container {
+  border-radius: 20px 20px 20px 20px;
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: center;
+}
+
+.container-background {
+  background-color: $table-background-color;
+}
+
+.container-text {
+  color: $general-white-color;
+  font-family: 'orbitron', sans-serif;
+}
+
+.earthquake-table-title {
+  font-weight: bold;
+  color: $general-white-color;
+}
+
+.earthquake-table-content {
+  color: $general-white-color;
+}
+
+.button-animatic-web {
+  background-color: rgba(63, 63, 63, 0.96);
+  cursor: pointer;
+  border-radius: 20px 20px 20px 20px;
+  font-size: 25px;
+  color: $general-white-color;
+}
+
+.button-animatic-web:not([disabled]):hover {
+  transform: translateX(1px);
+  box-shadow: 0 4px 17px $general-white-color;
+}
+
+.map-container {
+  height: 640px;
+}
