@@ -15,6 +15,9 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
 import { MatMenuModule } from "@angular/material/menu";
 import { MatButtonModule } from "@angular/material/button";
 import {MatTableModule} from "@angular/material/table";
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { HttpClientModule } from '@angular/common/http';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 /*Page imports*/
 import { AppComponent } from './app.component';
@@ -23,8 +26,6 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
 import { HomePageComponent } from './home-page/home-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { EarthquakesPageComponent } from './earthquakes-page/earthquakes-page.component';
-import { AgmCoreModule } from "@agm/core";
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -50,8 +51,9 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     YouTubePlayerModule,
     MatMenuModule,
     MatTableModule,
-    AgmCoreModule.forRoot(),
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    HttpClientModule,
+    LeafletModule
   ],
   providers: [],
   bootstrap: [AppComponent]

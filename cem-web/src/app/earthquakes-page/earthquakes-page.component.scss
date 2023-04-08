@@ -1,9 +1,8 @@
-$table-background-color: rgb(64, 64, 64);
+$table-background-color: rgba(0, 0, 0, 0.2);
 $general-white-color: rgb(255, 255, 255);
 $general-green-color: rgba(32, 73, 18, 0.73);
 
 .main-container {
-  border: black solid;
   margin-left: 10%;
   margin-right: 5%;
 }
@@ -46,4 +45,21 @@ $general-green-color: rgba(32, 73, 18, 0.73);
 
 .earthquake-table-content {
   color: $general-white-color;
+}
+
+.button-animatic-web {
+  background-color: rgba(63, 63, 63, 0.96);
+  cursor: pointer;
+  border-radius: 20px 20px 20px 20px;
+  font-size: 25px;
+  color: $general-white-color;
+}
+
+.button-animatic-web:not([disabled]):hover {
+  transform: translateX(1px);
+  box-shadow: 0 4px 17px $general-white-color;
+}
+
+.map-container {
+  height: 640px;
 }

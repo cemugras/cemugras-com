@@ -79,13 +79,9 @@ img.bg {
   transform: scale(2);
 }
 
-.button-animatic:not([disabled]):hover {
+.button-animatic-web:not([disabled]):hover {
   transform: translateX(1px);
   box-shadow: 0 4px 17px $general-white-color;
-}
-
-.button-animatic[disabled] {
-  background-color: rgba(63, 63, 63, 0.96);
 }
 
 .filler {

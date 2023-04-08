@@ -8,37 +8,24 @@
     <mat-button-toggle value="map">Map</mat-button-toggle>
   </mat-button-toggle-group>
 
-  <!-- Google Maps for Earthquakes -->
   <div *ngIf="selectorVal=='map'">
     <div class="sub-container">
       <span class="container-text container-background">This page is under construction right now.</span>
     </div>
-    <agm-map #gm
-             style="height: 500px; width: 100%"
-             [latitude]="lat"
-             [longitude]="lng"
-             [zoom]="zoom"
-             [disableDoubleClickZoom]="true"
-             [mapTypeId]="'hybrid'"
-             [zoomControl]="false"
-             [draggable]="false">
-      <agm-marker
-        *ngFor="let m of markers; let i = index"
-        [latitude]="m.lat"
-        [longitude]="m.lng"
-        (mouseOver)="onMouseOver(infoWindow, gm)"
-      >
-        <agm-info-window #infoWindow>
-          <div>
-            {{m.label}}
-          </div>
-        </agm-info-window>
-      </agm-marker>
-    </agm-map>
+
+    <div class="map-container"
+         leaflet
+         [leafletOptions]="options"
+         (leafletMapReady)="onMapReady($event)"
+         (leafletClick)="mapClicked($event)">
+    </div>
   </div>
 
   <!-- Table for Earthquakes -->
   <div *ngIf="selectorVal=='table'">
+    <button class="button-animatic-web" (click)="fetchEarthquakeData()" >List Earthquakes</button>
+    <span class="container-text container-background">   This function lists last 100 earthquakes occured in Turkey.</span>
+    <div style="padding-top: 1%"></div>
     <table mat-table
            [dataSource]="dataSource" class="mat-elevation-z8 container-background">
 
@@ -56,7 +43,7 @@
 
       <!-- Longitude Column -->
       <ng-container matColumnDef="longitude">
-        <th mat-header-cell *matHeaderCellDef class="earthquake-table-title"> Latitude</th>
+        <th mat-header-cell *matHeaderCellDef class="earthquake-table-title"> Longitude</th>
         <td mat-cell *matCellDef="let element" class="earthquake-table-content"> {{element.longitude}} </td>
       </ng-container>
 
