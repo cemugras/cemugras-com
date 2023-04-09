@@ -3,7 +3,8 @@
      Medium : 'card-container-web', Large : 'card-container-web', XLarge : 'card-container-web'}[currentScreenSize]">
 
   <!-- Hero Section  -->
-  <div class="hero-div">
+  <div [ngClass]="{XSmall : 'hero-div-mobile', Small : 'hero-div-mobile',
+     Medium : 'hero-div', Large : 'hero-div', XLarge : 'hero-div'}[currentScreenSize]">
     <div class="hero-div-img">
     <img
       src="https://i.hizliresim.com/stu82bw.png"
@@ -12,9 +13,14 @@
     </div>
     <div class="hero-div-text font-features">
       <h1> Providing first class solutions.</h1>
-      <h3>/Since 1993</h3>
-      <p> Providing first class solutions.</p>
+      <h2>/Since 1993</h2>
     </div>
+  </div>
+
+  <div *ngIf="(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')">
+    <p class="font-features content-card-mobile">
+      Projects
+    </p>
   </div>
 
   <!-- Earthquakes -->
