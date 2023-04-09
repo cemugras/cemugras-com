@@ -1,5 +1,6 @@
 //Color Variables
 $general-background-color: rgba(0, 0, 0, 0.6);
+$general-white-color: rgb(255, 255, 255);
 
 .card-container-web {
   padding-top: 100px;
@@ -18,7 +19,7 @@ $general-background-color: rgba(0, 0, 0, 0.6);
   width: 350px;
   height: 500px;
   background-color: $general-background-color;
-  color: white;
+  color: $general-white-color;
   border-radius: 50px;
   box-shadow: 1px 1px 1px black;
 }
@@ -27,7 +28,7 @@ $general-background-color: rgba(0, 0, 0, 0.6);
   margin-bottom: 10px;
   max-width: 300px;
   background-color: $general-background-color;
-  color: white;
+  color: $general-white-color;
   box-shadow: 1px 1px 1px black;
 }
 
@@ -49,17 +50,17 @@ $general-background-color: rgba(0, 0, 0, 0.6);
   border-radius: 20px 20px 20px 20px;
   font-size: 12px;
   cursor: pointer;
-  color: white;
+  color: $general-white-color;
 }
 
 .button-animatic:not([disabled]):hover {
   transform: translateX(1px);
-  box-shadow: 1px 0 10px white;
+  box-shadow: 1px 0 10px $general-white-color;
 }
 
 .card-subtitles {
   font-weight: bold;
-  color: white
+  color: $general-white-color;
 }
 
 .card-icon {
@@ -67,7 +68,29 @@ $general-background-color: rgba(0, 0, 0, 0.6);
   width: 50px;
 }
 
-img {
+.card-img {
+  border-radius: 50px 50px 50px 50px;
+  margin: auto;
   max-height: 250px;
   max-width: 300px;
+}
+
+.hero-div {
+  display: flex;
+  width: 100%;
+  padding-right: 50px;
+}
+
+.hero-div-img {
+  width: 50%;
+}
+
+.hero-div-text {
+  width: 50%;
+  background-color: $general-background-color;
+  color: $general-white-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

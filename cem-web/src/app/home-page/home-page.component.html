@@ -2,6 +2,21 @@
      [ngClass]="{XSmall : 'card-container-mobile', Small : 'card-container-mobile',
      Medium : 'card-container-web', Large : 'card-container-web', XLarge : 'card-container-web'}[currentScreenSize]">
 
+  <!-- Hero Section  -->
+  <div class="hero-div">
+    <div class="hero-div-img">
+    <img
+      src="https://i.hizliresim.com/stu82bw.png"
+      alt="image"
+    style="width: 100% ; height: 100%">
+    </div>
+    <div class="hero-div-text font-features">
+      <h1> Providing first class solutions.</h1>
+      <h3>/Since 1993</h3>
+      <p> Providing first class solutions.</p>
+    </div>
+  </div>
+
   <!-- Earthquakes -->
   <mat-card [ngClass]="{XSmall : 'content-card-mobile', Small : 'content-card-mobile',
      Medium : 'content-card-web', Large : 'content-card-web', XLarge : 'content-card-web'}[currentScreenSize]">
@@ -95,7 +110,7 @@
       mat-card-image
       src="https://www.schengenvisainfo.com/news/wp-content/uploads/2021/04/Cyprus.jpg"
       alt="image"
-      style="border-radius: 50px 50px 50px 50px; margin: auto;">
+      class="card-img">
     <mat-card-actions class="lightbox-example">
       <button class="button-animatic" style="margin-right: 1em;" (click)="lightbox.open(0, 'lightbox', {panelClass: 'fullscreen'})" >
         Photos
@@ -154,7 +169,7 @@
       mat-card-image
       src="https://images.immediate.co.uk/production/volatile/sites/7/2019/11/51.-BKH3D2-5ef1f90-e1574436043662.jpg?quality=90&resize=980,654"
       alt="image"
-      style="border-radius: 50px 50px 50px 50px; margin: auto;">
+      class="card-img">
     <mat-card-actions class="lightbox-example">
       <button class="button-animatic" style="margin-right: 1em;" (click)="lightbox.open(0, 'lightbox-2', {panelClass: 'fullscreen'})" >
         Photos

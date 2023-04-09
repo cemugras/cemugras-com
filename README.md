@@ -52,7 +52,8 @@ If environment is setting first time, start with #1 otherwise start with #3
 2) `npm install -g firebase-tools` -> if command not found: firebase
 
 ## Features Inprogress
-- [x] Mobile responsive styles
-- [x] Earthquakes page
+- [x] Mobile responsive styles (release-v3)
+- [x] Earthquakes page for web browsers (release-v4)
+- [x] Earthquakes page for mobile browsers (release-v5)
 - [ ] Language Support (TR/EN)
 - [ ] Epic Games Free Games Component (Will include free games list with dates.)
