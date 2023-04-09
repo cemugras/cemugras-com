@@ -1,8 +1,11 @@
 <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
 
-<!-- Earthquake Page for Web Environments -->
-<div class="main-container" *ngIf="!(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')">
+<div  [ngClass]="{XSmall : 'main-container-mobile',
+      Small : 'main-container-mobile',
+      Medium : 'main-container',
+      Large : 'main-container',
+      XLarge : 'main-container'}[currentScreenSize]">
 
   <!-- Toggle for Earthquakes -->
   <mat-button-toggle-group #group="matButtonToggleGroup" [value]="selectorVal" (change)="onValChange(group.value)"
@@ -13,107 +16,109 @@
 
   <!-- Table for Earthquakes -->
   <div *ngIf="selectorVal=='table'">
-    <button class="button-animatic-web" (click)="fetchEarthquakeData()" >List Earthquakes</button>
-    <span class="container-text container-background">   This function lists last 100 earthquakes occured in Turkey.</span>
+    <button [ngClass]="{XSmall : 'button-animatic-mobile',
+            Small : 'button-animatic-mobile',
+            Medium : 'button-animatic-web',
+            Large : 'button-animatic-web',
+            XLarge : 'button-animatic-web'}[currentScreenSize]"
+            (click)="fetchEarthquakeData()" >List Earthquakes</button>
+    <p [ngClass]="{XSmall : 'container-text-mobile',
+          Small : 'container-text-mobile',
+          Medium : 'container-text',
+          Large : 'container-text',
+          XLarge : 'container-text'}[currentScreenSize]">
+          This function lists last 100 earthquakes occured in Turkey.</p>
     <div style="padding-top: 1%"></div>
-    <table mat-table
-           [dataSource]="dataSource" class="mat-elevation-z8 container-background">
+    <table mat-table [dataSource]="dataSource"
+           [ngClass]="{XSmall : 'mat-elevation-z8 container-background-mobile',
+           Small : 'mat-elevation-z8 container-background-mobile',
+           Medium : 'mat-elevation-z8 container-background',
+           Large : 'mat-elevation-z8 container-background',
+           XLarge : 'mat-elevation-z8 container-background'}[currentScreenSize]">
 
       <!-- Date Column -->
       <ng-container matColumnDef="date">
-        <th mat-header-cell *matHeaderCellDef class="earthquake-table-title"> Date</th>
-        <td mat-cell *matCellDef="let element" class="earthquake-table-content"> {{element.date}} </td>
+        <th mat-header-cell *matHeaderCellDef
+            [ngClass]="{XSmall : 'earthquake-table-title-mobile',
+            Small : 'earthquake-table-title-mobile',
+            Medium : 'earthquake-table-title',
+            Large : 'earthquake-table-title',
+            XLarge : 'earthquake-table-title'}[currentScreenSize]"> Date</th>
+        <td mat-cell *matCellDef="let element"
+            [ngClass]="{XSmall : 'earthquake-table-content-mobile',
+            Small : 'earthquake-table-content-mobile',
+            Medium : 'earthquake-table-content',
+            Large : 'earthquake-table-content',
+            XLarge : 'earthquake-table-content'}[currentScreenSize]"> {{element.date}} </td>
       </ng-container>
 
       <!-- Latitude Column -->
       <ng-container matColumnDef="latitude">
-        <th mat-header-cell *matHeaderCellDef class="earthquake-table-title"> Latitude</th>
-        <td mat-cell *matCellDef="let element" class="earthquake-table-content"> {{element.latitude}} </td>
+        <th mat-header-cell *matHeaderCellDef
+            [ngClass]="{XSmall : 'earthquake-table-title-mobile',
+            Small : 'earthquake-table-title-mobile',
+            Medium : 'earthquake-table-title',
+            Large : 'earthquake-table-title',
+            XLarge : 'earthquake-table-title'}[currentScreenSize]"> Latitude</th>
+        <td mat-cell *matCellDef="let element"
+            [ngClass]="{XSmall : 'earthquake-table-content-mobile',
+            Small : 'earthquake-table-content-mobile',
+            Medium : 'earthquake-table-content',
+            Large : 'earthquake-table-content',
+            XLarge : 'earthquake-table-content'}[currentScreenSize]"> {{element.latitude}} </td>
       </ng-container>
 
       <!-- Longitude Column -->
       <ng-container matColumnDef="longitude">
-        <th mat-header-cell *matHeaderCellDef class="earthquake-table-title"> Longitude</th>
-        <td mat-cell *matCellDef="let element" class="earthquake-table-content"> {{element.longitude}} </td>
+        <th mat-header-cell *matHeaderCellDef
+            [ngClass]="{XSmall : 'earthquake-table-title-mobile',
+            Small : 'earthquake-table-title-mobile',
+            Medium : 'earthquake-table-title',
+            Large : 'earthquake-table-title',
+            XLarge : 'earthquake-table-title'}[currentScreenSize]"> Longitude</th>
+        <td mat-cell *matCellDef="let element"
+            [ngClass]="{XSmall : 'earthquake-table-content-mobile',
+            Small : 'earthquake-table-content-mobile',
+            Medium : 'earthquake-table-content',
+            Large : 'earthquake-table-content',
+            XLarge : 'earthquake-table-content'}[currentScreenSize]"> {{element.longitude}} </td>
       </ng-container>
 
       <!-- Magnitude Column -->
       <ng-container matColumnDef="mag">
-        <th mat-header-cell *matHeaderCellDef class="earthquake-table-title"> Magnitude</th>
-        <td mat-cell *matCellDef="let element" class="earthquake-table-content"> {{element["mag"]}} </td>
+        <th mat-header-cell *matHeaderCellDef
+            [ngClass]="{XSmall : 'earthquake-table-title-mobile',
+            Small : 'earthquake-table-title-mobile',
+            Medium : 'earthquake-table-title',
+            Large : 'earthquake-table-title',
+            XLarge : 'earthquake-table-title'}[currentScreenSize]"> Magnitude</th>
+        <td mat-cell *matCellDef="let element"
+            [ngClass]="{XSmall : 'earthquake-table-content-mobile',
+            Small : 'earthquake-table-content-mobile',
+            Medium : 'earthquake-table-content',
+            Large : 'earthquake-table-content',
+            XLarge : 'earthquake-table-content'}[currentScreenSize]">{{element["mag"]}} </td>
       </ng-container>
 
       <!-- Location Column -->
       <ng-container matColumnDef="location">
-        <th mat-header-cell *matHeaderCellDef class="earthquake-table-title"> Location</th>
-        <td mat-cell *matCellDef="let element" class="earthquake-table-content"> {{element.location}} </td>
+        <th mat-header-cell *matHeaderCellDef
+            [ngClass]="{XSmall : 'earthquake-table-title-mobile',
+            Small : 'earthquake-table-title-mobile',
+            Medium : 'earthquake-table-title',
+            Large : 'earthquake-table-title',
+            XLarge : 'earthquake-table-title'}[currentScreenSize]"> Location</th>
+        <td mat-cell *matCellDef="let element"
+            [ngClass]="{XSmall : 'earthquake-table-content-mobile',
+            Small : 'earthquake-table-content-mobile',
+            Medium : 'earthquake-table-content',
+            Large : 'earthquake-table-content',
+            XLarge : 'earthquake-table-content'}[currentScreenSize]"> {{element.location}} </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-  </div>
-
-  <!-- Map for Earthquakes -->
-  <div class="map-container" *ngIf="selectorVal=='map'"
-       leaflet
-       [leafletOptions]="options"
-       (leafletMapReady)="onMapReady($event)"
-       (leafletClick)="mapClicked($event)">
-  </div>
-</div>
-
-<!-- Earthquake Page for Mobile Environments -->
-<div class="main-container-mobile" *ngIf="(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')">
-
-  <!-- Toggle for Earthquakes -->
-  <mat-button-toggle-group #group="matButtonToggleGroup" [value]="selectorVal" (change)="onValChange(group.value)"
-                           class="selector">
-    <mat-button-toggle value="table">Table</mat-button-toggle>
-    <mat-button-toggle value="map">Map</mat-button-toggle>
-  </mat-button-toggle-group>
-
-  <!-- Table for Earthquakes -->
-  <div *ngIf="selectorVal=='table' && (currentScreenSize === 'XSmall' || currentScreenSize === 'Small')">
-    <button class="button-animatic-mobile" (click)="fetchEarthquakeData()" >List Earthquakes</button>
-    <span class="container-text-mobile container-background"><br />This function lists last 100 earthquakes occured in Turkey.</span>
-    <div style="padding-top: 1%"></div>
-    <mat-table
-      [dataSource]="dataSource" class="mat-elevation-z8 container-background-mobile">
-
-      <!-- Date Column -->
-      <ng-container matColumnDef="date">
-        <mat-header-cell *matHeaderCellDef class="earthquake-table-title-mobile"> Date</mat-header-cell>
-        <mat-cell *matCellDef="let element" class="earthquake-table-content-mobile"> {{element.date}} </mat-cell>
-      </ng-container>
-
-      <!-- Latitude Column -->
-      <ng-container matColumnDef="latitude">
-        <mat-header-cell *matHeaderCellDef class="earthquake-table-title-mobile"> Latitude</mat-header-cell>
-        <mat-cell *matCellDef="let element" class="earthquake-table-content-mobile"> {{element.latitude}} </mat-cell>
-      </ng-container>
-
-      <!-- Longitude Column -->
-      <ng-container matColumnDef="longitude">
-        <mat-header-cell *matHeaderCellDef class="earthquake-table-title-mobile"> Longitude</mat-header-cell>
-        <mat-cell *matCellDef="let element" class="earthquake-table-content-mobile"> {{element.longitude}} </mat-cell>
-      </ng-container>
-
-      <!-- Magnitude Column -->
-      <ng-container matColumnDef="mag">
-        <mat-header-cell *matHeaderCellDef class="earthquake-table-title-mobile"> Magnitude</mat-header-cell>
-        <mat-cell *matCellDef="let element" class="earthquake-table-content-mobile"> {{element["mag"]}} </mat-cell>
-      </ng-container>
-
-      <!-- Location Column -->
-      <ng-container matColumnDef="location">
-        <mat-header-cell *matHeaderCellDef class="earthquake-table-title-mobile"> Location</mat-header-cell>
-        <mat-cell *matCellDef="let element" class="earthquake-table-content-mobile"> {{element.location}} </mat-cell>
-      </ng-container>
-
-      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-    </mat-table>
   </div>
 
   <!-- Map for Earthquakes -->
