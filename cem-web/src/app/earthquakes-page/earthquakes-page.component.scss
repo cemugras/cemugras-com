@@ -1,10 +1,23 @@
-$general-background-color: rgba(0, 0, 0, 0.2);
+$general-bg-color: rgba(0, 0, 0, 0.2);
+$general-bg-gray-color: rgb(63, 63, 63);
 $general-white-color: rgb(255, 255, 255);
 $general-green-color: rgba(32, 73, 18, 0.73);
 
 .main-container {
   margin-left: 10%;
   margin-right: 5%;
+}
+
+.main-container-mobile {
+  margin-top: 15%;
+
+  /* Set up proportionate scaling */
+  height: auto;
+  position: absolute;
+
+  /* Set up positioning */
+  left: 1vw;
+  right: 1vw;
 }
 
 .selector {
@@ -22,15 +35,12 @@ $general-green-color: rgba(32, 73, 18, 0.73);
   background-color: $general-green-color;
 }
 
-.sub-container {
-  border-radius: 20px 20px 20px 20px;
-  margin-bottom: 2%;
-  display: flex;
-  justify-content: center;
+.container-background {
+  background-color: $general-bg-color;
 }
 
-.container-background {
-  background-color: $general-background-color;
+.container-background-mobile {
+  background-color: $general-bg-color;
 }
 
 .container-text {
@@ -38,8 +48,24 @@ $general-green-color: rgba(32, 73, 18, 0.73);
   font-family: 'orbitron', sans-serif;
 }
 
+.container-text-mobile {
+  color: $general-white-color;
+  font-size: 2vw;
+  font-family: 'orbitron', sans-serif;
+}
+
 .earthquake-table-title {
+  justify-content: center;
+  position: relative;
   font-weight: bold;
+  color: $general-white-color;
+}
+
+.earthquake-table-title-mobile {
+  justify-content: center;
+  position: relative;
+  font-weight: bold;
+  font-size: 2vw;
   color: $general-white-color;
 }
 
@@ -47,8 +73,14 @@ $general-green-color: rgba(32, 73, 18, 0.73);
   color: $general-white-color;
 }
 
+.earthquake-table-content-mobile {
+  font-weight: lighter;
+  font-size: 2vw;
+  color: $general-white-color;
+}
+
 .button-animatic-web {
-  background-color: rgb(63, 63, 63);
+  background-color: $general-bg-gray-color;
   cursor: pointer;
   border-radius: 20px 20px 20px 20px;
   font-size: 25px;
@@ -60,6 +92,49 @@ $general-green-color: rgba(32, 73, 18, 0.73);
   box-shadow: 0 4px 17px $general-white-color;
 }
 
+.button-animatic-mobile {
+  margin-top: 4%;
+  background-color: $general-bg-gray-color;
+  border-radius: 20px 20px 20px 20px;
+  font-size: 5vw;
+  color: $general-white-color;
+}
+
 .map-container {
   height: 640px;
+}
+
+.mat-column-date {
+  border: 1px solid $general-bg-gray-color;
+  padding-left: 1vw;
+  max-width: 30%;
+}
+
+.mat-column-latitude {
+  border: 1px solid $general-bg-gray-color;
+  justify-content: flex-start;
+  position: relative;
+  padding-left: 1vw;
+  max-width: 12%;
+}
+
+.mat-column-longitude {
+  border: 1px solid $general-bg-gray-color;
+  justify-content: flex-start;
+  position: relative;
+  padding-left: 1vw;
+  max-width: 12%;
+}
+
+.mat-column-mag {
+  border: 1px solid $general-bg-gray-color;
+  justify-content: flex-start;
+  position: relative;
+  padding-left: 1vw;
+  max-width: 12%;
+}
+
+.mat-column-location {
+  border: 1px solid $general-bg-gray-color;
+  padding-left: 1vw;
 }
