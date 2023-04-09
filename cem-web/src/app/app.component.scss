@@ -3,6 +3,7 @@ $tooltip-background-color: rgba(255, 255, 255, 0.96);
 $general-red-color: rgba(255, 0, 0, 0.96);
 $general-white-color: rgba(255, 255, 255, 0.96);
 $general-black-color: rgba(0, 0, 0, 0.96);
+$general-background-color: rgba(0, 0, 0, 0.6);
 
 img.bg {
   z-index: -1;
@@ -27,7 +28,7 @@ img.bg {
   }
 }
 
-.toolbar-web {
+.toolbar {
   position: absolute;
   top: 0;
   left: 0;
@@ -37,21 +38,7 @@ img.bg {
   align-items: center;
   font-weight: bold;
   font-size: 25px;
-  background: rgb(64, 64, 64);
-  color: $general-white-color;
-}
-
-.toolbar-mobile {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  font-size: 25px;
-  background-color: #3F3F3FF4;
+  background: $general-background-color;
   color: $general-white-color;
 }
 
@@ -104,7 +91,7 @@ img.bg {
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0; /* Stay at the left */
-  background: rgb(64, 64, 64);
+  background: $general-background-color;
   padding-top: 5px;
 
   a {

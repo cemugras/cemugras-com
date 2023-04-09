@@ -1,4 +1,4 @@
-$table-background-color: rgba(0, 0, 0, 0.2);
+$general-background-color: rgba(0, 0, 0, 0.2);
 $general-white-color: rgb(255, 255, 255);
 $general-green-color: rgba(32, 73, 18, 0.73);
 
@@ -30,7 +30,7 @@ $general-green-color: rgba(32, 73, 18, 0.73);
 }
 
 .container-background {
-  background-color: $table-background-color;
+  background-color: $general-background-color;
 }
 
 .container-text {
@@ -48,7 +48,7 @@ $general-green-color: rgba(32, 73, 18, 0.73);
 }
 
 .button-animatic-web {
-  background-color: rgba(63, 63, 63, 0.96);
+  background-color: rgb(63, 63, 63);
   cursor: pointer;
   border-radius: 20px 20px 20px 20px;
   font-size: 25px;
