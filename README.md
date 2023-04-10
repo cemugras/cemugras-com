@@ -39,6 +39,18 @@ You can also use:
 
 `npm audit fix --force` -> if above command not works
 
+### Issue ng commands
+> AppData\Roaming\npm\ng.ps1 cannot be loaded because running scripts is disabled on this system.
+>
+> CategoryInfo          : SecurityError: (:) [], PSSecurityException
+>
+> FullyQualifiedErrorId : UnauthorizedAccess
+
+### Solution ng commands
+- set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+- Get-ExecutionPolicy
+- Get-ExecutionPolicy -list
+
 ## Firebase Deployment
 If environment is setting first time, start with #1 otherwise start with #3
 1) `npm install -g firebase-tools`
@@ -52,8 +64,7 @@ If environment is setting first time, start with #1 otherwise start with #3
 2) `npm install -g firebase-tools` -> if command not found: firebase
 
 ## Features Inprogress
-- [x] Mobile responsive styles (release-v3)
-- [x] Earthquakes page for web browsers (release-v4)
-- [x] Earthquakes page for mobile browsers (release-v5)
+- [x] Mobile responsive styles
+- [x] Earthquakes page
 - [ ] Language Support (TR/EN)
 - [ ] Epic Games Free Games Component (Will include free games list with dates.)
