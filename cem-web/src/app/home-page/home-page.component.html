@@ -1,31 +1,50 @@
 <div fxLayout="row wrap"
-     [ngClass]="{XSmall : 'card-container-mobile', Small : 'card-container-mobile',
-     Medium : 'card-container-web', Large : 'card-container-web', XLarge : 'card-container-web'}[currentScreenSize]">
+     [ngClass]="{XSmall : 'card-container-mobile',
+     Small : 'card-container-mobile',
+     Medium : 'card-container-web',
+     Large : 'card-container-web',
+     XLarge : 'card-container-web'}[currentScreenSize]">
 
   <!-- Hero Section  -->
-  <div [ngClass]="{XSmall : 'hero-div-mobile', Small : 'hero-div-mobile',
-     Medium : 'hero-div', Large : 'hero-div', XLarge : 'hero-div'}[currentScreenSize]">
-    <div class="hero-div-img">
+  <div [ngClass]="{XSmall : 'hero-div-mobile',
+       Small : 'hero-div-mobile',
+       Medium : 'hero-div',
+       Large : 'hero-div',
+       XLarge : 'hero-div'}[currentScreenSize]">
+
+    <div [ngClass]="{XSmall : 'hero-div-img-mobile',
+         Small : 'hero-div-img-mobile',
+         Medium : 'hero-div-img',
+         Large : 'hero-div-img',
+         XLarge : 'hero-div-img'}[currentScreenSize]">
     <img
       src="https://i.hizliresim.com/stu82bw.png"
       alt="image"
     style="width: 100% ; height: 100%">
     </div>
-    <div class="hero-div-text font-features">
+    <div [ngClass]="{XSmall : 'hero-div-text-mobile',
+         Small : 'hero-div-text-mobile',
+         Medium : 'hero-div-text',
+         Large : 'hero-div-text',
+         XLarge : 'hero-div-text'}[currentScreenSize]"
+      class="font-features">
       <h1> Providing first class solutions.</h1>
-      <h2>/Since 1993</h2>
+      <p>/Since 1993</p>
     </div>
   </div>
 
-  <div *ngIf="(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')">
+  <div *ngIf="(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" style="min-width: 100%; display: flex; align-items: center; justify-content: center">
     <p class="font-features content-card-mobile">
       Projects
     </p>
   </div>
 
   <!-- Earthquakes -->
-  <mat-card [ngClass]="{XSmall : 'content-card-mobile', Small : 'content-card-mobile',
-     Medium : 'content-card-web', Large : 'content-card-web', XLarge : 'content-card-web'}[currentScreenSize]">
+  <mat-card [ngClass]="{XSmall : 'content-card-mobile',
+            Small : 'content-card-mobile',
+            Medium : 'content-card-web',
+            Large : 'content-card-web',
+            XLarge : 'content-card-web'}[currentScreenSize]">
     <mat-card-header>
       <img
         src="/assets/icons/earthquake-icon.png"
@@ -62,8 +81,11 @@
   </mat-card>
 
   <!-- Mia Instagram -->
-  <mat-card [ngClass]="{XSmall : 'content-card-mobile', Small : 'content-card-mobile',
-     Medium : 'content-card-web', Large : 'content-card-web', XLarge : 'content-card-web'}[currentScreenSize]">
+  <mat-card [ngClass]="{XSmall : 'content-card-mobile',
+            Small : 'content-card-mobile',
+            Medium : 'content-card-web',
+            Large : 'content-card-web',
+            XLarge : 'content-card-web'}[currentScreenSize]">
     <mat-card-header>
       <img
         src="/assets/icons/mia-icon.png"
@@ -94,8 +116,11 @@
   </mat-card>
 
   <!-- Cyprus Vacation -->
-  <mat-card [ngClass]="{XSmall : 'content-card-mobile', Small : 'content-card-mobile',
-     Medium : 'content-card-web', Large : 'content-card-web', XLarge : 'content-card-web'}[currentScreenSize]">
+  <mat-card [ngClass]="{XSmall : 'content-card-mobile',
+            Small : 'content-card-mobile',
+            Medium : 'content-card-web',
+            Large : 'content-card-web',
+            XLarge : 'content-card-web'}[currentScreenSize]">
     <mat-card-header>
       <img
         src="/assets/icons/vacation-icon.png"
@@ -125,8 +150,11 @@
   </mat-card>
 
   <!-- MzM Team Star Wars -->
-  <mat-card [ngClass]="{XSmall : 'content-card-mobile', Small : 'content-card-mobile',
-     Medium : 'content-card-web', Large : 'content-card-web', XLarge : 'content-card-web'}[currentScreenSize]">
+  <mat-card [ngClass]="{XSmall : 'content-card-mobile',
+            Small : 'content-card-mobile',
+            Medium : 'content-card-web',
+            Large : 'content-card-web',
+            XLarge : 'content-card-web'}[currentScreenSize]">
     <mat-card-header>
       <img
         src="/assets/icons/mzm-icon.png"
@@ -152,8 +180,11 @@
   </mat-card>
 
   <!-- Troy Vacation -->
-  <mat-card [ngClass]="{XSmall : 'content-card-mobile', Small : 'content-card-mobile',
-     Medium : 'content-card-web', Large : 'content-card-web', XLarge : 'content-card-web'}[currentScreenSize]"
+  <mat-card [ngClass]="{XSmall : 'content-card-mobile',
+            Small : 'content-card-mobile',
+            Medium : 'content-card-web',
+            Large : 'content-card-web',
+            XLarge : 'content-card-web'}[currentScreenSize]"
   style="">
     <mat-card-header>
       <img

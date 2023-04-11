@@ -83,14 +83,17 @@ $general-white-color: rgb(255, 255, 255);
 }
 
 .hero-div-mobile {
-  display: flex;
-  width: 100%;
-  margin-bottom: 10px;
-  max-width: 300px;
+  min-width: 100%;
+  background-color: $general-background-color;
 }
 
 .hero-div-img {
   width: 50%;
+}
+
+.hero-div-img-mobile {
+  width: 100%;
+  height: auto;
 }
 
 .hero-div-text {
@@ -98,6 +101,16 @@ $general-white-color: rgb(255, 255, 255);
   background-color: $general-background-color;
   color: $general-white-color;
   font-size: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-div-text-mobile {
+  width: 100%;
+  color: $general-white-color;
+  font-size: 2vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
