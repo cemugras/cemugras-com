@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HashLocationStrategy, LocationStrategy } from "@angular/common";
 
 /*Module imports*/
 import { AppRoutingModule } from './app-routing.module';
@@ -55,7 +56,7 @@ import { EarthquakesPageComponent } from './earthquakes-page/earthquakes-page.co
     HttpClientModule,
     LeafletModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

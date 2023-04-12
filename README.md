@@ -39,6 +39,18 @@ You can also use:
 
 `npm audit fix --force` -> if above command not works
 
+### Issue ng commands
+> AppData\Roaming\npm\ng.ps1 cannot be loaded because running scripts is disabled on this system.
+>
+> CategoryInfo          : SecurityError: (:) [], PSSecurityException
+>
+> FullyQualifiedErrorId : UnauthorizedAccess
+
+### Solution ng commands
+- set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+- Get-ExecutionPolicy
+- Get-ExecutionPolicy -list
+
 ## Firebase Deployment
 If environment is setting first time, start with #1 otherwise start with #3
 1) `npm install -g firebase-tools`

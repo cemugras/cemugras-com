@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactPageComponent},
   { path: 'earthquakes', component: EarthquakesPageComponent},
   { path: 'notfound', component: NotFoundPageComponent },
-  { path: '**', redirectTo: 'notfound' }
+  { path: '**', pathMatch: 'full', component: NotFoundPageComponent }
 ];
 
 @NgModule({

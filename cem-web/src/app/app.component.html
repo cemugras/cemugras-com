@@ -1,7 +1,7 @@
 <img src="https://i.stack.imgur.com/SvWWN.png" class="bg" alt="">
 
 <!--Toolbar[Responsive] for Web environments -->
-<div *ngIf="!(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" class="toolbar-web" role="dialog">
+<div *ngIf="!(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" class="toolbar" role="dialog">
   <a style="padding-left: 100px; font-weight: bold; font-size: 25px">Cem Ugras</a>
   <a style="padding-left: 20px; font-family: 'Orbitron', sans-serif; font-size: 15px; padding-top: 5px">Software
     Engineer | Gamer</a>
@@ -18,7 +18,7 @@
 </div>
 
 <!--Toolbar[Responsive] for !Web environments -->
-<div *ngIf="(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" class="toolbar-web">
+<div *ngIf="(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" class="toolbar">
   <button mat-button [matMenuTriggerFor]="menu">
     <mat-icon class="toolbar-button-margin-color button-animatic-mobile">menu</mat-icon>
   </button>

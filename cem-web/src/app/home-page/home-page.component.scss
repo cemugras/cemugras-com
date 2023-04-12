@@ -1,0 +1,118 @@
+//Color Variables
+$general-background-color: rgba(0, 0, 0, 0.6);
+$general-white-color: rgb(255, 255, 255);
+
+.card-container-web {
+  padding-top: 100px;
+  padding-left: 100px;
+  justify-content: center;
+}
+
+.card-container-mobile {
+  padding-top: 80px;
+  justify-content: center;
+}
+
+.content-card-web {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 350px;
+  height: 500px;
+  background-color: $general-background-color;
+  color: $general-white-color;
+  border-radius: 50px;
+  box-shadow: 1px 1px 1px black;
+}
+
+.content-card-mobile {
+  margin-bottom: 10px;
+  max-width: 300px;
+  background-color: $general-background-color;
+  color: $general-white-color;
+  box-shadow: 1px 1px 1px black;
+}
+
+.tab {
+  margin-left: 16px;
+}
+
+.font-features {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.button-animatic {
+  background-color: rgba(63, 63, 63, 0.96);
+  padding: 10px 30px 10px 30px;
+  position: absolute;
+  right: 30%;
+  left: 30%;
+  bottom: 10px;
+  border-radius: 20px 20px 20px 20px;
+  font-size: 12px;
+  cursor: pointer;
+  color: $general-white-color;
+}
+
+.button-animatic:not([disabled]):hover {
+  transform: translateX(1px);
+  box-shadow: 1px 0 10px $general-white-color;
+}
+
+.card-subtitles {
+  font-weight: bold;
+  color: $general-white-color;
+}
+
+.card-icon {
+  height: 50px;
+  width: 50px;
+}
+
+.card-img {
+  border-radius: 50px 50px 50px 50px;
+  margin: auto;
+  max-height: 250px;
+  max-width: 300px;
+}
+
+.hero-div {
+  display: flex;
+  width: 100%;
+  padding-right: 50px;
+  padding-bottom: 5%;
+}
+
+.hero-div-mobile {
+  min-width: 100%;
+  background-color: $general-background-color;
+}
+
+.hero-div-img {
+  width: 50%;
+}
+
+.hero-div-img-mobile {
+  width: 100%;
+  height: auto;
+}
+
+.hero-div-text {
+  width: 50%;
+  background-color: $general-background-color;
+  color: $general-white-color;
+  font-size: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-div-text-mobile {
+  width: 100%;
+  color: $general-white-color;
+  font-size: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
