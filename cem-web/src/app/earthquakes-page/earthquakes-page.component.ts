@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { GlobalFile } from "../global-file";
 import { EarthquakeClass } from "./earthquake-collection";
 import * as Leaflet from 'leaflet';
 import { Icon } from "leaflet";
+import { MatTable } from "@angular/material/table";
+import { Observable } from "rxjs";
+import { HttpClient } from "@angular/common/http";
 
 export interface EarthquakeListElement {
   date: string;
@@ -12,21 +15,22 @@ export interface EarthquakeListElement {
   location: string;
 }
 
+const ELEMENT_DATA: EarthquakeListElement[] = [];
+
 @Component({
   selector: 'app-earthquakes-page',
   templateUrl: './earthquakes-page.component.html',
   styleUrls: ['./earthquakes-page.component.scss']
 })
 
-export class EarthquakesPageComponent {
+export class EarthquakesPageComponent implements OnInit{
 
   currentScreenSize!: string;
   public selectorVal: string;
 
   // Table components
   earthquakeClass: EarthquakeClass;
-  displayedColumns: string[] = ['date', 'latitude', 'longitude', 'mag', 'location'];
-  dataSource: EarthquakeListElement[] = [];
+  dataSource = [...ELEMENT_DATA];
 
   // Map Leaflet components
   map!: Leaflet.Map;
@@ -40,8 +44,57 @@ export class EarthquakesPageComponent {
     center: { lat: 39.1461, lng: 34.1595 }
   }
 
+  @ViewChild('table') table!: MatTable<EarthquakeListElement>;
+  displayedColumns = ['date', 'latitude', 'longitude', 'mag', 'location'];
 
-  constructor() {
+  ngOnInit() {
+    this.fillRows();
+  }
+
+  fillRows() {
+    this.getEarthquakeList().subscribe(res => {
+      console.log("res", res);
+
+      this.earthquakeClass = new EarthquakeClass(
+        res.status,
+        res.httpStatus,
+        res.serverloadms,
+        res.desc,
+        res.metadata,
+        res.result
+      );
+
+      ELEMENT_DATA.length = 0;
+
+      this.earthquakeClass.result.forEach(data => {
+        let latitude = data.geojson.coordinates[1];
+        let longitude = data.geojson.coordinates[0];
+        ELEMENT_DATA.push({
+          date: data.date,
+          latitude: latitude,
+          longitude: longitude,
+          mag: data.mag,
+          location: data.title
+        });
+
+        let positionVar = {lat: parseFloat(latitude), lng: parseFloat(longitude)};
+
+        this.markersTemp.push({
+          position: positionVar,
+          label: 'Magnitude: ' + data.mag + '<br>' + data.title + '<br>' + data.date,
+          draggable: false
+        });
+      });
+
+      this.dataSource.splice(0, this.dataSource.length);
+      ELEMENT_DATA.forEach(element => {
+        this.dataSource.push(element);
+        this.table.renderRows();
+      })
+    })
+  }
+
+  constructor(private httpClient: HttpClient) {
     this.currentScreenSize = GlobalFile.screenSize;
     this.selectorVal ='table';
 
@@ -49,10 +102,6 @@ export class EarthquakesPageComponent {
 
     //-- Window size logger for test purposes --//
     //console.log("[EarthquakesPageComponent]Local var screenSize ", this.currentScreenSize);
-  }
-
-  ngOnInit() {
-    this.fetchEarthquakeData();
   }
 
   generateMarker(data: any, index: number) {
@@ -78,40 +127,8 @@ export class EarthquakesPageComponent {
     console.log($event.target.getLatLng());
   }
 
-  async fetchEarthquakeData() {
-    const response = await fetch("https://api.orhanaydogdu.com.tr/deprem/kandilli/live?limit=100");
-    let jsonData = await response.json();
-
-    this.earthquakeClass = new EarthquakeClass(
-      jsonData.status,
-      jsonData.httpStatus,
-      jsonData.serverloadms,
-      jsonData.desc,
-      jsonData.metadata,
-      jsonData.result
-    );
-
-    this.dataSource = [];
-
-    this.earthquakeClass.result.forEach(data => {
-      let latitude = data.geojson.coordinates[1];
-      let longitude = data.geojson.coordinates[0];
-      this.dataSource.push({
-        date: data.date,
-        latitude: latitude,
-        longitude: longitude,
-        mag: data.mag,
-        location: data.title
-      });
-
-      let positionVar = { lat: parseFloat(latitude), lng: parseFloat(longitude)};
-
-      this.markersTemp.push({
-        position: positionVar,
-        label: 'Magnitude: ' + data.mag + '<br>' + data.title + '<br>' + data.date,
-        draggable: false
-      });
-    });
+  private getEarthquakeList(): Observable<any> {
+    return this.httpClient.get("https://api.orhanaydogdu.com.tr/deprem/kandilli/live?limit=100");
   }
 
   private fillMap() {
