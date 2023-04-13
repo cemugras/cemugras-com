@@ -8,19 +8,21 @@
       XLarge : 'main-container'}[currentScreenSize]">
 
   <!-- Toggle for Earthquakes -->
-  <mat-button-toggle-group #group="matButtonToggleGroup" [value]="selectorVal" (change)="onValChange(group.value)"
-                           class="selector">
-    <mat-button-toggle value="table">{{'eqComponent.table' | translate }}</mat-button-toggle>
-    <mat-button-toggle value="map">{{'eqComponent.map' | translate }}</mat-button-toggle>
-  </mat-button-toggle-group>
-  <div></div>
 
-  <button [ngClass]="{XSmall : 'button-animatic-mobile',
+  <div>
+    <button [ngClass]="{XSmall : 'button-animatic-mobile',
           Small : 'button-animatic-mobile',
           Medium : 'button-animatic-web',
           Large : 'button-animatic-web',
           XLarge : 'button-animatic-web'}[currentScreenSize]"
-          (click)="fillRows()">{{'eqComponent.refresh' | translate }}</button>
+            (click)="fillRows()">{{'eqComponent.refresh' | translate }}</button>
+    <mat-button-toggle-group #group="matButtonToggleGroup" [value]="selectorVal" (change)="onValChange(group.value)"
+                             class="selector">
+      <mat-button-toggle value="table">{{'eqComponent.table' | translate }}</mat-button-toggle>
+      <mat-button-toggle value="map">{{'eqComponent.map' | translate }}</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
   <p [ngClass]="{XSmall : 'container-text-mobile',
           Small : 'container-text-mobile',
           Medium : 'container-text',
