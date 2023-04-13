@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {GlobalFile} from "../global-file";
+import { Component, OnInit } from '@angular/core';
+import { GlobalFile } from "../global-file";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-about-page',
@@ -9,8 +10,9 @@ import {GlobalFile} from "../global-file";
 export class AboutPageComponent implements OnInit {
   currentScreenSize!: string;
 
-  constructor() {
+  constructor(private translate: TranslateService) {
     this.currentScreenSize = GlobalFile.screenSize;
+    translate.setDefaultLang(GlobalFile.language);
 
     //-- Window size logger for test purposes --//
     //console.log("[AboutPageComponent]Local var screenSize ", this.currentScreenSize);

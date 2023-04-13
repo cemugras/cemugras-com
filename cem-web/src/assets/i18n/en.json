@@ -1,0 +1,64 @@
+{
+  "appComponent": {
+    "nameSurname": "Cem Ugras",
+    "jobTitle": "Software Engineer | Gamer",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "aboutComponent": {
+    "paragraphOne": "Meet with Cem, a software engineer graduated from Maltepe University Software (50% Scholarship) (English) Department who is chilling with creating free open source applications for web & mobile platforms.",
+    "paragraphTwo": "Knows Java, Android(Java), Javascript, SQL, PL\\SQL languages very well, worked with them in business life also. Done many projects up to this time and have used libraries as much. Knows somethings about many other languages.",
+    "paragraphThree": "Enjoy it :)"
+  },
+  "homeComponent": {
+    "heroSectionFirst": "Providing first class solutions.",
+    "heroSectionSecond": "/Since 1993",
+    "projectsText": "Projects",
+    "earthquakes": {
+      "title": "Earthquakes",
+      "header": "in Turkey",
+      "contentOne": "Latest earthquakes in Turkey.",
+      "contentTwo": "This page is still in progress.",
+      "contentThree": "You can check the project with below button.",
+      "contentFour": "Please contact if any errors/ideas occur while the feature is using."
+    },
+    "mia": {
+      "title": "Mia",
+      "header": "The Smokin",
+      "contentOne": "I am Mia. I sleep nearly 16 hours in a day, if less; I become an angry leopard.",
+      "contentTwo": "One of my most critical hobbies is catching fly.",
+      "contentThree": "You can check my instagram account with below button :)",
+      "instagram": "Instagram"
+    },
+    "cyprus": {
+      "title": "Cyprus Vacation",
+      "header": "October 2022",
+      "contentOne": "Some photos of Cyprus Vacation",
+      "photos": "Photos"
+    },
+    "starWars": {
+      "title": "StarWars RolePlay",
+      "header": "MzM Gaming Group",
+      "contentOne": "Star Wars Old Republic Gameplay with MzM Gaming Group",
+      "contentTwo": "Path of Ancient Sith : Darth Daihatsu"
+    },
+    "troy": {
+      "title": "Troy Vacation",
+      "header": "December 2022",
+      "contentOne": "Some photos of Troy Ancient Site Vacation",
+      "photos": "Photos"
+    }
+
+  },
+  "eqComponent": {
+    "refresh": "Refresh Earthquakes",
+    "descr": "This function lists last 100 earthquakes occured in Turkey.",
+    "table": "Table",
+    "map": "Map",
+    "date": "Date",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "mag": "Magnitude",
+    "location": "Location"
+  }
+}

@@ -17,8 +17,11 @@ import { MatMenuModule } from "@angular/material/menu";
 import { MatButtonModule } from "@angular/material/button";
 import {MatTableModule} from "@angular/material/table";
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+// import ngx-translate and the http loader
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 /*Page imports*/
 import { AppComponent } from './app.component';
@@ -54,9 +57,21 @@ import { EarthquakesPageComponent } from './earthquakes-page/earthquakes-page.co
     MatTableModule,
     MatButtonToggleModule,
     HttpClientModule,
-    LeafletModule
+    LeafletModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}

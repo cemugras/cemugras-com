@@ -8,25 +8,27 @@
       XLarge : 'main-container'}[currentScreenSize]">
 
   <!-- Toggle for Earthquakes -->
-  <mat-button-toggle-group #group="matButtonToggleGroup" [value]="selectorVal" (change)="onValChange(group.value)"
-                           class="selector">
-    <mat-button-toggle value="table">Table</mat-button-toggle>
-    <mat-button-toggle value="map">Map</mat-button-toggle>
-  </mat-button-toggle-group>
-  <div></div>
 
-  <button [ngClass]="{XSmall : 'button-animatic-mobile',
+  <div>
+    <button [ngClass]="{XSmall : 'button-animatic-mobile',
           Small : 'button-animatic-mobile',
           Medium : 'button-animatic-web',
           Large : 'button-animatic-web',
           XLarge : 'button-animatic-web'}[currentScreenSize]"
-          (click)="fillRows()">Refresh Earthquakes</button>
+            (click)="fillRows()">{{'eqComponent.refresh' | translate }}</button>
+    <mat-button-toggle-group #group="matButtonToggleGroup" [value]="selectorVal" (change)="onValChange(group.value)"
+                             class="selector">
+      <mat-button-toggle value="table">{{'eqComponent.table' | translate }}</mat-button-toggle>
+      <mat-button-toggle value="map">{{'eqComponent.map' | translate }}</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
   <p [ngClass]="{XSmall : 'container-text-mobile',
           Small : 'container-text-mobile',
           Medium : 'container-text',
           Large : 'container-text',
           XLarge : 'container-text'}[currentScreenSize]">
-    This function lists last 100 earthquakes occured in Turkey.</p>
+    {{'eqComponent.descr' | translate }}</p>
   <div style="padding-top: 1%"></div>
 
   <!-- Table for Earthquakes -->
@@ -46,7 +48,8 @@
                          Small : 'earthquake-table-title-mobile',
                          Medium : 'earthquake-table-title',
                          Large : 'earthquake-table-title',
-                         XLarge : 'earthquake-table-title'}[currentScreenSize]"> Date </mat-header-cell>
+                         XLarge : 'earthquake-table-title'}[currentScreenSize]">
+          {{'eqComponent.date' | translate }}</mat-header-cell>
         <mat-cell *matCellDef="let element"
                   [ngClass]="{XSmall : 'earthquake-table-content-mobile',
                   Small : 'earthquake-table-content-mobile',
@@ -62,7 +65,8 @@
                          Small : 'earthquake-table-title-mobile',
                          Medium : 'earthquake-table-title',
                          Large : 'earthquake-table-title',
-                         XLarge : 'earthquake-table-title'}[currentScreenSize]"> Latitude </mat-header-cell>
+                         XLarge : 'earthquake-table-title'}[currentScreenSize]">
+          {{'eqComponent.latitude' | translate }}</mat-header-cell>
         <mat-cell *matCellDef="let element"
                   [ngClass]="{XSmall : 'earthquake-table-content-mobile',
                   Small : 'earthquake-table-content-mobile',
@@ -78,7 +82,8 @@
                          Small : 'earthquake-table-title-mobile',
                          Medium : 'earthquake-table-title',
                          Large : 'earthquake-table-title',
-                         XLarge : 'earthquake-table-title'}[currentScreenSize]"> Longitude </mat-header-cell>
+                         XLarge : 'earthquake-table-title'}[currentScreenSize]">
+          {{'eqComponent.longitude' | translate }}</mat-header-cell>
         <mat-cell *matCellDef="let element"
                   [ngClass]="{XSmall : 'earthquake-table-content-mobile',
                   Small : 'earthquake-table-content-mobile',
@@ -94,7 +99,8 @@
                          Small : 'earthquake-table-title-mobile',
                          Medium : 'earthquake-table-title',
                          Large : 'earthquake-table-title',
-                         XLarge : 'earthquake-table-title'}[currentScreenSize]"> Magnitude </mat-header-cell>
+                         XLarge : 'earthquake-table-title'}[currentScreenSize]">
+          {{'eqComponent.mag' | translate }}</mat-header-cell>
         <mat-cell *matCellDef="let element"
                   [ngClass]="{XSmall : 'earthquake-table-content-mobile',
                   Small : 'earthquake-table-content-mobile',
@@ -110,7 +116,8 @@
                          Small : 'earthquake-table-title-mobile',
                          Medium : 'earthquake-table-title',
                          Large : 'earthquake-table-title',
-                         XLarge : 'earthquake-table-title'}[currentScreenSize]"> Location </mat-header-cell>
+                         XLarge : 'earthquake-table-title'}[currentScreenSize]">
+          {{'eqComponent.location' | translate }}</mat-header-cell>
         <mat-cell *matCellDef="let element"
                   [ngClass]="{XSmall : 'earthquake-table-content-mobile',
                   Small : 'earthquake-table-content-mobile',

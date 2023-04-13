@@ -6,6 +6,7 @@ import { Icon } from "leaflet";
 import { MatTable } from "@angular/material/table";
 import { Observable } from "rxjs";
 import { HttpClient } from "@angular/common/http";
+import {TranslateService} from "@ngx-translate/core";
 
 export interface EarthquakeListElement {
   date: string;
@@ -94,9 +95,10 @@ export class EarthquakesPageComponent implements OnInit{
     })
   }
 
-  constructor(private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient, private translate: TranslateService) {
     this.currentScreenSize = GlobalFile.screenSize;
     this.selectorVal ='table';
+    translate.setDefaultLang(GlobalFile.language);
 
     this.earthquakeClass = {} as EarthquakeClass;
 

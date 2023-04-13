@@ -4,12 +4,13 @@ $general-white-color: rgb(255, 255, 255);
 $general-green-color: rgba(32, 73, 18, 0.73);
 
 .main-container {
+  margin-top: 5%;
   margin-left: 10%;
   margin-right: 5%;
 }
 
 .main-container-mobile {
-  margin-top: 15%;
+  margin-top: 10%;
 
   /* Set up proportionate scaling */
   height: auto;
@@ -21,8 +22,7 @@ $general-green-color: rgba(32, 73, 18, 0.73);
 }
 
 .selector {
-  margin-bottom: 2%;
-  margin-left: 30%;
+  margin-left: 10%;
   border-radius: 20px 5px 20px 5px;
   height: 30px;
   align-items: center;

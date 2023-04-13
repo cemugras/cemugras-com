@@ -1,7 +1,8 @@
 import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { Gallery, GalleryItem, ImageItem, ThumbnailsPosition, ImageSize } from 'ng-gallery';
 import { Lightbox } from 'ng-gallery/lightbox';
-import {GlobalFile} from "../global-file";
+import { GlobalFile } from "../global-file";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-home-page',
@@ -26,8 +27,9 @@ export class HomePageComponent implements OnInit {
   // Global variable
   currentScreenSize!: string;
 
-  constructor(public gallery: Gallery, public lightbox: Lightbox) {
+  constructor(public gallery: Gallery, public lightbox: Lightbox, private translate: TranslateService) {
     this.currentScreenSize = GlobalFile.screenSize;
+    translate.setDefaultLang(GlobalFile.language);
 
     //-- Window size logger for test purposes --//
     //console.log("[HomePageComponent]Local var screenSize ", this.currentScreenSize);
