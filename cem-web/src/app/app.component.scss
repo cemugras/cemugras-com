@@ -5,7 +5,7 @@ $general-white-color: rgba(255, 255, 255, 0.96);
 $general-black-color: rgba(0, 0, 0, 0.96);
 $general-background-color: rgba(0, 0, 0, 0.6);
 
-img.bg {
+.bg {
   z-index: -1;
   /* Set rules to fill background */
   min-height: 100%;
@@ -20,13 +20,6 @@ img.bg {
   top: 0;
   left: 0;
   bottom: 0;
-}
-
-@media screen and (max-width: 1024px) {
-  img.bg {
-    left: 50%;
-    margin-left: -512px;
-  }
 }
 
 .toolbar {
@@ -96,14 +89,6 @@ img.bg {
 
 .filler {
   flex: 1 1 auto;
-}
-
-.bg {
-  width: 100%;
-  height: 100%;
-  background-size: 100% 100%;
-  background-position: top center;
-  background-image: url('https://images.nightcafe.studio/jobs/CWIzPD6FkJM49Zh1qs6h/CWIzPD6FkJM49Zh1qs6h_8x.jpg');
 }
 
 /* The sidebar menu */
