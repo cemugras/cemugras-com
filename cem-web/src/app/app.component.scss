@@ -19,6 +19,7 @@ img.bg {
   position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
 }
 
 @media screen and (max-width: 1024px) {
@@ -40,11 +41,27 @@ img.bg {
   font-size: 25px;
   background: $general-background-color;
   color: $general-white-color;
-  .text{
-    padding-left: 3%; font-weight: bold; font-size: 25px
+  select {
+    min-height: 60%;
+    @media screen and (min-width: 1024px) {
+      margin-right: 2%;
+    }
   }
-  .text2{
-    padding-left: 2%; font-family: 'Orbitron', sans-serif; font-size: 15px; padding-top: 5px
+  .text {
+    padding-left: 3%;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .text2 {
+    padding-left: 2%;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+    padding-top: 5px;
+  }
+  .mobile-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    padding-left: 10%;
   }
 }
 

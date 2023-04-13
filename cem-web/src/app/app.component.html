@@ -29,8 +29,12 @@
     <button mat-menu-item routerLink="/about">About Me</button>
     <button mat-menu-item routerLink="/contact">Contact</button>
   </mat-menu>
-  <span class="filler"></span>
-  <a style="font-family: 'Orbitron', sans-serif; font-size: 20px">Cem Ugras</a>
+  <select (change)='updateLanguage(languageSelection.value)' #languageSelection>
+    <option [value]="'en'">EN</option>
+    <option [value]="'tr'">TR</option>
+  </select>
+  <a class="mobile-name">
+    {{'appComponent.nameSurname' | translate }}</a>
   <span class="filler"></span>
 
   <button class="button-animatic-mobile toolbar-button-margin-color" routerLink="/">
