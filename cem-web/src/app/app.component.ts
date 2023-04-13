@@ -1,7 +1,8 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { TranslateService } from "@ngx-translate/core";
 import{ GlobalFile } from './global-file';
 
-import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,11 @@ export class AppComponent {
     [Breakpoints.XLarge, 'XLarge'],
   ]);
 
-  constructor(breakpointObserver: BreakpointObserver) {
+  constructor(breakpointObserver: BreakpointObserver, private translate: TranslateService) {
+    GlobalFile.language = 'en';
+    translate.setDefaultLang(GlobalFile.language);
+    //translate.use(GlobalFile.language);
+
     breakpointObserver
       .observe([
         Breakpoints.XSmall,
@@ -39,6 +44,11 @@ export class AppComponent {
           }
         }
       });
+  }
+
+  public updateLanguage(lang:string) {
+    GlobalFile.language = lang;
+    this.translate.use(GlobalFile.language);
   }
 
   /*

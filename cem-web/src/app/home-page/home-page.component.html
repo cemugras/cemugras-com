@@ -28,15 +28,13 @@
          Large : 'hero-div-text',
          XLarge : 'hero-div-text'}[currentScreenSize]"
       class="font-features">
-      <h1> Providing first class solutions.</h1>
-      <p>/Since 1993</p>
+      <h1>{{'homeComponent.heroSectionFirst' | translate }}</h1>
+      <p>{{'homeComponent.heroSectionSecond' | translate }}</p>
     </div>
   </div>
 
   <div *ngIf="(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" style="min-width: 100%; display: flex; align-items: center; justify-content: center">
-    <p class="font-features content-card-mobile">
-      Projects
-    </p>
+    <p class="font-features content-card-mobile">{{'homeComponent.projectsText' | translate }}</p>
   </div>
 
   <!-- Earthquakes -->
@@ -51,31 +49,26 @@
         alt="image"
         mat-card-avatar
         class="card-icon"/>
-      <mat-card-title class="font-features">Earthquakes</mat-card-title>
-      <mat-card-subtitle class="card-subtitles">
-        in Turkey
-      </mat-card-subtitle>
+      <mat-card-title class="font-features">{{'homeComponent.earthquakes.title' | translate }}</mat-card-title>
+      <mat-card-subtitle class="card-subtitles">{{'homeComponent.earthquakes.header' | translate }}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
       <p class="font-features">
-        <span class="tab"></span>Latest earthquakes in Turkey.
+        <span class="tab"></span>{{'homeComponent.earthquakes.contentOne' | translate }}
       </p>
       <p class="font-features">
-        <span class="tab"></span>This page is still in progress.
+        <span class="tab"></span>{{'homeComponent.earthquakes.contentTwo' | translate }}
       </p>
       <p class="font-features">
-        <span class="tab"></span>You can check the project with below button.
+        <span class="tab"></span>{{'homeComponent.earthquakes.contentThree' | translate }}
       </p>
       <p class="font-features">
-        <span class="tab"></span>Please contact if any errors/ideas occur while the feature is using.
-      </p>
-      <p class="font-features">
-        <span class="tab"></span>The function should be use in desktop web. Mobile web usage is not supported right now.
+        <span class="tab"></span>{{'homeComponent.earthquakes.contentFour' | translate }}
       </p>
     </mat-card-content>
     <mat-card-actions>
       <button class="button-animatic" routerLink="/earthquakes">
-        Earthquakes
+        {{'homeComponent.earthquakes.title' | translate }}
       </button>
     </mat-card-actions>
   </mat-card>
@@ -92,25 +85,23 @@
         alt="image"
         mat-card-avatar
         class="card-icon"/>
-      <mat-card-title class="font-features">Mia</mat-card-title>
-      <mat-card-subtitle class="card-subtitles">
-        The Smokin
-      </mat-card-subtitle>
+      <mat-card-title class="font-features">{{'homeComponent.mia.title' | translate }}</mat-card-title>
+      <mat-card-subtitle class="card-subtitles">{{'homeComponent.mia.header' | translate }}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
       <p class="font-features">
-        <span class="tab"></span>I am Mia. I sleep nearly 16 hours in a day, if less; I become an angry leopard.
+        <span class="tab"></span>{{'homeComponent.mia.contentOne' | translate }}
       </p>
       <p class="font-features">
-        <span class="tab"></span>One of my most critical hobbies is catching fly.
+        <span class="tab"></span>{{'homeComponent.mia.contentTwo' | translate }}
       </p>
       <p class="font-features">
-        <span class="tab"></span>You can check my instagram account with below button :)
+        <span class="tab"></span>{{'homeComponent.mia.contentThree' | translate }}
       </p>
     </mat-card-content>
     <mat-card-actions>
       <button class="button-animatic" onclick=" window.open('https://www.instagram.com/mia.thesmokin/','_blank')">
-        Instagram
+        {{'homeComponent.mia.instagram' | translate }}
       </button>
     </mat-card-actions>
   </mat-card>
@@ -127,14 +118,12 @@
         alt="image"
         mat-card-avatar
         class="card-icon"/>
-      <mat-card-title class="font-features">Cyprus Vacation</mat-card-title>
-      <mat-card-subtitle class="card-subtitles">
-        October 2022
-      </mat-card-subtitle>
+      <mat-card-title class="font-features">{{'homeComponent.cyprus.title' | translate }}</mat-card-title>
+      <mat-card-subtitle class="card-subtitles">{{'homeComponent.cyprus.header' | translate }}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
       <p class="font-features">
-        <span class="tab"></span>Some photos of Cyprus Vacation
+        <span class="tab"></span>{{'homeComponent.cyprus.contentOne' | translate }}
       </p>
     </mat-card-content>
     <img
@@ -144,7 +133,7 @@
       class="card-img">
     <mat-card-actions class="lightbox-example">
       <button class="button-animatic" style="margin-right: 1em;" (click)="lightbox.open(0, 'lightbox', {panelClass: 'fullscreen'})" >
-        Photos
+        {{'homeComponent.cyprus.photos' | translate }}
       </button>
     </mat-card-actions>
   </mat-card>
@@ -161,17 +150,16 @@
         alt="image"
         mat-card-avatar
         class="card-icon"/>
-      <mat-card-title class="font-features">StarWars RolePlay</mat-card-title>
+      <mat-card-title class="font-features">{{'homeComponent.starWars.title' | translate }}</mat-card-title>
       <mat-card-subtitle class="card-subtitles">
-        MzM Gaming Group
+        {{'homeComponent.starWars.header' | translate }}
       </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
       <p class="font-features">
-        <span class="tab"></span>Star Wars Old Republic Gameplay with MzM Gaming Group
+        <span class="tab"></span>{{'homeComponent.starWars.contentOne' | translate }}
       </p>
-      <p class="font-features">
-        Path of Ancient Sith : Darth Daihatsu
+      <p class="font-features"><span class="tab"></span>{{'homeComponent.starWars.contentTwo' | translate }}
       </p>
     </mat-card-content>
     <div style="margin: auto">
@@ -192,14 +180,12 @@
         alt="image"
         mat-card-avatar
         class="card-icon"/>
-      <mat-card-title class="font-features">Troy Vacation</mat-card-title>
-      <mat-card-subtitle class="card-subtitles">
-        December 2022
-      </mat-card-subtitle>
+      <mat-card-title class="font-features">{{'homeComponent.troy.title' | translate }}</mat-card-title>
+      <mat-card-subtitle class="card-subtitles">{{'homeComponent.troy.header' | translate }}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
       <p class="font-features">
-        <span class="tab"></span>Some photos of Troy Ancient Site Vacation
+        <span class="tab"></span>{{'homeComponent.troy.contentOne' | translate }}
       </p>
     </mat-card-content>
     <img
@@ -209,7 +195,7 @@
       class="card-img">
     <mat-card-actions class="lightbox-example">
       <button class="button-animatic" style="margin-right: 1em;" (click)="lightbox.open(0, 'lightbox-2', {panelClass: 'fullscreen'})" >
-        Photos
+        {{'homeComponent.troy.photos' | translate }}
       </button>
     </mat-card-actions>
   </mat-card>

@@ -1,0 +1,63 @@
+{
+  "appComponent": {
+    "nameSurname": "Cem Uğraş",
+    "jobTitle": "Yazılım Mühendisi | Oyuncu",
+    "about": "Hakkımda",
+    "contact": "İletişim"
+  },
+  "aboutComponent": {
+    "paragraphOne": "Cem ile tanışın, a software engineer graduated from Maltepe University Software (50% Scholarship) (English) Department who is chilling with creating free open source applications for web & mobile platforms.",
+    "paragraphTwo": "Kullandığı yazılım dilleri: Java, Android(Java), Javascript, SQL, PL\\SQL ve burada yazamadığı bir çoğu ile iş hayatında çalışıyor. Günümüze kadar farklı bir çok projeyi tamamladı ve bir çok farklı yazılım kütüphanesi kullandı. Bazı diğer yazılım dilleriyle ilgili de bilgi sahibi.",
+    "paragraphThree": "İyi eğlenceler :)"
+  },
+  "homeComponent": {
+    "heroSectionFirst": "Birinci sınıf çözümler.",
+    "heroSectionSecond": "/1993 'ten beri",
+    "projectsText": "Projeler",
+    "earthquakes": {
+      "title": "Depremler",
+      "header": "Türkiye",
+      "contentOne": "Türkiye'deki son depremler.",
+      "contentTwo": "Bu proje geliştirme aşamasındadır.",
+      "contentThree": "Projeyi aşağıdaki butona tıklayarak kullanabilirsiniz.",
+      "contentFour": "Bu özelliği kullanırken bir sorun/fikir ortaya çıkarsa lütfen iletişime geçiniz."
+    },
+    "mia": {
+      "title": "Mia",
+      "header": "Smokin",
+      "contentOne": "Ben Mia. Günde neredeyse 16 saat uyurum, daha az uyursam; bir leopar gibi sinirli olurum.",
+      "contentTwo": "En önemli hobilerimden biri sinek yakalamaktır.",
+      "contentThree": "Instagram hesabımı aşağıdaki butona tıklayarak inceleyebilirsiniz :)",
+      "instagram": "Instagram"
+    },
+    "cyprus": {
+      "title": "Kıbrıs Gezisi",
+      "header": "Ekim 2022",
+      "contentOne": "Kıbrıs gezisinden bazı fotoğraflar.",
+      "photos": "Fotoğraflar"
+    },
+    "starWars": {
+      "title": "StarWars Oyun",
+      "header": "MzM Oyun Grubu",
+      "contentOne": "MzM Oyun Grubu ile Star Wars Eski Cumhuriyet oyun videosu.",
+      "contentTwo": "Eski Sith'in Yolu : Darth Daihatsu"
+    },
+    "troy": {
+      "title": "Truva Gezisi",
+      "header": "Aralık 2022",
+      "contentOne": "Truva antik şehrinden bazı fotoğraflar.",
+      "photos": "Fotoğraflar"
+    }
+  },
+  "eqComponent": {
+    "refresh": "Depremleri Yenile",
+    "descr": "Bu özellik Türkiye'de yaşanan son 100 depremi listeler.",
+    "table": "Tablo",
+    "map": "Harita",
+    "date": "Tarih",
+    "latitude": "Enlem",
+    "longitude": "Boylam",
+    "mag": "Büyüklük",
+    "location": "Konum"
+  }
+}

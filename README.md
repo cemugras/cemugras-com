@@ -24,6 +24,7 @@ You can also use:
 4) [youtube-player](https://github.com/angular/components/tree/main/src/youtube-player) |
 5) [angular-table](https://material.angular.io/components/table) |
 6) [ngx-leaflet](https://leafletjs.com/index.html)
+7) [ngx-translate](https://www.npmjs.com/package/@ngx-translate/core)
 
 #### 1) ngx-gallery Development Notes
 #### 2) flex-layout Development Notes
@@ -33,6 +34,7 @@ You can also use:
 #### 6) ngx-leaflet Development Notes
 1) `npm install leaflet @asymmetrik/ngx-leaflet`
 2) `npm install --save-dev @types/leaflet`
+#### 6) ngx-translate Development Notes
 
 ## Known Issues
 `npm audit fix` -> 1 moderate severity vulnerability
@@ -66,5 +68,5 @@ If environment is setting first time, start with #1 otherwise start with #3
 ## Features Inprogress
 - [x] Mobile responsive styles
 - [x] Earthquakes page
-- [ ] Language Support (TR/EN)
+- [x] Language Support (TR/EN)
 - [ ] Epic Games Free Games Component (Will include free games list with dates.)

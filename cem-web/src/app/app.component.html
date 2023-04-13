@@ -2,19 +2,22 @@
 
 <!--Toolbar[Responsive] for Web environments -->
 <div *ngIf="!(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" class="toolbar" role="dialog">
-  <a style="padding-left: 100px; font-weight: bold; font-size: 25px">Cem Ugras</a>
-  <a style="padding-left: 20px; font-family: 'Orbitron', sans-serif; font-size: 15px; padding-top: 5px">Software
-    Engineer | Gamer</a>
+  <span style="padding-left: 6%"></span>
+  <a class="text">{{'appComponent.nameSurname' | translate }}</a>
+  <a class="text2">{{'appComponent.jobTitle' | translate }}</a>
   <span class="filler"></span>
   <button class="button-animatic-web toolbar-button-margin-color" routerLink="/about">
     <mat-icon class="mat-icon-borders" aria-hidden="false" fontIcon="mark_unread_chat_alt"></mat-icon>
-    About
+    {{'appComponent.about' | translate }}
   </button>
   <button class="button-animatic-web toolbar-button-margin-color" routerLink="/contact">
     <mat-icon class="mat-icon-borders" aria-hidden="false" fontIcon="contact_mail"></mat-icon>
-    Contact
+    {{'appComponent.contact' | translate }}
   </button>
-  <img src="/assets/icons/gifs/crow-fly.gif" alt="image" style="max-width: 40px">
+  <select (change)='updateLanguage(languageSelection.value)' #languageSelection>
+    <option [value]="'en'">EN</option>
+    <option [value]="'tr'">TR</option>
+  </select>
 </div>
 
 <!--Toolbar[Responsive] for !Web environments -->
@@ -36,42 +39,40 @@
 </div>
 
 <!--Sidenav[Responsive] for Web environments -->
-<div *ngIf="!(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" class="sidenav"
-     style="text-align: center">
-  <button class="button-animatic-web" style="color: white; padding: 10px 30px 10px 30px; margin-bottom: 10px"
-          routerLink="/">
+<div *ngIf="!(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" class="sidenav">
+  <button class="button-animatic-web" routerLink="/">
     <mat-icon class="mat-icon-borders" aria-hidden="false" fontIcon="home"></mat-icon>
   </button>
   <a href="https://www.linkedin.com/in/cemugras/" target="_blank">
-    <img src="/assets/sidebar/linkedin-icon.png" alt="image" style="height: 20px">
+    <img src="/assets/sidebar/linkedin-icon.png" alt="image">
     <a class="tooltip">LinkedIn</a>
   </a>
   <a href="https://www.hackerrank.com/cemugrs" target="_blank">
-    <img src="/assets/sidebar/hackerrank-icon.png" alt="image" style="height: 20px">
+    <img src="/assets/sidebar/hackerrank-icon.png" alt="image">
     <a class="tooltip">HackerRank</a>
   </a>
   <a href="https://play.google.com/store/apps/developer?id=Cem+Ugras" target="_blank">
-    <img src="/assets/sidebar/googleplay-icon.png" alt="image" style="height: 20px">
+    <img src="/assets/sidebar/googleplay-icon.png" alt="image">
     <a class="tooltip">GooglePlay</a>
   </a>
   <a href="https://github.com/cemugras" target="_blank">
-    <img src="/assets/sidebar/github-icon.png" alt="image" style="height: 20px">
+    <img src="/assets/sidebar/github-icon.png" alt="image">
     <a class="tooltip">GitHub</a>
   </a>
   <a href="https://open.spotify.com/user/cemugrs" target="_blank">
-    <img src="/assets/sidebar/spotify-icon.png" alt="image" style="height: 20px">
+    <img src="/assets/sidebar/spotify-icon.png" alt="image">
     <a class="tooltip">Spotify</a>
   </a>
   <a href="https://www.youtube.com/@mzm1187" target="_blank">
-    <img src="/assets/sidebar/youtube-icon.png" alt="image" style="height: 20px">
+    <img src="/assets/sidebar/youtube-icon.png" alt="image">
     <a class="tooltip">Youtube</a>
   </a>
   <a href="https://steamcommunity.com/id/cembabbe/" target="_blank">
-    <img src="/assets/sidebar/steam-icon.png" alt="image" style="height: 20px">
+    <img src="/assets/sidebar/steam-icon.png" alt="image">
     <a class="tooltip">Steam</a>
   </a>
   <a href="https://www.buymeacoffee.com/cemugras" target="_blank">
-    <img src="/assets/sidebar/donate-icon.png" alt="image" style="height: 20px">
+    <img src="/assets/sidebar/donate-icon.png" alt="image">
     <a class="tooltip">Donate</a>
   </a>
 </div>

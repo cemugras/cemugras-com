@@ -40,6 +40,12 @@ img.bg {
   font-size: 25px;
   background: $general-background-color;
   color: $general-white-color;
+  .text{
+    padding-left: 3%; font-weight: bold; font-size: 25px
+  }
+  .text2{
+    padding-left: 2%; font-family: 'Orbitron', sans-serif; font-size: 15px; padding-top: 5px
+  }
 }
 
 .toolbar-button-margin-color {
@@ -94,6 +100,12 @@ img.bg {
   background: $general-background-color;
   padding-top: 5px;
 
+  button {
+    color: white;
+    padding: 10px 30px 10px 30px;
+    margin-bottom: 10px;
+  }
+
   a {
     padding: 8px 8px 8px 8px;
     text-decoration: none;
@@ -101,6 +113,10 @@ img.bg {
     color: $general-black-color;
     display: block;
     text-align: center;
+
+    img {
+      height: 20px;
+    }
 
     .tooltip {
       display: inline-block;
