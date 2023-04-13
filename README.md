@@ -69,4 +69,7 @@ If environment is setting first time, start with #1 otherwise start with #3
 - [x] Mobile responsive styles
 - [x] Earthquakes page
 - [x] Language Support (TR/EN)
+- [ ] Flight page
+- [ ] Weather Page
 - [ ] Epic Games Free Games Component (Will include free games list with dates.)
+- [ ] Side Bar will be refactored for listing features
