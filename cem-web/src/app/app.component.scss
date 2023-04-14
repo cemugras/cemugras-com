@@ -4,6 +4,11 @@ $general-red-color: rgba(255, 0, 0, 0.96);
 $general-white-color: rgba(255, 255, 255, 0.96);
 $general-black-color: rgba(0, 0, 0, 0.96);
 $general-background-color: rgba(0, 0, 0, 0.6);
+$general-gray-color: rgba(63, 63, 63, 0.96);
+
+.general-color-white {
+  color: $general-white-color;
+}
 
 .bg {
   z-index: -1;
@@ -39,7 +44,7 @@ $general-background-color: rgba(0, 0, 0, 0.6);
     font-size: 50%;
     border-radius: 15px 15px 15px 15px;
     border-color: white;
-    background-color: rgba(63, 63, 63, 0.96);
+    background-color: $general-gray-color;
     color: white;
     @media screen and (min-width: 1024px) {
       margin-right: 2%;
@@ -68,7 +73,7 @@ $general-background-color: rgba(0, 0, 0, 0.6);
       font-size:10vw !important;
       transform: rotate(180deg);
       transition: transform 1s;
-      background-color: rgba(63, 63, 63, 0.96);
+      background-color: $general-gray-color;
       border-radius: 20px 20px 20px 20px;
     }
   }
@@ -80,26 +85,40 @@ $general-background-color: rgba(0, 0, 0, 0.6);
   }
 }
 
+.mat-menu-top-item {
+  margin-top: -8px;
+  background-color: $general-gray-color;
+}
+
+.mat-menu-item {
+  background-color: $general-gray-color;
+}
+
+.mat-menu-bottom-item {
+  margin-bottom: -8px;
+  background-color: $general-gray-color;
+}
+
 .toolbar-button-margin-color {
   color: $general-white-color;
   margin-right: 20px;
 }
 
 .mat-icon-borders {
-  background-color: rgba(63, 63, 63, 0.96);
+  background-color: $general-gray-color;
   border-radius: 20px 20px 20px 20px;
   margin-block: -3px;
 }
 
 .button-animatic-web {
-  background-color: rgba(63, 63, 63, 0.96);
+  background-color: $general-gray-color;
   cursor: pointer;
   border-radius: 20px 20px 20px 20px;
   font-size: 25px;
 }
 
 .button-animatic-mobile {
-  background-color: rgba(63, 63, 63, 0.96);
+  background-color: $general-gray-color;
   border-radius: 15px 15px 15px 15px;
   transform: scale(2);
 }
