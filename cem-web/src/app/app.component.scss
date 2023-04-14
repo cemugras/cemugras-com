@@ -61,6 +61,23 @@ $general-background-color: rgba(0, 0, 0, 0.6);
     font-size: 20px;
     padding-left: 10%;
   }
+  .hamburger-button {
+    .rotate-me {
+      height:10vw !important;
+      width:10vw !important;
+      font-size:10vw !important;
+      transform: rotate(180deg);
+      transition: transform 1s;
+      background-color: rgba(63, 63, 63, 0.96);
+      border-radius: 20px 20px 20px 20px;
+    }
+  }
+  .hamburger-button:active {
+    .rotate-me {
+      transform: rotate(0deg);
+      transition: 0s;
+    }
+  }
 }
 
 .toolbar-button-margin-color {

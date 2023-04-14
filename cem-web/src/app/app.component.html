@@ -22,8 +22,8 @@
 
 <!--Toolbar[Responsive] for !Web environments -->
 <div *ngIf="(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" class="toolbar">
-  <button mat-button [matMenuTriggerFor]="menu">
-    <mat-icon class="toolbar-button-margin-color button-animatic-mobile">menu</mat-icon>
+  <button mat-button [matMenuTriggerFor]="menu" class="hamburger-button">
+    <mat-icon class="toolbar-button-margin-color rotate-me">menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item routerLink="/about">About Me</button>
