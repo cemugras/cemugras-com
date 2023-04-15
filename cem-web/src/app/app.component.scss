@@ -4,8 +4,13 @@ $general-red-color: rgba(255, 0, 0, 0.96);
 $general-white-color: rgba(255, 255, 255, 0.96);
 $general-black-color: rgba(0, 0, 0, 0.96);
 $general-background-color: rgba(0, 0, 0, 0.6);
+$general-gray-color: rgba(63, 63, 63, 0.96);
 
-img.bg {
+.general-color-white {
+  color: $general-white-color;
+}
+
+.bg {
   z-index: -1;
   /* Set rules to fill background */
   min-height: 100%;
@@ -22,13 +27,6 @@ img.bg {
   bottom: 0;
 }
 
-@media screen and (max-width: 1024px) {
-  img.bg {
-    left: 50%;
-    margin-left: -512px;
-  }
-}
-
 .toolbar {
   position: absolute;
   top: 0;
@@ -43,6 +41,11 @@ img.bg {
   color: $general-white-color;
   select {
     min-height: 60%;
+    font-size: 50%;
+    border-radius: 15px 15px 15px 15px;
+    border-color: white;
+    background-color: $general-gray-color;
+    color: white;
     @media screen and (min-width: 1024px) {
       margin-right: 2%;
     }
@@ -63,6 +66,37 @@ img.bg {
     font-size: 20px;
     padding-left: 10%;
   }
+  .hamburger-button {
+    .rotate-me {
+      height:10vw !important;
+      width:10vw !important;
+      font-size:10vw !important;
+      transform: rotate(180deg);
+      transition: transform 1s;
+      background-color: $general-gray-color;
+      border-radius: 20px 20px 20px 20px;
+    }
+  }
+  .hamburger-button:active {
+    .rotate-me {
+      transform: rotate(0deg);
+      transition: 0s;
+    }
+  }
+}
+
+.mat-menu-top-item {
+  margin-top: -8px;
+  background-color: $general-gray-color;
+}
+
+.mat-menu-item {
+  background-color: $general-gray-color;
+}
+
+.mat-menu-bottom-item {
+  margin-bottom: -8px;
+  background-color: $general-gray-color;
 }
 
 .toolbar-button-margin-color {
@@ -71,20 +105,20 @@ img.bg {
 }
 
 .mat-icon-borders {
-  background-color: rgba(63, 63, 63, 0.96);
+  background-color: $general-gray-color;
   border-radius: 20px 20px 20px 20px;
   margin-block: -3px;
 }
 
 .button-animatic-web {
-  background-color: rgba(63, 63, 63, 0.96);
+  background-color: $general-gray-color;
   cursor: pointer;
   border-radius: 20px 20px 20px 20px;
   font-size: 25px;
 }
 
 .button-animatic-mobile {
-  background-color: rgba(63, 63, 63, 0.96);
+  background-color: $general-gray-color;
   border-radius: 15px 15px 15px 15px;
   transform: scale(2);
 }
@@ -96,14 +130,6 @@ img.bg {
 
 .filler {
   flex: 1 1 auto;
-}
-
-.bg {
-  width: 100%;
-  height: 100%;
-  background-size: 100% 100%;
-  background-position: top center;
-  background-image: url('https://images.nightcafe.studio/jobs/CWIzPD6FkJM49Zh1qs6h/CWIzPD6FkJM49Zh1qs6h_8x.jpg');
 }
 
 /* The sidebar menu */
