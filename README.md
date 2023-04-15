@@ -69,7 +69,13 @@ If environment is setting first time, start with #1 otherwise start with #3
 - [x] Mobile responsive styles
 - [x] Earthquakes page
 - [x] Language Support (TR/EN)
+- [x] Side Bar refactored for listing features
+- [ ] Currency Page
+- [ ] Domain Check Page
+- [ ] QR Code Generator Page
+- [ ] Yes/No Game Page
+- [ ] What is My IP page with Country
+- [ ] Universities Page by Countries
 - [ ] Flight page
 - [ ] Weather Page
 - [ ] Epic Games Free Games Component (Will include free games list with dates.)
-- [ ] Side Bar will be refactored for listing features
