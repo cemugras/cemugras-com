@@ -3,7 +3,8 @@
     "nameSurname": "Cem Ugras",
     "jobTitle": "Software Engineer | Gamer",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "whatIsMyIp": "What Is My IP"
   },
   "aboutComponent": {
     "paragraphOne": "Meet with Cem, a software engineer graduated from Maltepe University Software (50% Scholarship) (English) Department who is chilling with creating free open source applications for web & mobile platforms.",

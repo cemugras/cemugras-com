@@ -1,18 +1,23 @@
 <!--Toolbar[Responsive] for Web environments -->
 <div *ngIf="!(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" class="toolbar" role="dialog">
-  <span style="padding-left: 6%"></span>
+  <img src="https://i.hizliresim.com/irto2ge.png" routerLink="/" class="home-button" alt="image"/>
   <a class="text">{{'appComponent.nameSurname' | translate }}</a>
   <a class="text2">{{'appComponent.jobTitle' | translate }}</a>
-  <span class="filler"></span>
-  <button class="button-animatic-web toolbar-button-margin-color" routerLink="/about">
+  <div class="dropdown">
+    <button class="drop-button">
+      <mat-icon class="mat-icon-borders" aria-hidden="false" fontIcon="developer_board"></mat-icon>
+      {{'homeComponent.projectsText' | translate }}</button>
+    <div class="dropdown-content">
+      <a routerLink="/earthquakes" style="font-size: 20px;">{{'homeComponent.earthquakes.title' | translate }}</a>
+      <a href="#" style="font-size: 20px;">{{'appComponent.whatIsMyIp' | translate }}</a>
+    </div>
+  </div>
+  <!--<button class="button-animatic-web toolbar-button-margin-color" routerLink="/about">
     <mat-icon class="mat-icon-borders" aria-hidden="false" fontIcon="mark_unread_chat_alt"></mat-icon>
     {{'appComponent.about' | translate }}
-  </button>
-  <button class="button-animatic-web toolbar-button-margin-color" routerLink="/contact">
-    <mat-icon class="mat-icon-borders" aria-hidden="false" fontIcon="contact_mail"></mat-icon>
-    {{'appComponent.contact' | translate }}
-  </button>
-  <select (change)='updateLanguage(languageSelection.value)' #languageSelection>
+  </button>-->
+  <span class="filler"></span>
+  <select (change)='updateLanguage(languageSelection.value)' #languageSelection class="button-animatic-web">
     <option [value]="'en'">EN</option>
     <option [value]="'tr'">TR</option>
   </select>
@@ -52,40 +57,46 @@
 
 <!--Sidenav[Responsive] for Web environments -->
 <div *ngIf="!(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" class="sidenav">
-  <button class="button-animatic-web" routerLink="/">
-    <mat-icon class="mat-icon-borders" aria-hidden="false" fontIcon="home"></mat-icon>
-  </button>
   <a href="https://www.linkedin.com/in/cemugras/" target="_blank">
     <img src="/assets/sidebar/linkedin-icon.png" alt="image">
     <a class="tooltip">LinkedIn</a>
   </a>
-  <a href="https://www.hackerrank.com/cemugrs" target="_blank">
+  <!--<a href="https://www.hackerrank.com/cemugrs" target="_blank">
     <img src="/assets/sidebar/hackerrank-icon.png" alt="image">
     <a class="tooltip">HackerRank</a>
-  </a>
-  <a href="https://play.google.com/store/apps/developer?id=Cem+Ugras" target="_blank">
+  </a>-->
+  <!--<a href="https://play.google.com/store/apps/developer?id=Cem+Ugras" target="_blank">
     <img src="/assets/sidebar/googleplay-icon.png" alt="image">
     <a class="tooltip">GooglePlay</a>
-  </a>
+  </a>-->
   <a href="https://github.com/cemugras" target="_blank">
     <img src="/assets/sidebar/github-icon.png" alt="image">
     <a class="tooltip">GitHub</a>
   </a>
-  <a href="https://open.spotify.com/user/cemugrs" target="_blank">
+  <!--<a href="https://open.spotify.com/user/cemugrs" target="_blank">
     <img src="/assets/sidebar/spotify-icon.png" alt="image">
     <a class="tooltip">Spotify</a>
-  </a>
-  <a href="https://www.youtube.com/@mzm1187" target="_blank">
+  </a>-->
+  <!--<a href="https://www.youtube.com/@mzm1187" target="_blank">
     <img src="/assets/sidebar/youtube-icon.png" alt="image">
     <a class="tooltip">Youtube</a>
-  </a>
-  <a href="https://steamcommunity.com/id/cembabbe/" target="_blank">
+  </a>-->
+  <!--<a href="https://steamcommunity.com/id/cembabbe/" target="_blank">
     <img src="/assets/sidebar/steam-icon.png" alt="image">
     <a class="tooltip">Steam</a>
-  </a>
+  </a>-->
   <a href="https://www.buymeacoffee.com/cemugras" target="_blank">
     <img src="/assets/sidebar/donate-icon.png" alt="image">
     <a class="tooltip">Donate</a>
+  </a>
+
+  <a routerLink="/about">
+    <mat-icon class="mat-icon-borders" aria-hidden="false" fontIcon="mark_unread_chat_alt"></mat-icon>
+    <a class="tooltip">AboutMe</a>
+  </a>
+  <a routerLink="/contact">
+    <mat-icon class="mat-icon-borders" aria-hidden="false" fontIcon="contact_mail"></mat-icon>
+    <a class="tooltip">Contact</a>
   </a>
 </div>
 
