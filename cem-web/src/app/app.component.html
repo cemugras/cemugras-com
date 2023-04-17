@@ -1,7 +1,7 @@
 <!--Toolbar[Responsive] for Web environments -->
 <div *ngIf="!(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" class="toolbar" role="dialog">
   <img src="https://i.hizliresim.com/irto2ge.png" routerLink="/" class="home-button" alt="image"/>
-  <a class="text">{{'appComponent.nameSurname' | translate }}</a>
+  <div class="text" routerLink="/">{{'appComponent.nameSurname' | translate }}</div>
   <a class="text2">{{'appComponent.jobTitle' | translate }}</a>
   <div class="dropdown">
     <button class="drop-button">

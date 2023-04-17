@@ -47,6 +47,8 @@ $general-gray-color: rgba(63, 63, 63, 0.96);
     }
   }
   .text {
+    cursor: pointer;
+    background-color: transparent;
     font-weight: bold;
     font-size: 25px;
   }
@@ -174,8 +176,7 @@ $general-gray-color: rgba(63, 63, 63, 0.96);
   width: 50px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
-  top: 34%; /* Stay at the top */
-  bottom: 34%;
+  margin-top: 40vh;
   left: 0; /* Stay at the left */
   background: $general-background-color;
   padding-top: 5px;
