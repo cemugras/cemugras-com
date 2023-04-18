@@ -70,11 +70,11 @@ If environment is setting first time, start with #1 otherwise start with #3
 - [x] Earthquakes page
 - [x] Language Support (TR/EN)
 - [x] Side Bar refactored for listing features
+- [x] What is My IP page with map
 - [ ] Currency Page
 - [ ] Domain Check Page
 - [ ] QR Code Generator Page
 - [ ] Yes/No Game Page
-- [ ] What is My IP page with Country
 - [ ] Universities Page by Countries
 - [ ] Flight page
 - [ ] Weather Page

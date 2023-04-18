@@ -10,23 +10,6 @@ $general-gray-color: rgba(63, 63, 63, 0.96);
   color: $general-white-color;
 }
 
-.bg {
-  z-index: -1;
-  /* Set rules to fill background */
-  min-height: 100%;
-  min-width: 1024px;
-
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-}
-
 .toolbar {
   position: absolute;
   top: 0;
@@ -35,10 +18,23 @@ $general-gray-color: rgba(63, 63, 63, 0.96);
   height: 50px;
   display: flex;
   align-items: center;
-  font-weight: bold;
   font-size: 25px;
-  background: $general-background-color;
   color: $general-white-color;
+  background: $general-background-color;
+
+  .home-button{
+    border: none;
+    cursor: pointer;
+    background-color: inherit;
+    transition: transform .7s ease-in-out;
+    border-radius: round(100px);
+    height: 50px;
+    width: 50px;
+  }
+  .home-button:hover{
+    transform: rotate(360deg);
+  }
+
   select {
     min-height: 60%;
     font-size: 50%;
@@ -51,7 +47,8 @@ $general-gray-color: rgba(63, 63, 63, 0.96);
     }
   }
   .text {
-    padding-left: 3%;
+    cursor: pointer;
+    background-color: transparent;
     font-weight: bold;
     font-size: 25px;
   }
@@ -60,6 +57,47 @@ $general-gray-color: rgba(63, 63, 63, 0.96);
     font-family: 'Orbitron', sans-serif;
     font-size: 15px;
     padding-top: 5px;
+  }
+
+  .dropdown {
+    position: relative;
+    padding-left: 2%;
+    display: inline-block;
+    .drop-button {
+      color: $general-white-color;
+      cursor: pointer;
+      background-color: $general-gray-color;
+      font-size: 25px;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      width: 150px;
+      background-color: $general-black-color;
+      z-index: 1;
+      a {
+        color: $general-white-color;
+        font-size: 2vw;
+      }
+      a:hover {
+        transform: translateX(1px);
+        background-color: $general-gray-color;
+        color: $general-white-color;
+        box-shadow: 0 1px 17px $general-white-color;
+      }
+    }
+  }
+
+  .dropdown:hover .dropdown-content {display: block}
+  .dropdown:hover .drop-button {
+    box-shadow: 0 1px 17px $general-white-color;
+    transform: translateX(1px);}
+
+  .dropdown-content a {
+    color: black;
+    padding: 2px 4px;
+    text-decoration: none;
+    display: block;
   }
   .mobile-name {
     font-family: 'Orbitron', sans-serif;
@@ -134,11 +172,11 @@ $general-gray-color: rgba(63, 63, 63, 0.96);
 
 /* The sidebar menu */
 .sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 70px; /* Set the width of the sidebar */
+  //height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 50px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  margin-top: 40vh;
   left: 0; /* Stay at the left */
   background: $general-background-color;
   padding-top: 5px;
@@ -150,7 +188,7 @@ $general-gray-color: rgba(63, 63, 63, 0.96);
   }
 
   a {
-    padding: 8px 8px 8px 8px;
+    padding: 4px 4px 4px 2px;
     text-decoration: none;
     font-size: 25px;
     color: $general-black-color;
@@ -161,13 +199,18 @@ $general-gray-color: rgba(63, 63, 63, 0.96);
       height: 20px;
     }
 
+    mat-icon {
+      background-color: rgba(0, 0, 0, 0);
+      color: white;
+    }
+
     .tooltip {
       display: inline-block;
       position: absolute;
       background-color: $general-white-color;
       padding: 8px 15px;
-      border-radius: 30px;
-      left: 100px;
+      border-radius: 50px;
+      left: 60px;
       opacity: 0;
       visibility: hidden;
       font-size: 13px;
@@ -190,8 +233,8 @@ $general-gray-color: rgba(63, 63, 63, 0.96);
 
   a:hover {
     transform: translateX(1px);
-    padding: 8px 8px 8px 2px;
-    border-radius: 20px 20px 20px 20px;
+    padding: 4px 4px 4px 2px;
+    border-radius: 10px 10px 10px 10px;
     box-shadow: 0 1px 17px $general-white-color;
 
     .tooltip {

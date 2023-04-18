@@ -73,6 +73,33 @@
     </mat-card-actions>
   </mat-card>
 
+  <!-- My IP -->
+  <mat-card [ngClass]="{XSmall : 'content-card-mobile',
+            Small : 'content-card-mobile',
+            Medium : 'content-card-web',
+            Large : 'content-card-web',
+            XLarge : 'content-card-web'}[currentScreenSize]">
+    <mat-card-header>
+      <img
+        src="https://cdn1.iconfinder.com/data/icons/delivery-logistics/512/delivery_adress-512.png"
+        alt="image"
+        mat-card-avatar
+        class="card-icon"/>
+      <mat-card-title class="font-features">{{'homeComponent.myIp.title' | translate }}</mat-card-title>
+      <mat-card-subtitle class="card-subtitles"></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="font-features">
+        <span class="tab"></span>{{'homeComponent.myIp.contentOne' | translate }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="button-animatic" routerLink="/my-ip">
+        {{'homeComponent.myIp.title' | translate }}
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
   <!-- Mia Instagram -->
   <mat-card [ngClass]="{XSmall : 'content-card-mobile',
             Small : 'content-card-mobile',

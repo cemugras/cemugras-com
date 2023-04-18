@@ -6,7 +6,7 @@ import { Icon } from "leaflet";
 import { MatTable } from "@angular/material/table";
 import { Observable } from "rxjs";
 import { HttpClient } from "@angular/common/http";
-import {TranslateService} from "@ngx-translate/core";
+import { TranslateService } from "@ngx-translate/core";
 
 export interface EarthquakeListElement {
   date: string;
@@ -41,6 +41,7 @@ export class EarthquakesPageComponent implements OnInit{
     layers: [
       Leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {})
     ],
+    attributionControl: false,
     zoom: 6,
     center: { lat: 39.1461, lng: 34.1595 }
   }

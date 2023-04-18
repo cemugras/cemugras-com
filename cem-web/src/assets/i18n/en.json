@@ -3,7 +3,8 @@
     "nameSurname": "Cem Ugras",
     "jobTitle": "Software Engineer | Gamer",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "whatIsMyIp": "My IP"
   },
   "aboutComponent": {
     "paragraphOne": "Meet with Cem, a software engineer graduated from Maltepe University Software (50% Scholarship) (English) Department who is chilling with creating free open source applications for web & mobile platforms.",
@@ -21,6 +22,11 @@
       "contentTwo": "This page is still in progress.",
       "contentThree": "You can check the project with below button.",
       "contentFour": "Please contact if any errors/ideas occur while the feature is using."
+    },
+    "myIp": {
+      "title": "My IP",
+      "contentOne": "What is my IP address and some details with map display.",
+      "marker": "Your IPs approximately location."
     },
     "mia": {
       "title": "Mia",
@@ -60,5 +66,13 @@
     "longitude": "Longitude",
     "mag": "Magnitude",
     "location": "Location"
+  },
+  "ipComponent": {
+    "ipAddress": "IP Address",
+    "country": "Country",
+    "ispProvider": "ISP Provider",
+    "ispCompanyName": "ISP Company",
+    "region": "Region",
+    "zipCode": "ZIP Code"
   }
 }
