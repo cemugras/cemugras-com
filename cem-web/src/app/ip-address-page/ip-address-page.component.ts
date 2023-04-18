@@ -3,7 +3,9 @@ import { Observable } from "rxjs";
 import { HttpClient } from "@angular/common/http";
 import { TranslateService } from "@ngx-translate/core";
 import { GlobalFile } from "../global-file";
-import {IpClass, IpGeoLocationClass} from "./ip-address-collection";
+import { IpClass, IpGeoLocationClass } from "./ip-address-collection";
+import * as Leaflet from "leaflet";
+import { Icon } from "leaflet";
 
 @Component({
   selector: 'app-ip-address-page',
@@ -14,6 +16,23 @@ export class IpAddressPageComponent implements OnInit {
 
   ipClass: IpClass;
   ipGeoLocationClass: IpGeoLocationClass;
+
+  // Map Leaflet components
+  map!: Leaflet.Map;
+  markers: Leaflet.Marker[] = [];
+  markersTemp: marker[] = [];
+  options = {
+    layers: [
+      Leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {})
+    ],
+    zoomControl: false,
+    dragging: false,
+    scrollWheelZoom: false,
+    touchZoom: false,
+    doubleClickZoom: false,
+    attributionControl: false,
+    zoom: 7
+  }
 
   constructor(private httpClient: HttpClient, private translate: TranslateService, private changeDetectorRef: ChangeDetectorRef) {
     translate.setDefaultLang(GlobalFile.language);
@@ -51,9 +70,50 @@ export class IpAddressPageComponent implements OnInit {
           url
         );
 
+        this.fillMap();
         this.changeDetectorRef.detectChanges();
       })
     })
+  }
+
+  generateMarker(data: any, index: number) {
+    return Leaflet.marker(data.position, { draggable: data.draggable })
+      .on('click', (event) => this.markerClicked(event, index))
+      .on('dragend', (event) => this.markerDragEnd(event, index));
+  }
+
+  onMapReady($event: Leaflet.Map) {
+    this.map = $event;
+  }
+
+  mapClicked($event: any) {
+    console.log($event.latlng.lat, $event.latlng.lng);
+  }
+
+  markerClicked($event: any, index: number) {
+    console.log($event.latlng.lat, $event.latlng.lng);
+  }
+
+  markerDragEnd($event: any, index: number) {
+    console.log($event.target.getLatLng());
+  }
+
+  private fillMap() {
+    let positionVar = {lat: parseFloat(this.ipGeoLocationClass.lat), lng: parseFloat(this.ipGeoLocationClass.lon)};
+    this.markersTemp.push({
+      position: positionVar,
+      label: this.translate.instant('homeComponent.myIp.marker'),
+      draggable: false
+    });
+
+    const marker = this.generateMarker(this.markersTemp[0], 0);
+    marker.setIcon(new Icon({
+      iconUrl: 'https://icon-library.com/images/round-icon/round-icon-8.jpg',
+      iconSize: [20, 20]
+    }));
+    marker.addTo(this.map).bindPopup(this.markersTemp[0].label);
+    this.map.panTo(this.markersTemp[0].position);
+    this.markers.push(marker)
   }
 
   private getIpAddress(): Observable<any> {
@@ -64,4 +124,14 @@ export class IpAddressPageComponent implements OnInit {
     const url = "http://ip-api.com/json/" + this.ipClass.ip;
     return this.httpClient.get(url);
   }
+}
+
+interface marker {
+  position:
+    {
+      lat: number,
+      lng: number
+    }
+  label: string;
+  draggable: boolean;
 }

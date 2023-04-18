@@ -26,4 +26,11 @@
       <td>: {{ipGeoLocationClass.zip}}</td>
     </tr>
   </table>
+  <!-- Map for IP Address -->
+  <div class="map-container"
+       leaflet
+       [leafletOptions]="options"
+       (leafletMapReady)="onMapReady($event)"
+       (leafletClick)="mapClicked($event)">
+  </div>
 </div>

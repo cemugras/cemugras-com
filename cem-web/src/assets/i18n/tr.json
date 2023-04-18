@@ -25,7 +25,8 @@
     },
     "myIp": {
       "title": "IP Adresim",
-      "contentOne": "IP adres detayı ve harita görünümü."
+      "contentOne": "IP adres detayı ve harita görünümü.",
+      "marker": "IP adresinizin yaklaşık konumu."
     },
     "mia": {
       "title": "Mia",

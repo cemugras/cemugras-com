@@ -25,7 +25,8 @@
     },
     "myIp": {
       "title": "My IP",
-      "contentOne": "What is my IP address and some details with map display."
+      "contentOne": "What is my IP address and some details with map display.",
+      "marker": "Your IPs approximately location."
     },
     "mia": {
       "title": "Mia",
