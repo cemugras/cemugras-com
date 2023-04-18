@@ -1,0 +1,29 @@
+<div class="main-container">
+  <table>
+    <tr>
+      <th>{{'ipComponent.ipAddress' | translate}}</th>
+      <td>: {{ipClass.ip}}</td>
+    </tr>
+    <tr>
+      <th>{{'ipComponent.country' | translate}}</th>
+      <td>: <img src="{{ipGeoLocationClass.flagUrl}}" alt="Country flag">
+        {{ipGeoLocationClass.country}}</td>
+    </tr>
+    <tr>
+      <th>{{'ipComponent.ispProvider' | translate}}</th>
+      <td>: {{ipGeoLocationClass.isp}}</td>
+    </tr>
+    <tr>
+      <th>{{'ipComponent.ispCompanyName' | translate}}</th>
+      <td>: {{ipGeoLocationClass.as}}</td>
+    </tr>
+    <tr>
+      <th>{{'ipComponent.region' | translate}}</th>
+      <td>: {{ipGeoLocationClass.regionName}} {{ipGeoLocationClass.region}}</td>
+    </tr>
+    <tr>
+      <th>{{'ipComponent.zipCode' | translate}}</th>
+      <td>: {{ipGeoLocationClass.zip}}</td>
+    </tr>
+  </table>
+</div>

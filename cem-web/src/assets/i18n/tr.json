@@ -23,6 +23,10 @@
       "contentThree": "Projeyi aşağıdaki butona tıklayarak kullanabilirsiniz.",
       "contentFour": "Bu özelliği kullanırken bir sorun/fikir ortaya çıkarsa lütfen iletişime geçiniz."
     },
+    "myIp": {
+      "title": "IP Adresim",
+      "contentOne": "IP adres detayı ve harita görünümü."
+    },
     "mia": {
       "title": "Mia",
       "header": "Smokin",
@@ -60,5 +64,13 @@
     "longitude": "Boylam",
     "mag": "Büyüklük",
     "location": "Konum"
+  },
+  "ipComponent": {
+    "ipAddress": "IP Adresiniz",
+    "country": "Ülkeniz",
+    "ispProvider": "Servis Sağlayıcısı",
+    "ispCompanyName": "Servis Sağlayıcı Şirket",
+    "region": "Bölge",
+    "zipCode": "ZIP Kodu"
   }
 }
