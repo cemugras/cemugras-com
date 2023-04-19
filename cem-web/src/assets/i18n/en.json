@@ -71,7 +71,7 @@
     "ipAddress": "IP Address",
     "country": "Country",
     "ispProvider": "ISP Provider",
-    "ispCompanyName": "ISP Company",
+    "timeZone": "Time Zone",
     "region": "Region",
     "zipCode": "ZIP Code"
   }

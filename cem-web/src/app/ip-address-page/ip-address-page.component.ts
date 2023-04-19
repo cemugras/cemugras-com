@@ -3,7 +3,7 @@ import { Observable } from "rxjs";
 import { HttpClient } from "@angular/common/http";
 import { TranslateService } from "@ngx-translate/core";
 import { GlobalFile } from "../global-file";
-import { IpClass, IpGeoLocationClass } from "./ip-address-collection";
+import { IpGeoLocationClass } from "./ip-address-collection";
 import * as Leaflet from "leaflet";
 import { Icon } from "leaflet";
 
@@ -14,7 +14,6 @@ import { Icon } from "leaflet";
 })
 export class IpAddressPageComponent implements OnInit {
 
-  ipClass: IpClass;
   ipGeoLocationClass: IpGeoLocationClass;
 
   // Map Leaflet components
@@ -37,7 +36,6 @@ export class IpAddressPageComponent implements OnInit {
   constructor(private httpClient: HttpClient, private translate: TranslateService, private changeDetectorRef: ChangeDetectorRef) {
     translate.setDefaultLang(GlobalFile.language);
 
-    this.ipClass = {} as IpClass;
     this.ipGeoLocationClass = {} as IpGeoLocationClass;
 
     //-- Window size logger for test purposes --//
@@ -50,30 +48,27 @@ export class IpAddressPageComponent implements OnInit {
 
   fillIpCountryData() {
     let url = 'https://flagsapi.com/';
-    this.getIpAddress().subscribe(res => {
-      this.ipClass = new IpClass(res.ip);
+    this.getIpGeoLocation().subscribe(response => {
+      url = url + response.country + "/shiny/24.png";
+      this.ipGeoLocationClass = new IpGeoLocationClass(
+        response.ip,
+        response.city,
+        response.region,
+        response.country,
+        response.loc,
+        response.org,
+        response.postal,
+        response.timezone,
+        url
+      );
 
-      this.getIpGeoLocation().subscribe(response => {
-        url = url + response.countryCode + "/shiny/24.png";
-        this.ipGeoLocationClass = new IpGeoLocationClass(
-          response.country,
-          response.countryCode,
-          response.region,
-          response.regionName,
-          response.city,
-          response.zip,
-          response.lat,
-          response.lon,
-          response.timeZone,
-          response.isp,
-          response.as,
-          url
-        );
-
-        this.fillMap();
-        this.changeDetectorRef.detectChanges();
+      this.fillMap();
+      this.changeDetectorRef.detectChanges();
+    },
+      error => {
+        console.log("Error occured, re-fetching..");
+        this.fillIpCountryData();
       })
-    })
   }
 
   generateMarker(data: any, index: number) {
@@ -99,7 +94,10 @@ export class IpAddressPageComponent implements OnInit {
   }
 
   private fillMap() {
-    let positionVar = {lat: parseFloat(this.ipGeoLocationClass.lat), lng: parseFloat(this.ipGeoLocationClass.lon)};
+    const splitted = this.ipGeoLocationClass.loc.split(",");
+    let lat = splitted[0];
+    let lon = splitted[1];
+    let positionVar = {lat: parseFloat(lat), lng: parseFloat(lon)};
     this.markersTemp.push({
       position: positionVar,
       label: this.translate.instant('homeComponent.myIp.marker'),
@@ -116,12 +114,8 @@ export class IpAddressPageComponent implements OnInit {
     this.markers.push(marker)
   }
 
-  private getIpAddress(): Observable<any> {
-    return this.httpClient.get("https://api.ipify.org/?format=json");
-  }
-
   private getIpGeoLocation(): Observable<any> {
-    const url = "http://ip-api.com/json/" + this.ipClass.ip;
+    const url = "https://ipinfo.io/json?token=5b8e95b87826a7";
     return this.httpClient.get(url);
   }
 }

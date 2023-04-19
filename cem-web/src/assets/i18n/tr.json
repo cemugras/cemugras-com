@@ -70,7 +70,7 @@
     "ipAddress": "IP Adresiniz",
     "country": "Ülkeniz",
     "ispProvider": "Servis Sağlayıcısı",
-    "ispCompanyName": "Servis Sağlayıcı Şirket",
+    "timeZone": "Saat Dilimi",
     "region": "Bölge",
     "zipCode": "ZIP Kodu"
   }
