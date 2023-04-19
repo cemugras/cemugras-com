@@ -2,7 +2,7 @@
   <table>
     <tr>
       <th>{{'ipComponent.ipAddress' | translate}}</th>
-      <td>: {{ipClass.ip}}</td>
+      <td>: {{ipGeoLocationClass.ip}}</td>
     </tr>
     <tr>
       <th>{{'ipComponent.country' | translate}}</th>
@@ -11,19 +11,19 @@
     </tr>
     <tr>
       <th>{{'ipComponent.ispProvider' | translate}}</th>
-      <td>: {{ipGeoLocationClass.isp}}</td>
-    </tr>
-    <tr>
-      <th>{{'ipComponent.ispCompanyName' | translate}}</th>
-      <td>: {{ipGeoLocationClass.as}}</td>
+      <td>: {{ipGeoLocationClass.org}}</td>
     </tr>
     <tr>
       <th>{{'ipComponent.region' | translate}}</th>
-      <td>: {{ipGeoLocationClass.regionName}} {{ipGeoLocationClass.region}}</td>
+      <td>: {{ipGeoLocationClass.region}}</td>
+    </tr>
+    <tr>
+      <th>{{'ipComponent.timeZone' | translate}}</th>
+      <td>: {{ipGeoLocationClass.timezone}}</td>
     </tr>
     <tr>
       <th>{{'ipComponent.zipCode' | translate}}</th>
-      <td>: {{ipGeoLocationClass.zip}}</td>
+      <td>: {{ipGeoLocationClass.postal}}</td>
     </tr>
   </table>
   <!-- Map for IP Address -->
