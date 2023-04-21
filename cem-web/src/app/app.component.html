@@ -9,7 +9,7 @@
       {{'homeComponent.projectsText' | translate }}</button>
     <div class="dropdown-content">
       <a routerLink="/earthquakes" style="font-size: 20px;">{{'homeComponent.earthquakes.title' | translate }}</a>
-      <a routerLink="/my-ip" style="font-size: 20px;">{{'appComponent.whatIsMyIp' | translate }}</a>
+      <a routerLink="/my-ip" style="font-size: 20px;">{{'homeComponent.myIp.title' | translate }}</a>
     </div>
   </div>
   <!--<button class="button-animatic-web toolbar-button-margin-color" routerLink="/about">
@@ -31,19 +31,19 @@
   <mat-menu #menu="matMenu">
     <button mat-menu-item routerLink="/earthquakes" class="mat-menu-top-item">
       <mat-icon class="general-color-white">cell_wifi</mat-icon>
-      <span class="general-color-white">Earthquakes</span>
+      <span class="general-color-white">{{'homeComponent.earthquakes.title' | translate }}</span>
     </button>
     <button mat-menu-item routerLink="/my-ip" class="mat-menu-item">
       <mat-icon class="general-color-white">router</mat-icon>
-      <span class="general-color-white">My IP</span>
+      <span class="general-color-white">{{'homeComponent.myIp.title' | translate }}</span>
     </button>
     <button mat-menu-item routerLink="/about" class="mat-menu-item">
       <mat-icon class="general-color-white">info</mat-icon>
-      <span class="general-color-white">About Me</span>
+      <span class="general-color-white">{{'appComponent.about' | translate }}</span>
     </button>
     <button mat-menu-item routerLink="/contact" class="mat-menu-bottom-item">
       <mat-icon class="general-color-white">contact_mail</mat-icon>
-      <span class="general-color-white">Contact</span>
+      <span class="general-color-white">{{'appComponent.contact' | translate }}</span>
     </button>
   </mat-menu>
   <select (change)='updateLanguage(languageSelection.value)' #languageSelection>
