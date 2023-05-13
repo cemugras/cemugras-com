@@ -71,6 +71,7 @@ If environment is setting first time, start with #1 otherwise start with #3
 - [x] Language Support (TR/EN)
 - [x] Side Bar refactored for listing features
 - [x] What is My IP page with map
+- [ ] ToDo List Page 
 - [ ] Currency Page
 - [ ] Domain Check Page
 - [ ] QR Code Generator Page
