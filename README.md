@@ -1,6 +1,7 @@
 # CemWeb
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
+`npm install -g @angular/cli@15.0.3`
 
 The project is on live with the following URL: https://cemugras.com
 
@@ -41,6 +42,8 @@ You can also use:
 
 `npm audit fix --force` -> if above command not works
 
+`npm install --legacy-peer-deps` -> upstream dependency conflict
+
 ### Issue ng commands
 > AppData\Roaming\npm\ng.ps1 cannot be loaded because running scripts is disabled on this system.
 >
@@ -71,6 +74,7 @@ If environment is setting first time, start with #1 otherwise start with #3
 - [x] Language Support (TR/EN)
 - [x] Side Bar refactored for listing features
 - [x] What is My IP page with map
+- [ ] Online Games Server Ping Page
 - [ ] Currency Page
 - [ ] Domain Check Page
 - [ ] QR Code Generator Page

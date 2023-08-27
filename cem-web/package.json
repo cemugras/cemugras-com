@@ -1,6 +1,6 @@
 {
   "name": "cem-web",
-  "version": "0.0.0",
+  "version": "1.0.9",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^15.0.3",
-    "@angular/cli": "~15.0.3",
+    "@angular/cli": "^15.2.9",
     "@angular/compiler-cli": "^15.0.3",
     "@types/googlemaps": "^3.43.3",
     "@types/jasmine": "~4.0.0",
