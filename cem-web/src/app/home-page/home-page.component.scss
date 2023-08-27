@@ -89,11 +89,13 @@ $general-white-color: rgb(255, 255, 255);
 
 .hero-div-img {
   width: 50%;
+  animation: animLeftToRight 2s ease 0s 1 normal forwards;
 }
 
 .hero-div-img-mobile {
   width: 100%;
   height: auto;
+  animation: animTopToBottom 2s ease 0s 1 normal forwards;
 }
 
 .hero-div-text {
@@ -105,6 +107,7 @@ $general-white-color: rgb(255, 255, 255);
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: animRightToLeft 2s ease 0s 1 normal forwards;
 }
 
 .hero-div-text-mobile {
@@ -115,4 +118,50 @@ $general-white-color: rgb(255, 255, 255);
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: animBottomToTop 2s ease 0s 1 normal forwards;
+}
+
+@keyframes animLeftToRight {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes animRightToLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes animTopToBottom {
+	0% {
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes animBottomToTop {
+	0% {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
