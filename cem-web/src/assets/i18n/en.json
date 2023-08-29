@@ -4,7 +4,8 @@
     "jobTitle": "Software Engineer | Gamer",
     "about": "About",
     "contact": "Contact",
-    "whatIsMyIp": "My IP"
+    "whatIsMyIp": "My IP",
+    "donate": "Donate"
   },
   "aboutComponent": {
     "paragraphOne": "Meet with Cem, a software engineer graduated from Maltepe University Software (50% Scholarship) (English) Department who is chilling with creating free open source applications for web & mobile platforms.",
