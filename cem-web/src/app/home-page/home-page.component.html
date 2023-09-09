@@ -100,6 +100,33 @@
     </mat-card-actions>
   </mat-card>
 
+  <!-- Game Server Ping -->
+  <mat-card [ngClass]="{XSmall : 'content-card-mobile',
+            Small : 'content-card-mobile',
+            Medium : 'content-card-web',
+            Large : 'content-card-web',
+            XLarge : 'content-card-web'}[currentScreenSize]">
+    <mat-card-header>
+      <img
+        src="https://cdn3.iconfinder.com/data/icons/vol-3/128/game-512.png"
+        alt="image"
+        mat-card-avatar
+        class="card-icon"/>
+      <mat-card-title class="font-features">{{'homeComponent.gamePing.title' | translate }}</mat-card-title>
+      <mat-card-subtitle class="card-subtitles"></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="font-features">
+        <span class="tab"></span>{{'homeComponent.gamePing.contentOne' | translate }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="button-animatic" routerLink="/game-server-ping">
+        {{'homeComponent.gamePing.title' | translate }}
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
   <!-- Mia Instagram -->
   <mat-card [ngClass]="{XSmall : 'content-card-mobile',
             Small : 'content-card-mobile',

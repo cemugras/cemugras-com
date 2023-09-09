@@ -1,0 +1,85 @@
+//Color Variables
+$general-background-color: rgba(0, 0, 0, 0.6);
+$general-white-color: rgb(255, 255, 255);
+
+.main-container {
+    color: $general-white-color;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 5%;
+    width: 350px;
+    height: 10%;
+
+    position: absolute;   
+}
+  
+.main-container-mobile {
+    color: $general-white-color;
+  
+    /* Set up positioning */
+    margin-top: 20%;
+
+    /* Set up proportionate scaling */
+    height: 20%;
+    border-radius: 50px;
+}
+
+.button-animatic {
+    background-color: rgba(63, 63, 63, 0.96);
+    padding: 10px 10px 10px 10px;
+    position: absolute;
+    border-radius: 20px 20px 20px 20px;
+    font-size: 12px;
+    cursor: pointer;
+    color: $general-white-color;
+    bottom: 10px;
+    right: 20%;
+    left: 20%;
+    z-index: 3;
+}
+.button-animatic:not([disabled]):hover {
+    transform: translateX(1px);
+    box-shadow: 1px 0 10px $general-white-color;
+}
+
+.content-card-web{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: red 1px solid;
+    background-color: $general-background-color;
+    border-radius: 50px;
+    position: relative;
+}
+.content-card-mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        background-color: $general-background-color;
+        margin-bottom: 20%;
+        position: relative;
+
+        h3 {
+            color: $general-white-color;
+            border: 1px solid purple;
+            position: absolute;
+            bottom: 25%;
+            
+        }
+    }
+}
+
+.chart {
+    z-index: 1;
+}
+
+.font-features {
+    font-family: 'Orbitron', sans-serif;
+}

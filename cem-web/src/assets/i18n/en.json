@@ -29,6 +29,10 @@
       "contentOne": "What is my IP address and some details with map display.",
       "marker": "Your IPs approximately location."
     },
+    "gamePing": {
+      "title": "Game Servers Ping",
+      "contentOne": "Check your ping from some games with your internet connection."
+    },
     "mia": {
       "title": "Mia",
       "header": "The Smokin",

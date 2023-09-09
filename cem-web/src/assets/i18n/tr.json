@@ -29,6 +29,10 @@
       "contentOne": "IP adres detayı ve harita görünümü.",
       "marker": "IP adresinizin yaklaşık konumu."
     },
+    "gamePing": {
+      "title": "Oyun Sunucuları Ping",
+      "contentOne": "Oyun sunucularındaki ping değerlerinizi bağlandığınız internet altyapısı ile kontrol edin."
+    },
     "mia": {
       "title": "Mia",
       "header": "Smokin",

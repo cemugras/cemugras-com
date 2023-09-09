@@ -1,0 +1,41 @@
+<div [ngClass]="{XSmall : 'main-container-mobile',
+                Small : 'main-container-mobile',
+                Medium : 'main-container',
+                Large : 'main-container',
+                XLarge : 'main-container'}[currentScreenSize]">
+
+    <!--
+    <button class="button-animatic" (click)="postPing('https://dynamodb.eu-west-2.amazonaws.com/?random-no-cache=130ee')">
+        {{'homeComponent.gamePing.title' | translate }}
+    </button>
+    -->
+
+    <div [ngClass]="{XSmall : 'content-card-mobile',
+                    Small : 'content-card-mobile',
+                    Medium : 'content-card-web',
+                    Large : 'content-card-web',
+                    XLarge : 'content-card-web'}[currentScreenSize]">
+        <div class="card">
+            <h2 class="font-features">LoL EU West</h2>
+            <mat-slide-toggle (change)="slideChange($event, 1)" [checked]="lolEuWest"></mat-slide-toggle>
+            <canvas id="lolChartEuWest" class="chart"></canvas>
+            <h3 class="font-features"> {{pingLolEuWest}} ms</h3>
+        </div>
+        
+        <div class="card">
+            <h2 class="font-features">LoL EU Nordic & East</h2>
+            <mat-slide-toggle (change)="slideChange($event, 2)" [checked]="lolEuEast"></mat-slide-toggle>
+            <canvas id="lolChartEuEast" class="chart"></canvas>
+            <h3 class="font-features"> {{pingLolEuEast}} ms</h3>
+        </div>
+        
+        <div class="card">
+            <h2 class="font-features">LoL US East</h2>
+            <mat-slide-toggle (change)="slideChange($event, 3)" [checked]="lolUs"></mat-slide-toggle>
+            <canvas id="lolChartUs" class="chart"></canvas>
+            <h3 class="font-features"> {{pingLolUs}} ms</h3>
+        </div>
+        
+    </div>
+    
+</div>

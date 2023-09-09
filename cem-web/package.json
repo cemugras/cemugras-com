@@ -26,6 +26,7 @@
     "@asymmetrik/ngx-leaflet": "^15.0.1",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
+    "chart.js": "^4.4.0",
     "leaflet": "^1.9.3",
     "ng-gallery": "^8.0.0",
     "rxjs": "~7.5.0",

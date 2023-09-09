@@ -27,6 +27,7 @@ You can also use:
 5) [angular-table](https://material.angular.io/components/table) |
 6) [ngx-leaflet](https://leafletjs.com/index.html)
 7) [ngx-translate](https://www.npmjs.com/package/@ngx-translate/core)
+8) [ng-apexcharts](https://github.com/apexcharts/ng-apexcharts)
 
 #### 1) ngx-gallery Development Notes
 #### 2) flex-layout Development Notes
@@ -37,6 +38,8 @@ You can also use:
 1) `npm install leaflet @asymmetrik/ngx-leaflet`
 2) `npm install --save-dev @types/leaflet`
 #### 6) ngx-translate Development Notes
+#### 7) ng-apexcharts Development Notes
+1) `npm i ng-apexcharts`
 
 ## Known Issues
 `npm audit fix` -> 1 moderate severity vulnerability
@@ -75,6 +78,7 @@ If environment is setting first time, start with #1 otherwise start with #3
 - [x] Language Support (TR/EN)
 - [x] Side Bar refactored for listing features
 - [x] What is My IP page with map
+- [x] Game server ping page
 - [ ] Online Games Server Ping Page
 - [ ] Currency Page
 - [ ] Domain Check Page

@@ -19,6 +19,7 @@ import {MatTableModule} from "@angular/material/table";
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 // import ngx-translate and the http loader
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -31,6 +32,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { EarthquakesPageComponent } from './earthquakes-page/earthquakes-page.component';
 import { IpAddressPageComponent } from './ip-address-page/ip-address-page.component';
+import { GameServerPingPageComponent } from './game-server-ping-page/game-server-ping-page.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { IpAddressPageComponent } from './ip-address-page/ip-address-page.compon
     HomePageComponent,
     ContactPageComponent,
     EarthquakesPageComponent,
-    IpAddressPageComponent
+    IpAddressPageComponent,
+    GameServerPingPageComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +64,7 @@ import { IpAddressPageComponent } from './ip-address-page/ip-address-page.compon
     HttpClientModule,
     LeafletModule,
     HttpClientModule,
+    MatSlideToggleModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
