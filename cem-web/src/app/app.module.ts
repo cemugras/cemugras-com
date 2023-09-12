@@ -33,6 +33,7 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
 import { EarthquakesPageComponent } from './earthquakes-page/earthquakes-page.component';
 import { IpAddressPageComponent } from './ip-address-page/ip-address-page.component';
 import { GameServerPingPageComponent } from './game-server-ping-page/game-server-ping-page.component';
+import { ProjectsPageComponent } from './projects-page/projects-page.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { GameServerPingPageComponent } from './game-server-ping-page/game-server
     ContactPageComponent,
     EarthquakesPageComponent,
     IpAddressPageComponent,
-    GameServerPingPageComponent
+    GameServerPingPageComponent,
+    ProjectsPageComponent
   ],
   imports: [
     BrowserModule,

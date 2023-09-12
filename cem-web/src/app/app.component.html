@@ -2,7 +2,7 @@
 <div *ngIf="!(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" class="toolbar" role="dialog">
   <div class="top-menu">
     <a routerLink="/" style="font-size: 20px;">{{'appComponent.homePage' | translate }}</a>
-    <a routerLink="/my-ip" style="font-size: 20px;">{{'appComponent.projectsPage' | translate }}</a>
+    <a routerLink="/projects" style="font-size: 20px;">{{'appComponent.projectsPage' | translate }}</a>
     <a routerLink="/about" style="font-size: 20px;">{{'appComponent.aboutPage' | translate }}</a>
   </div>
   
@@ -18,13 +18,9 @@
     <mat-icon class="toolbar-button-margin-color rotate-me">menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item routerLink="/earthquakes" class="mat-menu-top-item">
+    <button mat-menu-item routerLink="/projects" class="mat-menu-top-item">
       <mat-icon class="general-color-white">cell_wifi</mat-icon>
-      <span class="general-color-white">{{'homeComponent.earthquakes.title' | translate }}</span>
-    </button>
-    <button mat-menu-item routerLink="/my-ip" class="mat-menu-item">
-      <mat-icon class="general-color-white">router</mat-icon>
-      <span class="general-color-white">{{'appComponent.whatIsMyIp' | translate }}</span>
+      <span class="general-color-white">{{'appComponent.projectsPage' | translate }}</span>
     </button>
     <button mat-menu-item routerLink="/about" class="mat-menu-item">
       <mat-icon class="general-color-white">info</mat-icon>

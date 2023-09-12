@@ -1,0 +1,199 @@
+<div fxLayout="row wrap" [ngClass]="{XSmall : 'card-container-mobile',
+     Small : 'card-container-mobile',
+     Medium : 'card-container-web',
+     Large : 'card-container-web',
+     XLarge : 'card-container-web'}[currentScreenSize]">
+
+    <div *ngIf="(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')"
+        style="min-width: 100%; display: flex; align-items: center; justify-content: center">
+        <p class="font-features content-card-mobile">{{'projectComponent.projectsText' | translate }}</p>
+    </div>
+
+    <!-- Earthquakes -->
+    <mat-card [ngClass]="{XSmall : 'content-card-mobile',
+            Small : 'content-card-mobile',
+            Medium : 'content-card-web',
+            Large : 'content-card-web',
+            XLarge : 'content-card-web'}[currentScreenSize]">
+        <mat-card-header>
+            <img src="/assets/icons/earthquake-icon.png" alt="image" mat-card-avatar class="card-icon" />
+            <mat-card-title class="font-features">{{'projectComponent.earthquakes.title' | translate }}</mat-card-title>
+            <mat-card-subtitle class="card-subtitles">{{'projectComponent.earthquakes.header' | translate
+                }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="font-features">
+                <span class="tab"></span>{{'projectComponent.earthquakes.contentOne' | translate }}
+            </p>
+            <p class="font-features">
+                <span class="tab"></span>{{'projectComponent.earthquakes.contentTwo' | translate }}
+            </p>
+            <p class="font-features">
+                <span class="tab"></span>{{'projectComponent.earthquakes.contentThree' | translate }}
+            </p>
+            <p class="font-features">
+                <span class="tab"></span>{{'projectComponent.earthquakes.contentFour' | translate }}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button class="button-animatic" routerLink="/earthquakes">
+                {{'projectComponent.earthquakes.title' | translate }}
+            </button>
+        </mat-card-actions>
+    </mat-card>
+
+    <!-- My IP -->
+    <mat-card [ngClass]="{XSmall : 'content-card-mobile',
+            Small : 'content-card-mobile',
+            Medium : 'content-card-web',
+            Large : 'content-card-web',
+            XLarge : 'content-card-web'}[currentScreenSize]">
+        <mat-card-header>
+            <img src="https://cdn1.iconfinder.com/data/icons/delivery-logistics/512/delivery_adress-512.png" alt="image"
+                mat-card-avatar class="card-icon" />
+            <mat-card-title class="font-features">{{'projectComponent.myIp.title' | translate }}</mat-card-title>
+            <mat-card-subtitle class="card-subtitles"></mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="font-features">
+                <span class="tab"></span>{{'projectComponent.myIp.contentOne' | translate }}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button class="button-animatic" routerLink="/my-ip">
+                {{'projectComponent.myIp.title' | translate }}
+            </button>
+        </mat-card-actions>
+    </mat-card>
+
+    <!-- Game Server Ping -->
+    <mat-card [ngClass]="{XSmall : 'content-card-mobile',
+            Small : 'content-card-mobile',
+            Medium : 'content-card-web',
+            Large : 'content-card-web',
+            XLarge : 'content-card-web'}[currentScreenSize]">
+        <mat-card-header>
+            <img src="https://cdn3.iconfinder.com/data/icons/vol-3/128/game-512.png" alt="image" mat-card-avatar
+                class="card-icon" />
+            <mat-card-title class="font-features">{{'projectComponent.gamePing.title' | translate }}</mat-card-title>
+            <mat-card-subtitle class="card-subtitles"></mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="font-features">
+                <span class="tab"></span>{{'projectComponent.gamePing.contentOne' | translate }}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button class="button-animatic" routerLink="/game-server-ping">
+                {{'projectComponent.gamePing.title' | translate }}
+            </button>
+        </mat-card-actions>
+    </mat-card>
+
+    <!-- Mia Instagram -->
+    <mat-card [ngClass]="{XSmall : 'content-card-mobile',
+            Small : 'content-card-mobile',
+            Medium : 'content-card-web',
+            Large : 'content-card-web',
+            XLarge : 'content-card-web'}[currentScreenSize]">
+        <mat-card-header>
+            <img src="/assets/icons/mia-icon.png" alt="image" mat-card-avatar class="card-icon" />
+            <mat-card-title class="font-features">{{'projectComponent.mia.title' | translate }}</mat-card-title>
+            <mat-card-subtitle class="card-subtitles">{{'projectComponent.mia.header' | translate }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="font-features">
+                <span class="tab"></span>{{'projectComponent.mia.contentOne' | translate }}
+            </p>
+            <p class="font-features">
+                <span class="tab"></span>{{'projectComponent.mia.contentTwo' | translate }}
+            </p>
+            <p class="font-features">
+                <span class="tab"></span>{{'projectComponent.mia.contentThree' | translate }}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button class="button-animatic" onclick=" window.open('https://www.instagram.com/mia.thesmokin/','_blank')">
+                {{'projectComponent.mia.instagram' | translate }}
+            </button>
+        </mat-card-actions>
+    </mat-card>
+
+    <!-- Cyprus Vacation -->
+    <mat-card [ngClass]="{XSmall : 'content-card-mobile',
+            Small : 'content-card-mobile',
+            Medium : 'content-card-web',
+            Large : 'content-card-web',
+            XLarge : 'content-card-web'}[currentScreenSize]">
+        <mat-card-header>
+            <img src="/assets/icons/vacation-icon.png" alt="image" mat-card-avatar class="card-icon" />
+            <mat-card-title class="font-features">{{'projectComponent.cyprus.title' | translate }}</mat-card-title>
+            <mat-card-subtitle class="card-subtitles">{{'projectComponent.cyprus.header' | translate }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="font-features">
+                <span class="tab"></span>{{'projectComponent.cyprus.contentOne' | translate }}
+            </p>
+        </mat-card-content>
+        <img mat-card-image src="https://www.schengenvisainfo.com/news/wp-content/uploads/2021/04/Cyprus.jpg"
+            alt="image" class="card-img">
+        <mat-card-actions class="lightbox-example">
+            <button class="button-animatic" style="margin-right: 1em;"
+                (click)="lightbox.open(0, 'lightbox', {panelClass: 'fullscreen'})">
+                {{'projectComponent.cyprus.photos' | translate }}
+            </button>
+        </mat-card-actions>
+    </mat-card>
+
+    <!-- MzM Team Star Wars -->
+    <mat-card [ngClass]="{XSmall : 'content-card-mobile',
+            Small : 'content-card-mobile',
+            Medium : 'content-card-web',
+            Large : 'content-card-web',
+            XLarge : 'content-card-web'}[currentScreenSize]">
+        <mat-card-header>
+            <img src="/assets/icons/mzm-icon.png" alt="image" mat-card-avatar class="card-icon" />
+            <mat-card-title class="font-features">{{'projectComponent.starWars.title' | translate }}</mat-card-title>
+            <mat-card-subtitle class="card-subtitles">
+                {{'projectComponent.starWars.header' | translate }}
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="font-features">
+                <span class="tab"></span>{{'projectComponent.starWars.contentOne' | translate }}
+            </p>
+            <p class="font-features"><span class="tab"></span>{{'projectComponent.starWars.contentTwo' | translate }}
+            </p>
+        </mat-card-content>
+        <div style="margin: auto">
+            <youtube-player [videoId]="videoId" [height]="height" [width]="width"></youtube-player>
+        </div>
+    </mat-card>
+
+    <!-- Troy Vacation -->
+    <mat-card [ngClass]="{XSmall : 'content-card-mobile',
+            Small : 'content-card-mobile',
+            Medium : 'content-card-web',
+            Large : 'content-card-web',
+            XLarge : 'content-card-web'}[currentScreenSize]">
+        <mat-card-header>
+            <img src="/assets/icons/vacation-icon.png" alt="image" mat-card-avatar class="card-icon" />
+            <mat-card-title class="font-features">{{'projectComponent.troy.title' | translate }}</mat-card-title>
+            <mat-card-subtitle class="card-subtitles">{{'projectComponent.troy.header' | translate }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="font-features">
+                <span class="tab"></span>{{'projectComponent.troy.contentOne' | translate }}
+            </p>
+        </mat-card-content>
+        <img mat-card-image
+            src="https://images.immediate.co.uk/production/volatile/sites/7/2019/11/51.-BKH3D2-5ef1f90-e1574436043662.jpg?quality=90&resize=980,654"
+            alt="image" class="card-img">
+        <mat-card-actions class="lightbox-example">
+            <button class="button-animatic" style="margin-right: 1em;"
+                (click)="lightbox.open(0, 'lightbox-2', {panelClass: 'fullscreen'})">
+                {{'projectComponent.troy.photos' | translate }}
+            </button>
+        </mat-card-actions>
+    </mat-card>
+</div>

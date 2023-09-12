@@ -2,7 +2,6 @@
   "appComponent": {
     "about": "About",
     "contact": "Contact",
-    "whatIsMyIp": "My IP",
     "donate": "Donate",
     "homePage": "Home",
     "projectsPage": "Projects",
@@ -15,7 +14,9 @@
   },
   "homeComponent": {
     "heroSectionFirst": "Cem Ugras",
-    "heroSectionSecond": "Software Engineer | Gamer",
+    "heroSectionSecond": "Software Engineer | Gamer"
+  },
+  "projectComponent": {
     "projectsText": "Projects",
     "earthquakes": {
       "title": "Earthquakes",
@@ -60,7 +61,6 @@
       "contentOne": "Some photos of Troy Ancient Site Vacation",
       "photos": "Photos"
     }
-
   },
   "eqComponent": {
     "refresh": "Refresh Earthquakes",

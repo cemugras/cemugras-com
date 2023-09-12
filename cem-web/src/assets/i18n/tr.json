@@ -2,7 +2,6 @@
   "appComponent": {
     "about": "Hakkımda",
     "contact": "İletişim",
-    "whatIsMyIp": "IP Adresim",
     "donate": "Bağış",
     "homePage": "Anasayfa",
     "projectsPage": "Projeler",
@@ -15,7 +14,9 @@
   },
   "homeComponent": {
     "heroSectionFirst": "Cem Uğraş",
-    "heroSectionSecond": "Yazılım Mühendisi | Oyuncu",
+    "heroSectionSecond": "Yazılım Mühendisi | Oyuncu"
+  },
+  "projectComponent": {
     "projectsText": "Projeler",
     "earthquakes": {
       "title": "Depremler",
