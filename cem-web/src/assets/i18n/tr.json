@@ -1,11 +1,12 @@
 {
   "appComponent": {
-    "nameSurname": "Cem Uğraş",
-    "jobTitle": "Yazılım Mühendisi | Oyuncu",
     "about": "Hakkımda",
     "contact": "İletişim",
     "whatIsMyIp": "IP Adresim",
-    "donate": "Bağış"
+    "donate": "Bağış",
+    "homePage": "Anasayfa",
+    "projectsPage": "Projeler",
+    "aboutPage": "About"
   },
   "aboutComponent": {
     "paragraphOne": "Cem ile tanışın, a software engineer graduated from Maltepe University Software (50% Scholarship) (English) Department who is chilling with creating free open source applications for web & mobile platforms.",
@@ -13,8 +14,8 @@
     "paragraphThree": "İyi eğlenceler :)"
   },
   "homeComponent": {
-    "heroSectionFirst": "Birinci sınıf çözümler.",
-    "heroSectionSecond": "/1993 'ten beri",
+    "heroSectionFirst": "Cem Uğraş",
+    "heroSectionSecond": "Yazılım Mühendisi | Oyuncu",
     "projectsText": "Projeler",
     "earthquakes": {
       "title": "Depremler",

@@ -1,11 +1,12 @@
 {
   "appComponent": {
-    "nameSurname": "Cem Ugras",
-    "jobTitle": "Software Engineer | Gamer",
     "about": "About",
     "contact": "Contact",
     "whatIsMyIp": "My IP",
-    "donate": "Donate"
+    "donate": "Donate",
+    "homePage": "Home",
+    "projectsPage": "Projects",
+    "aboutPage": "About"
   },
   "aboutComponent": {
     "paragraphOne": "Meet with Cem, a software engineer graduated from Maltepe University Software (50% Scholarship) (English) Department who is chilling with creating free open source applications for web & mobile platforms.",
@@ -13,8 +14,8 @@
     "paragraphThree": "Enjoy it :)"
   },
   "homeComponent": {
-    "heroSectionFirst": "Providing first class solutions.",
-    "heroSectionSecond": "/Since 1993",
+    "heroSectionFirst": "Cem Ugras",
+    "heroSectionSecond": "Software Engineer | Gamer",
     "projectsText": "Projects",
     "earthquakes": {
       "title": "Earthquakes",

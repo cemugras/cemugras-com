@@ -1,24 +1,12 @@
 <!--Toolbar[Responsive] for Web environments -->
 <div *ngIf="!(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" class="toolbar" role="dialog">
-  <img src="https://i.hizliresim.com/irto2ge.png" routerLink="/" class="home-button" alt="image"/>
-  <div class="text" routerLink="/">{{'appComponent.nameSurname' | translate }}</div>
-  <a class="text2">{{'appComponent.jobTitle' | translate }}</a>
-  <div class="dropdown">
-    <button class="drop-button">
-      <mat-icon class="mat-icon-borders" aria-hidden="false" fontIcon="developer_board"></mat-icon>
-      {{'homeComponent.projectsText' | translate }}
-    </button>
-    <div class="dropdown-content">
-      <a routerLink="/earthquakes" style="font-size: 20px;">{{'homeComponent.earthquakes.title' | translate }}</a>
-      <a routerLink="/my-ip" style="font-size: 20px;">{{'appComponent.whatIsMyIp' | translate }}</a>
-    </div>
+  <div class="top-menu">
+    <a routerLink="/" style="font-size: 20px;">{{'appComponent.homePage' | translate }}</a>
+    <a routerLink="/my-ip" style="font-size: 20px;">{{'appComponent.projectsPage' | translate }}</a>
+    <a routerLink="/about" style="font-size: 20px;">{{'appComponent.aboutPage' | translate }}</a>
   </div>
-  <!--<button class="button-animatic-web toolbar-button-margin-color" routerLink="/about">
-    <mat-icon class="mat-icon-borders" aria-hidden="false" fontIcon="mark_unread_chat_alt"></mat-icon>
-    {{'appComponent.about' | translate }}
-  </button>-->
-  <span class="filler"></span>
-  <select (change)='updateLanguage(languageSelection.value)' #languageSelection class="button-animatic-web">
+  
+  <select (change)='updateLanguage(languageSelection.value)' #languageSelection class="button-animatic-web lang-select-web">
     <option [value]="'en'">EN</option>
     <option [value]="'tr'">TR</option>
   </select>
@@ -47,12 +35,10 @@
       <span class="general-color-white">{{'appComponent.contact' | translate }}</span>
     </button>
   </mat-menu>
-  <select (change)='updateLanguage(languageSelection.value)' #languageSelection>
+  <select (change)='updateLanguage(languageSelection.value)' #languageSelection class="lang-select-mobile">
     <option [value]="'en'">EN</option>
     <option [value]="'tr'">TR</option>
   </select>
-  <a class="mobile-name">
-    {{'appComponent.nameSurname' | translate }}</a>
   <span class="filler"></span>
 
   <button class="button-animatic-mobile toolbar-button-margin-color" routerLink="/">
@@ -95,10 +81,10 @@
     <a class="tooltip">{{'appComponent.donate' | translate }}</a>
   </a>
 
-  <a routerLink="/about">
+  <!-- <a routerLink="/about">
     <mat-icon class="mat-icon-borders" aria-hidden="false" fontIcon="mark_unread_chat_alt"></mat-icon>
     <a class="tooltip">{{'appComponent.about' | translate }}</a>
-  </a>
+  </a> -->
   <a routerLink="/contact">
     <mat-icon class="mat-icon-borders" aria-hidden="false" fontIcon="contact_mail"></mat-icon>
     <a class="tooltip">{{'appComponent.contact' | translate }}</a>
