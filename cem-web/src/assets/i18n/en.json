@@ -14,7 +14,9 @@
   },
   "homeComponent": {
     "heroSectionFirst": "Cem Ugras",
-    "heroSectionSecond": "Software Engineer | Gamer"
+    "heroSectionSWEngineer": "Software Engineer",
+    "heroSectionGamer": "Gamer",
+    "heroSectionFTLearner": "Full Time Learner"
   },
   "projectComponent": {
     "projectsText": "Projects",

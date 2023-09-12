@@ -14,7 +14,9 @@
   },
   "homeComponent": {
     "heroSectionFirst": "Cem Uğraş",
-    "heroSectionSecond": "Yazılım Mühendisi | Oyuncu"
+    "heroSectionSWEngineer": "Yazılım Mühendisi",
+    "heroSectionGamer": "Oyuncu",
+    "heroSectionFTLearner": "Tam Zamanlı Öğrenici"
   },
   "projectComponent": {
     "projectsText": "Projeler",
