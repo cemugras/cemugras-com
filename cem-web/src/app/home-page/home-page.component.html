@@ -1,9 +1,8 @@
-<div fxLayout="row wrap"
-     [ngClass]="{XSmall : 'card-container-mobile',
-     Small : 'card-container-mobile',
-     Medium : 'card-container-web',
-     Large : 'card-container-web',
-     XLarge : 'card-container-web'}[currentScreenSize]">
+<div fxLayout="row wrap" [ngClass]="{XSmall : 'container-mobile',
+     Small : 'container-mobile',
+     Medium : 'container-web',
+     Large : 'container-web',
+     XLarge : 'container-web'}[currentScreenSize]">
 
   <!-- Hero Section  -->
   <div [ngClass]="{XSmall : 'hero-div-mobile',
@@ -17,212 +16,71 @@
          Medium : 'hero-div-img',
          Large : 'hero-div-img',
          XLarge : 'hero-div-img'}[currentScreenSize]">
-    <img
-      src="https://i.hizliresim.com/stu82bw.png"
-      alt="image"
-    style="width: 100% ; height: 100%">
+      <img src="https://i.hizliresim.com/stu82bw.png" alt="image">
     </div>
     <div [ngClass]="{XSmall : 'hero-div-text-mobile',
          Small : 'hero-div-text-mobile',
          Medium : 'hero-div-text',
          Large : 'hero-div-text',
-         XLarge : 'hero-div-text'}[currentScreenSize]"
-      class="font-features">
+         XLarge : 'hero-div-text'}[currentScreenSize]" class="font-features">
       <h1>{{'homeComponent.heroSectionFirst' | translate }}</h1>
-      <p>{{'homeComponent.heroSectionSecond' | translate }}</p>
+      <div class="hero-div-sub-text">
+        <p class="left-to-right">{{'homeComponent.heroSectionSWEngineer' | translate }}</p>
+        <p *ngIf="(currentScreenSize === 'Medium' || currentScreenSize === 'Large' || currentScreenSize === 'XLarge')"
+          class="middle-pipe"> | </p>
+        <p>{{'homeComponent.heroSectionGamer' | translate }}</p>
+        <p *ngIf="(currentScreenSize === 'Medium' || currentScreenSize === 'Large' || currentScreenSize === 'XLarge')"
+          class="middle-pipe"> | </p>
+        <p class="right-to-left">{{'homeComponent.heroSectionFTLearner' | translate }}</p>
+      </div>
     </div>
   </div>
 
-  <div *ngIf="(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" style="min-width: 100%; display: flex; align-items: center; justify-content: center">
-    <p class="font-features content-card-mobile">{{'homeComponent.projectsText' | translate }}</p>
+  <!-- Skills Section-->
+  <div [ngClass]="{XSmall : 'skill-container-mobile',
+      Small : 'skill-container-mobile',
+      Medium : 'skill-container',
+      Large : 'skill-container',
+      XLarge : 'skill-container'}[currentScreenSize]">
+
+      <div class="skill-box"><!-- Java Logo -->
+        <img src="https://static-00.iconduck.com/assets.00/java-icon-2048x2048-yxty4s2p.png">
+        <p *ngIf="(currentScreenSize === 'Medium' || currentScreenSize === 'Large' || currentScreenSize === 'XLarge')" class="font-features">Java</p>
+      </div>
+
+      <div class="skill-box"><!-- Spring Logo -->
+        <img src="https://www.svgrepo.com/show/354380/spring-icon.svg">
+        <p *ngIf="(currentScreenSize === 'Medium' || currentScreenSize === 'Large' || currentScreenSize === 'XLarge')" class="font-features">Spring</p>
+      </div>
+
+      <div class="skill-box"><!-- Javascript Logo -->
+        <img src="https://www.quantumsoftech.com/img/icons/JS.svg">
+        <p *ngIf="(currentScreenSize === 'Medium' || currentScreenSize === 'Large' || currentScreenSize === 'XLarge')" class="font-features">Javascript</p>
+      </div>
+
+      <div class="skill-box"><!-- NodeJS Logo -->
+        <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png">
+        <p *ngIf="(currentScreenSize === 'Medium' || currentScreenSize === 'Large' || currentScreenSize === 'XLarge')" class="font-features">NodeJS</p>
+      </div>
+
+      <div class="skill-box"><!-- Angular Logo -->
+        <img src="https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/angular-js-512.png">
+        <p *ngIf="(currentScreenSize === 'Medium' || currentScreenSize === 'Large' || currentScreenSize === 'XLarge')" class="font-features">Angular</p>
+      </div>
+
+      <div class="skill-box"><!-- Flutter Logo -->
+        <img src="https://miro.medium.com/v2/resize:fit:320/1*wWUfWY0hKs3-VR8QNUjklQ.png">
+        <p *ngIf="(currentScreenSize === 'Medium' || currentScreenSize === 'Large' || currentScreenSize === 'XLarge')" class="font-features">Flutter</p>
+      </div>
+
+      <div class="skill-box"><!-- HTML Logo -->
+        <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_960_720.png">
+        <p *ngIf="(currentScreenSize === 'Medium' || currentScreenSize === 'Large' || currentScreenSize === 'XLarge')" class="font-features">HTML</p>
+      </div>
+
+      <div class="skill-box"><!-- CSS Logo -->
+        <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png">
+        <p *ngIf="(currentScreenSize === 'Medium' || currentScreenSize === 'Large' || currentScreenSize === 'XLarge')" class="font-features">CSS</p>
+      </div>
   </div>
-
-  <!-- Earthquakes -->
-  <mat-card [ngClass]="{XSmall : 'content-card-mobile',
-            Small : 'content-card-mobile',
-            Medium : 'content-card-web',
-            Large : 'content-card-web',
-            XLarge : 'content-card-web'}[currentScreenSize]">
-    <mat-card-header>
-      <img
-        src="/assets/icons/earthquake-icon.png"
-        alt="image"
-        mat-card-avatar
-        class="card-icon"/>
-      <mat-card-title class="font-features">{{'homeComponent.earthquakes.title' | translate }}</mat-card-title>
-      <mat-card-subtitle class="card-subtitles">{{'homeComponent.earthquakes.header' | translate }}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p class="font-features">
-        <span class="tab"></span>{{'homeComponent.earthquakes.contentOne' | translate }}
-      </p>
-      <p class="font-features">
-        <span class="tab"></span>{{'homeComponent.earthquakes.contentTwo' | translate }}
-      </p>
-      <p class="font-features">
-        <span class="tab"></span>{{'homeComponent.earthquakes.contentThree' | translate }}
-      </p>
-      <p class="font-features">
-        <span class="tab"></span>{{'homeComponent.earthquakes.contentFour' | translate }}
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button class="button-animatic" routerLink="/earthquakes">
-        {{'homeComponent.earthquakes.title' | translate }}
-      </button>
-    </mat-card-actions>
-  </mat-card>
-
-  <!-- My IP -->
-  <mat-card [ngClass]="{XSmall : 'content-card-mobile',
-            Small : 'content-card-mobile',
-            Medium : 'content-card-web',
-            Large : 'content-card-web',
-            XLarge : 'content-card-web'}[currentScreenSize]">
-    <mat-card-header>
-      <img
-        src="https://cdn1.iconfinder.com/data/icons/delivery-logistics/512/delivery_adress-512.png"
-        alt="image"
-        mat-card-avatar
-        class="card-icon"/>
-      <mat-card-title class="font-features">{{'homeComponent.myIp.title' | translate }}</mat-card-title>
-      <mat-card-subtitle class="card-subtitles"></mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p class="font-features">
-        <span class="tab"></span>{{'homeComponent.myIp.contentOne' | translate }}
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button class="button-animatic" routerLink="/my-ip">
-        {{'homeComponent.myIp.title' | translate }}
-      </button>
-    </mat-card-actions>
-  </mat-card>
-
-  <!-- Mia Instagram -->
-  <mat-card [ngClass]="{XSmall : 'content-card-mobile',
-            Small : 'content-card-mobile',
-            Medium : 'content-card-web',
-            Large : 'content-card-web',
-            XLarge : 'content-card-web'}[currentScreenSize]">
-    <mat-card-header>
-      <img
-        src="/assets/icons/mia-icon.png"
-        alt="image"
-        mat-card-avatar
-        class="card-icon"/>
-      <mat-card-title class="font-features">{{'homeComponent.mia.title' | translate }}</mat-card-title>
-      <mat-card-subtitle class="card-subtitles">{{'homeComponent.mia.header' | translate }}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p class="font-features">
-        <span class="tab"></span>{{'homeComponent.mia.contentOne' | translate }}
-      </p>
-      <p class="font-features">
-        <span class="tab"></span>{{'homeComponent.mia.contentTwo' | translate }}
-      </p>
-      <p class="font-features">
-        <span class="tab"></span>{{'homeComponent.mia.contentThree' | translate }}
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button class="button-animatic" onclick=" window.open('https://www.instagram.com/mia.thesmokin/','_blank')">
-        {{'homeComponent.mia.instagram' | translate }}
-      </button>
-    </mat-card-actions>
-  </mat-card>
-
-  <!-- Cyprus Vacation -->
-  <mat-card [ngClass]="{XSmall : 'content-card-mobile',
-            Small : 'content-card-mobile',
-            Medium : 'content-card-web',
-            Large : 'content-card-web',
-            XLarge : 'content-card-web'}[currentScreenSize]">
-    <mat-card-header>
-      <img
-        src="/assets/icons/vacation-icon.png"
-        alt="image"
-        mat-card-avatar
-        class="card-icon"/>
-      <mat-card-title class="font-features">{{'homeComponent.cyprus.title' | translate }}</mat-card-title>
-      <mat-card-subtitle class="card-subtitles">{{'homeComponent.cyprus.header' | translate }}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p class="font-features">
-        <span class="tab"></span>{{'homeComponent.cyprus.contentOne' | translate }}
-      </p>
-    </mat-card-content>
-    <img
-      mat-card-image
-      src="https://www.schengenvisainfo.com/news/wp-content/uploads/2021/04/Cyprus.jpg"
-      alt="image"
-      class="card-img">
-    <mat-card-actions class="lightbox-example">
-      <button class="button-animatic" style="margin-right: 1em;" (click)="lightbox.open(0, 'lightbox', {panelClass: 'fullscreen'})" >
-        {{'homeComponent.cyprus.photos' | translate }}
-      </button>
-    </mat-card-actions>
-  </mat-card>
-
-  <!-- MzM Team Star Wars -->
-  <mat-card [ngClass]="{XSmall : 'content-card-mobile',
-            Small : 'content-card-mobile',
-            Medium : 'content-card-web',
-            Large : 'content-card-web',
-            XLarge : 'content-card-web'}[currentScreenSize]">
-    <mat-card-header>
-      <img
-        src="/assets/icons/mzm-icon.png"
-        alt="image"
-        mat-card-avatar
-        class="card-icon"/>
-      <mat-card-title class="font-features">{{'homeComponent.starWars.title' | translate }}</mat-card-title>
-      <mat-card-subtitle class="card-subtitles">
-        {{'homeComponent.starWars.header' | translate }}
-      </mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p class="font-features">
-        <span class="tab"></span>{{'homeComponent.starWars.contentOne' | translate }}
-      </p>
-      <p class="font-features"><span class="tab"></span>{{'homeComponent.starWars.contentTwo' | translate }}
-      </p>
-    </mat-card-content>
-    <div style="margin: auto">
-      <youtube-player [videoId]="videoId" [height]="height" [width]="width" ></youtube-player>
-    </div>
-  </mat-card>
-
-  <!-- Troy Vacation -->
-  <mat-card [ngClass]="{XSmall : 'content-card-mobile',
-            Small : 'content-card-mobile',
-            Medium : 'content-card-web',
-            Large : 'content-card-web',
-            XLarge : 'content-card-web'}[currentScreenSize]">
-    <mat-card-header>
-      <img
-        src="/assets/icons/vacation-icon.png"
-        alt="image"
-        mat-card-avatar
-        class="card-icon"/>
-      <mat-card-title class="font-features">{{'homeComponent.troy.title' | translate }}</mat-card-title>
-      <mat-card-subtitle class="card-subtitles">{{'homeComponent.troy.header' | translate }}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p class="font-features">
-        <span class="tab"></span>{{'homeComponent.troy.contentOne' | translate }}
-      </p>
-    </mat-card-content>
-    <img
-      mat-card-image
-      src="https://images.immediate.co.uk/production/volatile/sites/7/2019/11/51.-BKH3D2-5ef1f90-e1574436043662.jpg?quality=90&resize=980,654"
-      alt="image"
-      class="card-img">
-    <mat-card-actions class="lightbox-example">
-      <button class="button-animatic" style="margin-right: 1em;" (click)="lightbox.open(0, 'lightbox-2', {panelClass: 'fullscreen'})" >
-        {{'homeComponent.troy.photos' | translate }}
-      </button>
-    </mat-card-actions>
-  </mat-card>
 </div>

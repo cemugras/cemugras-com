@@ -1,20 +1,20 @@
-<div>
+<div class="page-container">
   <div [ngClass]="{XSmall : 'img-mobile', Small : 'img-mobile',
      Medium : 'img-web', Large : 'img-web', XLarge : 'img-web'}[currentScreenSize]">
-    <span class="filler"></span>
     <img src="/assets/icons/profile-icon.png" alt="image">
-    <span class="filler"></span>
   </div>
 
-  <p [ngClass]="{XSmall : 'content-mobile', Small : 'content-mobile',
+  <div class="about-text">
+    <p [ngClass]="{XSmall : 'content-mobile', Small : 'content-mobile',
      Medium : 'content-web', Large : 'content-web', XLarge : 'content-web'}[currentScreenSize]">
     {{'aboutComponent.paragraphOne' | translate }}</p>
 
-  <p [ngClass]="{XSmall : 'content-mobile', Small : 'content-mobile',
+    <p [ngClass]="{XSmall : 'content-mobile', Small : 'content-mobile',
      Medium : 'content-web', Large : 'content-web', XLarge : 'content-web'}[currentScreenSize]">
     {{'aboutComponent.paragraphTwo' | translate }}</p>
 
-  <p [ngClass]="{XSmall : 'content-mobile', Small : 'content-mobile',
+    <p [ngClass]="{XSmall : 'content-mobile', Small : 'content-mobile',
      Medium : 'content-web', Large : 'content-web', XLarge : 'content-web'}[currentScreenSize]">
     {{'aboutComponent.paragraphThree' | translate }}</p>
+  </div>
 </div>

@@ -1,55 +1,65 @@
 //Color Variables
-$tooltip-background-color: rgba(255, 255, 255, 0.96);
+$general-background-color: rgba(0, 0, 0, 0.6);
 $general-red-color: rgba(255, 0, 0, 0.96);
 $general-white-color: rgba(255, 255, 255, 0.96);
 $general-black-color: rgba(0, 0, 0, 0.96);
 
-.img-web {
+.page-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding-top: 100px
+  justify-content: center;
+  .img-web {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px
+  }
+  .img-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+  }
+
+  .about-text {
+    margin-top: 20px;
+    background: $general-background-color;
+    border-radius: 50px;
+    width: 75%;
+    .content-web {
+      line-height: 1.8rem;
+      font-size: 1.2em;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: bold;
+      color: $general-white-color;
+      text-shadow: 2px 2px $general-black-color;
+      padding-top: 20px;
+      padding-left: 200px;
+      padding-right: 200px;
+    }
+    
+    .content-mobile {
+      line-height: 1.8rem;
+      font-size: 1.2em;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: bold;
+      color: $general-white-color;
+      text-shadow: 2px 2px $general-black-color;
+      padding-top: 20px;
+      
+    }
+  }
 }
 
-.img-mobile {
-  display: flex;
-  align-items: center;
-  padding-top: 50px;
-}
 
-.content-web {
-  line-height: 1.8rem;
-  font-size: 1.2em;
-  text-align: center;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: bold;
-  color: $general-white-color;
-  text-shadow: 2px 2px $general-black-color;
-  padding-top: 20px;
-  padding-left: 200px;
-  padding-right: 200px
-}
 
-.content-mobile {
-  line-height: 1.8rem;
-  font-size: 1.2em;
-  text-align: center;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: bold;
-  color: $general-white-color;
-  text-shadow: 2px 2px $general-black-color;
-  padding-top: 20px;
-}
+
 
 img {
   width: 100%;
   max-width: 160px;
   height: auto;
-}
-
-.filler {
-  flex: 1 1 auto;
-}
-
-.filler2 {
-  flex: 3rem 0;
 }

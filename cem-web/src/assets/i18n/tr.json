@@ -1,10 +1,11 @@
 {
   "appComponent": {
-    "nameSurname": "Cem Uğraş",
-    "jobTitle": "Yazılım Mühendisi | Oyuncu",
     "about": "Hakkımda",
     "contact": "İletişim",
-    "whatIsMyIp": "IP Adresim"
+    "donate": "Bağış",
+    "homePage": "Anasayfa",
+    "projectsPage": "Projeler",
+    "aboutPage": "About"
   },
   "aboutComponent": {
     "paragraphOne": "Cem ile tanışın, a software engineer graduated from Maltepe University Software (50% Scholarship) (English) Department who is chilling with creating free open source applications for web & mobile platforms.",
@@ -12,8 +13,12 @@
     "paragraphThree": "İyi eğlenceler :)"
   },
   "homeComponent": {
-    "heroSectionFirst": "Birinci sınıf çözümler.",
-    "heroSectionSecond": "/1993 'ten beri",
+    "heroSectionFirst": "Cem Uğraş",
+    "heroSectionSWEngineer": "Yazılım Mühendisi",
+    "heroSectionGamer": "Oyuncu",
+    "heroSectionFTLearner": "Tam Zamanlı Öğrenici"
+  },
+  "projectComponent": {
     "projectsText": "Projeler",
     "earthquakes": {
       "title": "Depremler",
@@ -27,6 +32,11 @@
       "title": "IP Adresim",
       "contentOne": "IP adres detayı ve harita görünümü.",
       "marker": "IP adresinizin yaklaşık konumu."
+    },
+    "gamePing": {
+      "title": "Oyun Sunucuları Ping",
+      "contentOne": "Oyun sunucularındaki ping değerlerinizi bağlandığınız internet altyapısı ile kontrol edin.",
+      "contentTwo": "Güncel olarak özelliğin desteklediği oyunlar:"
     },
     "mia": {
       "title": "Mia",

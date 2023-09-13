@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
 
+`npm install -g @angular/cli@15.0.3`
+
 The project is on live with the following URL: https://cemugras.com
 
 ## Development server
@@ -25,6 +27,7 @@ You can also use:
 5) [angular-table](https://material.angular.io/components/table) |
 6) [ngx-leaflet](https://leafletjs.com/index.html)
 7) [ngx-translate](https://www.npmjs.com/package/@ngx-translate/core)
+8) [ng-apexcharts](https://github.com/apexcharts/ng-apexcharts)
 
 #### 1) ngx-gallery Development Notes
 #### 2) flex-layout Development Notes
@@ -35,11 +38,15 @@ You can also use:
 1) `npm install leaflet @asymmetrik/ngx-leaflet`
 2) `npm install --save-dev @types/leaflet`
 #### 6) ngx-translate Development Notes
+#### 7) ng-apexcharts Development Notes
+1) `npm i ng-apexcharts`
 
 ## Known Issues
 `npm audit fix` -> 1 moderate severity vulnerability
 
 `npm audit fix --force` -> if above command not works
+
+`npm install --legacy-peer-deps` -> upstream dependency conflict
 
 ### Issue ng commands
 > AppData\Roaming\npm\ng.ps1 cannot be loaded because running scripts is disabled on this system.
@@ -71,6 +78,9 @@ If environment is setting first time, start with #1 otherwise start with #3
 - [x] Language Support (TR/EN)
 - [x] Side Bar refactored for listing features
 - [x] What is My IP page with map
+- [x] Game server ping page
+- [x] Online Games Server Ping Page
+- [ ] Projects Page
 - [ ] Currency Page
 - [ ] Domain Check Page
 - [ ] QR Code Generator Page

@@ -1,10 +1,11 @@
 {
   "appComponent": {
-    "nameSurname": "Cem Ugras",
-    "jobTitle": "Software Engineer | Gamer",
     "about": "About",
     "contact": "Contact",
-    "whatIsMyIp": "My IP"
+    "donate": "Donate",
+    "homePage": "Home",
+    "projectsPage": "Projects",
+    "aboutPage": "About"
   },
   "aboutComponent": {
     "paragraphOne": "Meet with Cem, a software engineer graduated from Maltepe University Software (50% Scholarship) (English) Department who is chilling with creating free open source applications for web & mobile platforms.",
@@ -12,8 +13,12 @@
     "paragraphThree": "Enjoy it :)"
   },
   "homeComponent": {
-    "heroSectionFirst": "Providing first class solutions.",
-    "heroSectionSecond": "/Since 1993",
+    "heroSectionFirst": "Cem Ugras",
+    "heroSectionSWEngineer": "Software Engineer",
+    "heroSectionGamer": "Gamer",
+    "heroSectionFTLearner": "Full Time Learner"
+  },
+  "projectComponent": {
     "projectsText": "Projects",
     "earthquakes": {
       "title": "Earthquakes",
@@ -27,6 +32,11 @@
       "title": "My IP",
       "contentOne": "What is my IP address and some details with map display.",
       "marker": "Your IPs approximately location."
+    },
+    "gamePing": {
+      "title": "Game Servers Ping",
+      "contentOne": "Check your ping from some games with your internet connection.",
+      "contentTwo": "Supported games for usage of this feature:"
     },
     "mia": {
       "title": "Mia",
@@ -54,7 +64,6 @@
       "contentOne": "Some photos of Troy Ancient Site Vacation",
       "photos": "Photos"
     }
-
   },
   "eqComponent": {
     "refresh": "Refresh Earthquakes",
