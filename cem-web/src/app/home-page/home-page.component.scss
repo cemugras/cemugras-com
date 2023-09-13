@@ -14,12 +14,13 @@ $general-white-color: rgb(255, 255, 255);
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding-bottom: 5%;
   }
   .hero-div-img {
     width: 50%;
     animation: animTopToBottom 2s ease 0s 1 normal forwards;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     img {
       height: 100%;
       width: 100%;

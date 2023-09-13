@@ -9,6 +9,9 @@ $general-white-color: rgb(255, 255, 255);
 }
   
 .main-container-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: $general-white-color;
   
     /* Set up positioning */
@@ -26,8 +29,8 @@ $general-white-color: rgb(255, 255, 255);
     position: relative;
 
     .card {
-        width: 25vw;
-        height: auto;
+        width: 350px;
+        height: 500px;
         margin: 2%;
         display: flex;
         flex-direction: column;
@@ -48,7 +51,7 @@ $general-white-color: rgb(255, 255, 255);
             width: 50px;
         }
 
-        h3 {
+        h4 {
             color: $general-white-color;
             position: absolute;
             bottom: 25%;
@@ -87,11 +90,10 @@ $general-white-color: rgb(255, 255, 255);
             width: 40px;
         }
 
-        h3 {
+        h4 {
             color: $general-white-color;
             position: absolute;
             bottom: 25%;
-            
         }
 
         mat-slide-toggle {
