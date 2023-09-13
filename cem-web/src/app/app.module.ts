@@ -70,7 +70,8 @@ import { ProjectsPageComponent } from './projects-page/projects-page.component';
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
+        useFactory: (http: HttpClient) =>
+              new TranslateHttpLoader(http, './assets/i18n/', `.json?v=${new Date().getTime()}`),
         deps: [HttpClient]
       }
     })
