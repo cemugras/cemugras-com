@@ -35,7 +35,8 @@
     },
     "gamePing": {
       "title": "Game Servers Ping",
-      "contentOne": "Check your ping from some games with your internet connection."
+      "contentOne": "Check your ping from some games with your internet connection.",
+      "contentTwo": "Supported games for usage of this feature:"
     },
     "mia": {
       "title": "Mia",

@@ -3,14 +3,14 @@ $general-background-color: rgba(0, 0, 0, 0.6);
 $general-white-color: rgb(255, 255, 255);
 
 .card-container-web {
-  padding-top: 80px;
-  padding-left: 50px;
-  justify-content: center;
+    padding-top: 80px;
+    padding-left: 50px;
+    justify-content: center;
 }
 
 .card-container-mobile {
-  padding-top: 80px;
-  justify-content: center;
+    padding-top: 80px;
+    justify-content: center;
 }
 
 .content-card-web {
@@ -23,19 +23,20 @@ $general-white-color: rgb(255, 255, 255);
     border-radius: 50px;
     box-shadow: 1px 1px 1px black;
 }
-  
+
 .content-card-mobile {
     margin-bottom: 10px;
     max-width: 300px;
     background-color: $general-background-color;
     color: $general-white-color;
+    border-radius: 50px;
     box-shadow: 1px 1px 1px black;
 }
 
 .tab {
     margin-left: 16px;
 }
-  
+
 .font-features {
     font-family: 'Orbitron', sans-serif;
 }
@@ -52,10 +53,10 @@ $general-white-color: rgb(255, 255, 255);
     cursor: pointer;
     color: $general-white-color;
 }
-  
+
 .button-animatic:not([disabled]):hover {
-  transform: translateX(1px);
-  box-shadow: 1px 0 10px $general-white-color;
+    transform: translateX(1px);
+    box-shadow: 1px 0 10px $general-white-color;
 }
 
 .card-subtitles {

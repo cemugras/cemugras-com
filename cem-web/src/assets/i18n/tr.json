@@ -35,7 +35,8 @@
     },
     "gamePing": {
       "title": "Oyun Sunucuları Ping",
-      "contentOne": "Oyun sunucularındaki ping değerlerinizi bağlandığınız internet altyapısı ile kontrol edin."
+      "contentOne": "Oyun sunucularındaki ping değerlerinizi bağlandığınız internet altyapısı ile kontrol edin.",
+      "contentTwo": "Güncel olarak özelliğin desteklediği oyunlar:"
     },
     "mia": {
       "title": "Mia",
