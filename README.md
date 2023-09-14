@@ -64,7 +64,10 @@ You can also use:
 If environment is setting first time, start with #1 otherwise start with #3
 1) `npm install -g firebase-tools`
 2) `firebase login`
-3) `firebase init` then select related options
+3) `firebase init`
+    - `What do you want to use as your public directory?` -> dist/cem-web-project
+    - `Configure as a single-page app (rewrite all urls to /index.html)?` -> Yes
+    - `Set up automatic builds and deploys with GitHub?` -> No
 4) `npm run build`
 6) `firebase deploy`
 
