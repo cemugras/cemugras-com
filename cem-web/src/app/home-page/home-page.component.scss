@@ -67,13 +67,13 @@ $general-white-color: rgb(255, 255, 255);
         width: 5vh;
         border: 5px solid $general-background-color;
         border-radius: 50%;
-        transition: transform 0.8s;
+        //transition: transform 0.8s;
         margin: 15px;
       }
-      img:hover {
+      /*img:hover {
         -webkit-transform: scaleX(-1);
         transform: scaleX(-1);
-      }
+      }*/
       p {
         color: $general-white-color;
       }
@@ -140,6 +140,31 @@ $general-white-color: rgb(255, 255, 255);
 
 .font-features {
   font-family: 'Orbitron', sans-serif;
+}
+
+.img-1 {
+  animation: flip-x 4s ease 0s infinite normal forwards;
+}
+.img-2 {
+  animation: flip-x 4s ease 1s infinite normal forwards;
+}
+.img-3 {
+  animation: flip-x 4s ease 2s infinite normal forwards;
+}
+.img-4 {
+  animation: flip-x 4s ease 3s infinite normal forwards;
+}
+.img-5 {
+  animation: flip-x 4s ease 4s infinite normal forwards;
+}
+.img-6 {
+  animation: flip-x 4s ease 5s infinite normal forwards;
+}
+.img-7 {
+  animation: flip-x 4s ease 6s infinite normal forwards;
+}
+.img-8 {
+  animation: flip-x 4s ease 7s infinite normal forwards;
 }
 
 .left-to-right {
@@ -215,4 +240,12 @@ $general-white-color: rgb(255, 255, 255);
 		opacity: 1;
 		transform: translateY(0);
 	}
+}
+@keyframes flip-x {
+  from {
+    transform: rotateY(0deg)
+  }
+  to {
+    transform: rotateY(360deg)
+  }
 }
