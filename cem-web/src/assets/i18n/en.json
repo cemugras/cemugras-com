@@ -33,6 +33,11 @@
       "contentOne": "What is my IP address and some details with map display.",
       "marker": "Your IPs approximately location."
     },
+    "games": {
+      "title": "Games",
+      "contentOne": "Game projects for web environment.",
+      "contentTwo": "All games are playable with a browser from any device and open source."
+    },
     "gamePing": {
       "title": "Game Servers Ping",
       "contentOne": "Check your ping from some games with your internet connection.",

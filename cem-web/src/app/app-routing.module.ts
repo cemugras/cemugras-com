@@ -9,6 +9,7 @@ import { EarthquakesPageComponent } from "./earthquakes-page/earthquakes-page.co
 import { NotFoundPageComponent } from "./not-found-page/not-found-page.component";
 import { IpAddressPageComponent } from "./ip-address-page/ip-address-page.component";
 import { GameServerPingPageComponent } from './game-server-ping-page/game-server-ping-page.component';
+import { GamesPageComponent } from './games-page/games-page.component';
 
 
 const routes: Routes = [
@@ -17,9 +18,10 @@ const routes: Routes = [
   { path: 'contact', component: ContactPageComponent },
   { path: 'projects', component: ProjectsPageComponent },
   { path: 'earthquakes', component: EarthquakesPageComponent },
-  { path: 'notfound', component: NotFoundPageComponent },
+  { path: 'games', component: GamesPageComponent},
   { path: 'my-ip', component: IpAddressPageComponent },
   { path: 'game-server-ping', component: GameServerPingPageComponent },
+  { path: 'notfound', component: NotFoundPageComponent },
   { path: '**', pathMatch: 'full', component: NotFoundPageComponent }
 ];
 

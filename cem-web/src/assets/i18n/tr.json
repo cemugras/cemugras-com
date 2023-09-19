@@ -33,6 +33,11 @@
       "contentOne": "IP adres detayı ve harita görünümü.",
       "marker": "IP adresinizin yaklaşık konumu."
     },
+    "games": {
+      "title": "Oyunlar",
+      "contentOne": "Web ortamı için oyun projeleri.",
+      "contentTwo": "Tüm oyunlar bir tarayıcı ile birlikte oynanabilir ve açık kaynak kodludur."
+    },
     "gamePing": {
       "title": "Oyun Sunucuları Ping",
       "contentOne": "Oyun sunucularındaki ping değerlerinizi bağlandığınız internet altyapısı ile kontrol edin.",
