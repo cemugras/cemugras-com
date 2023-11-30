@@ -1,38 +1,64 @@
-<div fxLayout="row wrap" [ngClass]="{XSmall : 'container-mobile',
-     Small : 'container-mobile',
-     Medium : 'container-web',
-     Large : 'container-web',
-     XLarge : 'container-web'}[currentScreenSize]">
+<!-- Hero Section  -->
+<div [ngClass]="{XSmall : 'section-mobile',
+     Small : 'section-mobile',
+     Medium : 'section-web',
+     Large : 'section-web',
+     XLarge : 'section-web'}[currentScreenSize]">
 
-  <!-- Hero Section  -->
-  <div [ngClass]="{XSmall : 'hero-div-mobile',
-       Small : 'hero-div-mobile',
-       Medium : 'hero-div',
-       Large : 'hero-div',
-       XLarge : 'hero-div'}[currentScreenSize]">
-
-    <div [ngClass]="{XSmall : 'hero-div-img-mobile',
-         Small : 'hero-div-img-mobile',
-         Medium : 'hero-div-img',
-         Large : 'hero-div-img',
-         XLarge : 'hero-div-img'}[currentScreenSize]">
-      <img src="https://i.hizliresim.com/stu82bw.png" alt="image">
+  <div [ngClass]="{XSmall : 'section-div-img-mobile',
+         Small : 'section-div-img-mobile',
+         Medium : 'section-div-img',
+         Large : 'section-div-img',
+         XLarge : 'section-div-img'}[currentScreenSize]">
+    <!--<img src="https://i.hizliresim.com/stu82bw.png" alt="image">-->
+    <img src="https://www.mygo.ge/uploads/blog/1584023795.jpg" alt="cem ugras">
+  </div>
+  <div [ngClass]="{XSmall : 'section-div-text-mobile',
+         Small : 'section-div-text-mobile',
+         Medium : 'section-div-text',
+         Large : 'section-div-text',
+         XLarge : 'section-div-text'}[currentScreenSize]" class="font-features">
+    <h1>{{'homeComponent.heroSectionFirst' | translate }}</h1>
+    <div class="section-div-sub-text">
+      <p class="left-to-right">{{'homeComponent.heroSectionSWEngineer' | translate }}</p>
+      <p *ngIf="(currentScreenSize === 'Medium' || currentScreenSize === 'Large' || currentScreenSize === 'XLarge')"
+         class="middle-pipe"> | </p>
+      <p>{{'homeComponent.heroSectionGamer' | translate }}</p>
+      <p *ngIf="(currentScreenSize === 'Medium' || currentScreenSize === 'Large' || currentScreenSize === 'XLarge')"
+         class="middle-pipe"> | </p>
+      <p class="right-to-left">{{'homeComponent.heroSectionFTLearner' | translate }}</p>
     </div>
-    <div [ngClass]="{XSmall : 'hero-div-text-mobile',
-         Small : 'hero-div-text-mobile',
-         Medium : 'hero-div-text',
-         Large : 'hero-div-text',
-         XLarge : 'hero-div-text'}[currentScreenSize]" class="font-features">
-      <h1>{{'homeComponent.heroSectionFirst' | translate }}</h1>
-      <div class="hero-div-sub-text">
-        <p class="left-to-right">{{'homeComponent.heroSectionSWEngineer' | translate }}</p>
-        <p *ngIf="(currentScreenSize === 'Medium' || currentScreenSize === 'Large' || currentScreenSize === 'XLarge')"
-          class="middle-pipe"> | </p>
-        <p>{{'homeComponent.heroSectionGamer' | translate }}</p>
-        <p *ngIf="(currentScreenSize === 'Medium' || currentScreenSize === 'Large' || currentScreenSize === 'XLarge')"
-          class="middle-pipe"> | </p>
-        <p class="right-to-left">{{'homeComponent.heroSectionFTLearner' | translate }}</p>
-      </div>
+  </div>
+</div>
+
+<!-- Second Section -->
+<div [ngClass]="{XSmall : 'section-mobile',
+     Small : 'section-mobile',
+     Medium : 'section-web',
+     Large : 'section-web',
+     XLarge : 'section-web'}[currentScreenSize]">
+
+  <div [ngClass]="{XSmall : 'section-div-img-mobile',
+         Small : 'section-div-img-mobile',
+         Medium : 'section-div-img',
+         Large : 'section-div-img',
+         XLarge : 'section-div-img'}[currentScreenSize]">
+    <img src="https://www.innovination.com/wp-content/uploads/2021/06/develpoment.gif" alt="responsive development">
+  </div>
+  <div [ngClass]="{XSmall : 'section-div-text-mobile',
+         Small : 'section-div-text-mobile',
+         Medium : 'section-div-text',
+         Large : 'section-div-text',
+         XLarge : 'section-div-text'}[currentScreenSize]" class="font-features">
+    <h1>{{'homeComponent.heroSectionFirst' | translate }}</h1>
+    <div class="section-div-sub-text">
+      <p class="left-to-right">{{'homeComponent.heroSectionSWEngineer' | translate }}</p>
+      <p *ngIf="(currentScreenSize === 'Medium' || currentScreenSize === 'Large' || currentScreenSize === 'XLarge')"
+         class="middle-pipe"> | </p>
+      <p>{{'homeComponent.heroSectionGamer' | translate }}</p>
+      <p *ngIf="(currentScreenSize === 'Medium' || currentScreenSize === 'Large' || currentScreenSize === 'XLarge')"
+         class="middle-pipe"> | </p>
+      <p class="right-to-left">{{'homeComponent.heroSectionFTLearner' | translate }}</p>
     </div>
   </div>
 </div>
