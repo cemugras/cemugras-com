@@ -3,7 +3,7 @@ $general-background-color: rgba(0, 0, 0, 0.6);
 $general-white-color: rgb(255, 255, 255);
 
 .section-web {
-  height: 100vh;
+  margin-top: 8vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,10 +50,25 @@ $general-white-color: rgb(255, 255, 255);
       }
     }
   }
+  .card-container {
+    flex-direction: row;
+    .card {
+      height: 25vw;
+      width: 30vw;
+      img {
+        height: 10vw;
+      }
+      .div-button {
+        .button-animatic {
+          width: 15vw;
+        }
+      }
+    }
+  }
 }
 
 .section-mobile {
-  height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,11 +77,10 @@ $general-white-color: rgb(255, 255, 255);
   .section-div-img-mobile {
     width: 100%;
     animation: animTopToBottom 2s ease 0s 1 normal forwards;
-
+    background-color: $general-background-color;
     img {
-      height: 100%;
+      min-height: 100%;
       width: 100%;
-      background-color: $general-background-color;
     }
   }
   .section-div-text-mobile {
@@ -97,10 +111,86 @@ $general-white-color: rgb(255, 255, 255);
       }
     }
   }
+  .card-container {
+    flex-direction: column;
+    .card {
+      height: 50vh;
+      width: 80vw;
+      img {
+        height: 30vw;
+      }
+      .div-button {
+        .button-animatic {
+          width: 50vw;
+        }
+      }
+    }
+  }
+}
+
+.card-container {
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .card {
+    display: flex;
+    flex-direction: column;
+    background-color: $general-background-color;
+    color: $general-white-color;
+    margin: 10px;
+    .div-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      flex-grow: 1;
+      .button-animatic {
+        position: absolute;
+        bottom: 2vh;
+        background-color: rgba(63, 63, 63, 0.96);
+        padding: 10px 10px 10px 10px;
+        border-radius: 20px 20px 20px 20px;
+        font-size: 12px;
+        cursor: pointer;
+        color: $general-white-color;
+      }
+      .button-animatic:not([disabled]):hover {
+        transform: translateX(1px);
+        box-shadow: 1px 0 10px $general-white-color;
+      }
+    }
+    .card-title {
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+      color: $general-white-color;
+    }
+  }
+}
+
+.section-title {
+  height: 5vh;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $general-background-color;
+  cursor: pointer;
+
+  p {
+    font-size: 20px;
+    color: $general-white-color;
+
+  }
 }
 
 .font-features {
   font-family: 'Orbitron', sans-serif;
+  .tab {
+    margin-left: 16px;
+  }
 }
 
 .left-to-right {

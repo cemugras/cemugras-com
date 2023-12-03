@@ -2,10 +2,9 @@
 <div *ngIf="!(currentScreenSize === 'XSmall' || currentScreenSize === 'Small')" class="toolbar" role="dialog">
   <div class="top-menu">
     <a routerLink="/" style="font-size: 20px;">{{'appComponent.homePage' | translate }}</a>
-    <a routerLink="/projects" style="font-size: 20px;">{{'appComponent.projectsPage' | translate }}</a>
     <a routerLink="/about" style="font-size: 20px;">{{'appComponent.aboutPage' | translate }}</a>
   </div>
-  
+
   <select (change)='updateLanguage(languageSelection.value)' #languageSelection class="button-animatic-web lang-select-web">
     <option [value]="'en'">EN</option>
     <option [value]="'tr'">TR</option>
@@ -18,11 +17,7 @@
     <mat-icon class="toolbar-button-margin-color rotate-me">menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item routerLink="/projects" class="mat-menu-top-item">
-      <mat-icon class="general-color-white">apps</mat-icon>
-      <span class="general-color-white">{{'appComponent.projectsPage' | translate }}</span>
-    </button>
-    <button mat-menu-item routerLink="/about" class="mat-menu-item">
+    <button mat-menu-item routerLink="/about" class="mat-menu-top-item">
       <mat-icon class="general-color-white">info</mat-icon>
       <span class="general-color-white">{{'appComponent.about' | translate }}</span>
     </button>
@@ -36,7 +31,6 @@
     <option [value]="'tr'">TR</option>
   </select>
   <span class="filler"></span>
-
   <button class="button-animatic-mobile toolbar-button-margin-color" routerLink="/">
     <mat-icon class="mat-icon-borders" style="margin-top: 0.2px" fontIcon="home"></mat-icon>
   </button>

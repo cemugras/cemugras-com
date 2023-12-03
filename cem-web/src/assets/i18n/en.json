@@ -1,10 +1,8 @@
 {
   "appComponent": {
-    "about": "About",
     "contact": "Contact",
     "donate": "Donate",
     "homePage": "Home",
-    "projectsPage": "Projects",
     "aboutPage": "About"
   },
   "aboutComponent": {
@@ -33,41 +31,10 @@
       "contentOne": "What is my IP address and some details with map display.",
       "marker": "Your IPs approximately location."
     },
-    "games": {
-      "title": "Games",
-      "contentOne": "Game projects for web environment.",
-      "contentTwo": "All games are playable with a browser from any device and open source."
-    },
     "gamePing": {
       "title": "Game Servers Ping",
       "contentOne": "Check your ping from some games with your internet connection.",
       "contentTwo": "Supported games for usage of this feature:"
-    },
-    "mia": {
-      "title": "Mia",
-      "header": "The Smokin",
-      "contentOne": "I am Mia. I sleep nearly 16 hours in a day, if less; I become an angry leopard.",
-      "contentTwo": "One of my most critical hobbies is catching fly.",
-      "contentThree": "You can check my instagram account with below button :)",
-      "instagram": "Instagram"
-    },
-    "cyprus": {
-      "title": "Cyprus Vacation",
-      "header": "October 2022",
-      "contentOne": "Some photos of Cyprus Vacation",
-      "photos": "Photos"
-    },
-    "starWars": {
-      "title": "StarWars RolePlay",
-      "header": "MzM Gaming Group",
-      "contentOne": "Star Wars Old Republic Gameplay with MzM Gaming Group",
-      "contentTwo": "Path of Ancient Sith : Darth Daihatsu"
-    },
-    "troy": {
-      "title": "Troy Vacation",
-      "header": "December 2022",
-      "contentOne": "Some photos of Troy Ancient Site Vacation",
-      "photos": "Photos"
     }
   },
   "eqComponent": {

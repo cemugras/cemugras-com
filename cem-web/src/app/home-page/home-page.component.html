@@ -3,7 +3,7 @@
      Small : 'section-mobile',
      Medium : 'section-web',
      Large : 'section-web',
-     XLarge : 'section-web'}[currentScreenSize]">
+     XLarge : 'section-web'}[currentScreenSize]" #section1>
 
   <div [ngClass]="{XSmall : 'section-div-img-mobile',
          Small : 'section-div-img-mobile',
@@ -17,9 +17,9 @@
          Small : 'section-div-text-mobile',
          Medium : 'section-div-text',
          Large : 'section-div-text',
-         XLarge : 'section-div-text'}[currentScreenSize]" class="font-features">
-    <h1>{{'homeComponent.heroSectionFirst' | translate }}</h1>
-    <div class="section-div-sub-text">
+         XLarge : 'section-div-text'}[currentScreenSize]">
+    <h1 class="font-features">{{'homeComponent.heroSectionFirst' | translate }}</h1>
+    <div class="section-div-sub-text font-features">
       <p class="left-to-right">{{'homeComponent.heroSectionSWEngineer' | translate }}</p>
       <p *ngIf="(currentScreenSize === 'Medium' || currentScreenSize === 'Large' || currentScreenSize === 'XLarge')"
          class="middle-pipe"> | </p>
@@ -31,12 +31,98 @@
   </div>
 </div>
 
-<!-- Second Section -->
+<!-- Projects Section -->
 <div [ngClass]="{XSmall : 'section-mobile',
      Small : 'section-mobile',
      Medium : 'section-web',
      Large : 'section-web',
-     XLarge : 'section-web'}[currentScreenSize]">
+     XLarge : 'section-web'}[currentScreenSize]" #section2>
+  <div class="section-title" (click)="scroll(section2)">
+    <p class="font-features">Projects</p>
+  </div>
+  <div class="card-container">
+
+    <!-- Project Earthquakes -->
+    <div class="card">
+      <img src="https://connecteddeviceslab.org/wp-content/uploads/2016/08/signal-gif-1.gif" alt="image"/>
+      <br>
+      <div class="font-features card-title">
+        {{'projectComponent.earthquakes.title' | translate }}
+      </div>
+      <br>
+      <p class="font-features">
+        <span class="tab"></span>»{{'projectComponent.earthquakes.contentOne' | translate }}
+      </p>
+      <p class="font-features">
+        <span class="tab"></span>»{{'projectComponent.earthquakes.contentTwo' | translate }}
+      </p>
+      <p class="font-features">
+        <span class="tab"></span>»{{'projectComponent.earthquakes.contentThree' | translate }}
+      </p>
+      <p class="font-features">
+        <span class="tab"></span>»{{'projectComponent.earthquakes.contentFour' | translate }}
+      </p>
+      <div class="div-button">
+        <button class="button-animatic" routerLink="/earthquakes">
+          {{'projectComponent.earthquakes.title' | translate }}
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Projects My IP -->
+    <div class="card">
+      <img src="https://i.imgur.com/kfdziZK.gif" alt="image"/>
+      <br>
+      <div class="font-features card-title">
+        {{'projectComponent.myIp.title' | translate }}
+      </div>
+      <br>
+      <p class="font-features">
+        <span class="tab"></span>»{{'projectComponent.myIp.contentOne' | translate }}
+      </p>
+      <div class="div-button">
+        <button class="button-animatic" routerLink="/my-ip">
+          {{'projectComponent.myIp.title' | translate }}
+        </button>
+      </div>
+    </div>
+
+    <!-- Projects Game Server Ping -->
+    <div class="card">
+      <img src="https://support.elitegamer.com/hc/article_attachments/360085386412/image8.gif" alt="image"/>
+      <br>
+      <div class="font-features card-title">
+        {{'projectComponent.gamePing.title' | translate }}
+      </div>
+      <br>
+      <p class="font-features">
+        <span class="tab"></span>»{{'projectComponent.gamePing.contentOne' | translate }}
+      </p>
+      <p class="font-features">
+        <span class="tab"></span>»{{'projectComponent.gamePing.contentTwo' | translate }}
+      </p>
+      <p class="font-features">
+        <span class="tab"></span><span class="tab"> - League of Legends</span>
+      </p>
+      <p class="font-features">
+        <span class="tab"></span><span class="tab"> - CS:GO</span>
+      </p>
+      <div class="div-button">
+        <button class="button-animatic" routerLink="/game-server-ping">
+          {{'projectComponent.gamePing.title' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Third Section -->
+<div [ngClass]="{XSmall : 'section-mobile',
+     Small : 'section-mobile',
+     Medium : 'section-web',
+     Large : 'section-web',
+     XLarge : 'section-web'}[currentScreenSize]" id="#section3">
 
   <div [ngClass]="{XSmall : 'section-div-img-mobile',
          Small : 'section-div-img-mobile',
