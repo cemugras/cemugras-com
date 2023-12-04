@@ -22,9 +22,7 @@
       "title": "Depremler",
       "header": "Türkiye",
       "contentOne": "Türkiye'deki son depremler.",
-      "contentTwo": "Bu proje geliştirme aşamasındadır.",
-      "contentThree": "Projeyi aşağıdaki butona tıklayarak kullanabilirsiniz.",
-      "contentFour": "Bu özelliği kullanırken bir sorun/fikir ortaya çıkarsa lütfen iletişime geçiniz."
+      "contentTwo": "Bu proje geliştirme aşamasındadır."
     },
     "myIp": {
       "title": "IP Adresim",
@@ -33,8 +31,32 @@
     },
     "gamePing": {
       "title": "Oyun Sunucuları Ping",
-      "contentOne": "Oyun sunucularındaki ping değerlerinizi bağlandığınız internet altyapısı ile kontrol edin.",
+      "contentOne": "Bazı oyunlar için pinginizi kontrol edin.",
       "contentTwo": "Güncel olarak özelliğin desteklediği oyunlar:"
+    }
+  },
+  "blogComponent": {
+    "responsiveDesignComponent": {
+      "title": "Duyarlı Geliştirme",
+      "shortContent": {
+        "contentOne": "Web geliştirmenin temel özelliklerinden biridir.",
+        "contentTwo": "Duyarlı web sayfaları çeşitli cihazlarda ve ekran boyutlarında sorunsuz bir şekilde çalışır.",
+        "contentThree": "Bir sitenin arama motoru optimizasyonunu (SEO) geliştirmede önemli bir rol oynar."
+      }
+    },
+    "webSecurityComponent": {
+      "title": "Web Güvenliği",
+      "shortContent": {
+        "contentOne": "Web sitelerini ve web uygulamalarını çeşitli siber tehditlerden korumaya odaklanan web geliştirmenin kritik bir yönüdür.",
+        "contentTwo": "Web güvenliği bilgisi, siber tehditlerin sürekli geliştiği bir ortamda sağlam ve dayanıklı web uygulamaları oluşturmak için gereklidir."
+      }
+    },
+    "progressiveWebAppComponent": {
+      "title": "Aşamalı Web Uygulaması",
+      "shortContent": {
+        "contentOne": "Kullanıcılara daha uygulama benzeri bir deneyim sağlamak için modern web teknolojilerini kullanan bir web uygulaması türüdür.",
+        "contentTwo": "Çevrimdışı çalışmayı, hızlı yüklemeyi ve anlık bildirimler gibi özellikler sunmayı amaçlamaktadır."
+      }
     }
   },
   "eqComponent": {

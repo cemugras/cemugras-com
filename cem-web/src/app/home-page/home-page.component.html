@@ -38,13 +38,17 @@
      Large : 'section-web',
      XLarge : 'section-web'}[currentScreenSize]" #section2>
   <div class="section-title" (click)="scroll(section2)">
-    <p class="font-features">Projects</p>
+    <img src="https://cdn.shopify.com/s/files/1/2075/2531/t/56/assets/bouncingarrows-1674136865893.gif?v=1674136867" alt="project"/>
+    <img src="https://moein.video/wp-content/uploads/2021/12/Color-Sample-GIF-Royalty-Free-Animated-Icon-350px-after-effects-project-2.gif" style="transform: scale(-1, 1);" alt="portfolio project"/>
+    <p class="font-features">{{'projectComponent.projectsText' | translate }}</p>
+    <img src="https://moein.video/wp-content/uploads/2021/12/Color-Sample-GIF-Royalty-Free-Animated-Icon-350px-after-effects-project-2.gif" alt="portfolio projects"/>
+    <img src="https://cdn.shopify.com/s/files/1/2075/2531/t/56/assets/bouncingarrows-1674136865893.gif?v=1674136867" alt="projects"/>
   </div>
   <div class="card-container">
 
     <!-- Project Earthquakes -->
     <div class="card">
-      <img src="https://connecteddeviceslab.org/wp-content/uploads/2016/08/signal-gif-1.gif" alt="image"/>
+      <img src="https://connecteddeviceslab.org/wp-content/uploads/2016/08/signal-gif-1.gif" alt="earthquakes in turkey"/>
       <br>
       <div class="font-features card-title">
         {{'projectComponent.earthquakes.title' | translate }}
@@ -56,12 +60,6 @@
       <p class="font-features">
         <span class="tab"></span>»{{'projectComponent.earthquakes.contentTwo' | translate }}
       </p>
-      <p class="font-features">
-        <span class="tab"></span>»{{'projectComponent.earthquakes.contentThree' | translate }}
-      </p>
-      <p class="font-features">
-        <span class="tab"></span>»{{'projectComponent.earthquakes.contentFour' | translate }}
-      </p>
       <div class="div-button">
         <button class="button-animatic" routerLink="/earthquakes">
           {{'projectComponent.earthquakes.title' | translate }}
@@ -70,9 +68,9 @@
 
     </div>
 
-    <!-- Projects My IP -->
+    <!-- Project My IP -->
     <div class="card">
-      <img src="https://i.imgur.com/kfdziZK.gif" alt="image"/>
+      <img src="https://i.imgur.com/kfdziZK.gif" alt="what is my ip"/>
       <br>
       <div class="font-features card-title">
         {{'projectComponent.myIp.title' | translate }}
@@ -88,9 +86,9 @@
       </div>
     </div>
 
-    <!-- Projects Game Server Ping -->
+    <!-- Project Game Server Ping -->
     <div class="card">
-      <img src="https://support.elitegamer.com/hc/article_attachments/360085386412/image8.gif" alt="image"/>
+      <img src="https://support.elitegamer.com/hc/article_attachments/360085386412/image8.gif" alt="game server ping"/>
       <br>
       <div class="font-features card-title">
         {{'projectComponent.gamePing.title' | translate }}
@@ -117,34 +115,93 @@
   </div>
 </div>
 
-<!-- Third Section -->
+<!-- Blog Section -->
 <div [ngClass]="{XSmall : 'section-mobile',
      Small : 'section-mobile',
      Medium : 'section-web',
      Large : 'section-web',
-     XLarge : 'section-web'}[currentScreenSize]" id="#section3">
+     XLarge : 'section-web'}[currentScreenSize]" #section3>
 
-  <div [ngClass]="{XSmall : 'section-div-img-mobile',
-         Small : 'section-div-img-mobile',
-         Medium : 'section-div-img',
-         Large : 'section-div-img',
-         XLarge : 'section-div-img'}[currentScreenSize]">
-    <img src="https://www.innovination.com/wp-content/uploads/2021/06/develpoment.gif" alt="responsive development">
+  <div class="section-title" (click)="scroll(section3)">
+    <img src="https://cdn.shopify.com/s/files/1/2075/2531/t/56/assets/bouncingarrows-1674136865893.gif?v=1674136867" alt="blog"/>
+    <p class="font-features">Blog</p>
+    <img src="https://cdn.shopify.com/s/files/1/2075/2531/t/56/assets/bouncingarrows-1674136865893.gif?v=1674136867" alt="blogs"/>
   </div>
-  <div [ngClass]="{XSmall : 'section-div-text-mobile',
-         Small : 'section-div-text-mobile',
-         Medium : 'section-div-text',
-         Large : 'section-div-text',
-         XLarge : 'section-div-text'}[currentScreenSize]" class="font-features">
-    <h1>{{'homeComponent.heroSectionFirst' | translate }}</h1>
-    <div class="section-div-sub-text">
-      <p class="left-to-right">{{'homeComponent.heroSectionSWEngineer' | translate }}</p>
-      <p *ngIf="(currentScreenSize === 'Medium' || currentScreenSize === 'Large' || currentScreenSize === 'XLarge')"
-         class="middle-pipe"> | </p>
-      <p>{{'homeComponent.heroSectionGamer' | translate }}</p>
-      <p *ngIf="(currentScreenSize === 'Medium' || currentScreenSize === 'Large' || currentScreenSize === 'XLarge')"
-         class="middle-pipe"> | </p>
-      <p class="right-to-left">{{'homeComponent.heroSectionFTLearner' | translate }}</p>
+  <div class="card-container">
+    <!-- Responsive Development Blog Card -->
+    <div class="card">
+      <img src="https://devtechnosys.com/insights/wp-content/uploads/2021/03/pwa_full.gif" alt="responsive development">
+      <br>
+      <div class="font-features card-title">
+        {{'blogComponent.responsiveDesignComponent.title' | translate }}
+      </div>
+      <br>
+      <p class="font-features">
+        <span class="tab"></span>»{{'blogComponent.responsiveDesignComponent.shortContent.contentOne' | translate }}
+      </p>
+      <p class="font-features">
+        <span class="tab"></span>»{{'blogComponent.responsiveDesignComponent.shortContent.contentTwo' | translate }}
+      </p>
+      <p class="font-features">
+        <span class="tab"></span>»{{'blogComponent.responsiveDesignComponent.shortContent.contentThree' | translate }}
+      </p>
+      <!--
+      <div class="div-button">
+        <button class="button-animatic" routerLink="/earthquakes">
+          {{'blogComponent.responsiveDesignComponent.title' | translate }}
+        </button>
+      </div>
+      -->
+
     </div>
+
+    <!-- Web Security Blog Card -->
+    <div class="card">
+      <img src="https://appinventiv.com/wp-content/uploads/sites/1/2021/03/giphy.gif" alt="web security"/>
+      <br>
+      <div class="font-features card-title">
+        {{'blogComponent.webSecurityComponent.title' | translate }}
+      </div>
+      <br>
+      <p class="font-features">
+        <span class="tab"></span>»{{'blogComponent.webSecurityComponent.shortContent.contentOne' | translate }}
+      </p>
+      <p class="font-features">
+        <span class="tab"></span>»{{'blogComponent.webSecurityComponent.shortContent.contentTwo' | translate }}
+      </p>
+      <!--
+      <div class="div-button">
+        <button class="button-animatic" routerLink="/my-ip">
+          {{'webSecurityComponent.title' | translate }}
+        </button>
+      </div>
+      -->
+    </div>
+
+    <!-- Progressive Web Blog Card-->
+    <div class="card">
+      <img src="https://www.innovination.com/wp-content/uploads/2021/06/develpoment.gif" alt="progressive web development">
+      <br>
+      <div class="font-features card-title">
+        {{'blogComponent.progressiveWebAppComponent.title' | translate }}
+      </div>
+      <br>
+      <p class="font-features">
+        <span class="tab"></span>»{{'blogComponent.progressiveWebAppComponent.shortContent.contentOne' | translate }}
+      </p>
+      <p class="font-features">
+        <span class="tab"></span>»{{'blogComponent.progressiveWebAppComponent.shortContent.contentTwo' | translate }}
+      </p>
+      <!--
+      <div class="div-button">
+        <button class="button-animatic" routerLink="/game-server-ping">
+          {{'blogComponent.progressiveWebAppComponent.title' | translate }}
+        </button>
+      </div>
+      -->
+    </div>
+  </div>
+  <div class="top-scroller" (click)="scroll(section1)">
+    <img src="https://cdn.shopify.com/s/files/1/2075/2531/t/56/assets/bouncingarrows-1674136865893.gif?v=1674136867" alt="blog"/>
   </div>
 </div>

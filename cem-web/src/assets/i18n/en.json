@@ -22,9 +22,7 @@
       "title": "Earthquakes",
       "header": "in Turkey",
       "contentOne": "Latest earthquakes in Turkey.",
-      "contentTwo": "This page is still in progress.",
-      "contentThree": "You can check the project with below button.",
-      "contentFour": "Please contact if any errors/ideas occur while the feature is using."
+      "contentTwo": "This page is still in progress."
     },
     "myIp": {
       "title": "My IP",
@@ -33,8 +31,32 @@
     },
     "gamePing": {
       "title": "Game Servers Ping",
-      "contentOne": "Check your ping from some games with your internet connection.",
+      "contentOne": "Check your ping for some games.",
       "contentTwo": "Supported games for usage of this feature:"
+    }
+  },
+  "blogComponent": {
+    "responsiveDesignComponent": {
+      "title": "Responsive Development",
+      "shortContent": {
+        "contentOne": "Is one of the key feature for web development.",
+        "contentTwo": "Responsive websites work seamlessly across a variety of devices and screen sizes.",
+        "contentThree": "Plays a significant role in enhancing a site's search engine optimization (SEO)."
+      }
+    },
+    "webSecurityComponent": {
+      "title": "Web Security",
+      "shortContent": {
+        "contentOne": "Is a critical aspect of web development focused on protecting websites and web applications from various cyber threats.",
+        "contentTwo": "Web security knowledge is essential for creating robust and resilient web applications in an environment where cyber threats are constantly evolving."
+      }
+    },
+    "progressiveWebAppComponent": {
+      "title": "Progressive Web App",
+      "shortContent": {
+        "contentOne": "Is a type of web application that utilizes modern web technologies to provide a more app-like experience for users.",
+        "contentTwo": "Aims to work offline, load quickly, and offer features like push notifications."
+      }
     }
   },
   "eqComponent": {

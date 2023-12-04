@@ -10,7 +10,7 @@ $general-white-color: rgb(255, 255, 255);
   align-items: center;
 
   .section-div-img {
-    width: 55vw;
+    width: 90vw;
     height: 45vh;
     animation: animTopToBottom 2s ease 0s 1 normal forwards;
     display: flex;
@@ -23,8 +23,8 @@ $general-white-color: rgb(255, 255, 255);
     }
   }
   .section-div-text {
-    width: 55vw;
-    height: 30vh;
+    width: 90vw;
+    min-height: 30vh;
     background-color: $general-background-color;
     color: $general-white-color;
     font-size: 1vw;
@@ -114,7 +114,7 @@ $general-white-color: rgb(255, 255, 255);
   .card-container {
     flex-direction: column;
     .card {
-      height: 50vh;
+      min-height: 60vh;
       width: 80vw;
       img {
         height: 30vw;
@@ -172,17 +172,34 @@ $general-white-color: rgb(255, 255, 255);
 
 .section-title {
   height: 5vh;
-  width: 90vw;
+  width: 70vw;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: $general-background-color;
+  border-radius: 30px;
   cursor: pointer;
 
   p {
     font-size: 20px;
     color: $general-white-color;
+  }
+  img {
+    height: 100%;
+  }
+}
 
+.top-scroller {
+  height: 5vh;
+  cursor: pointer;
+  img {
+    background-color: $general-background-color;
+    border-radius: 40px;
+    height: 100%;
+    rotate: 180deg;
+  }
+  img:hover {
+    box-shadow: 1px 0 10px $general-white-color;
   }
 }
 
