@@ -5,17 +5,15 @@ import { HashLocationStrategy, LocationStrategy } from "@angular/common";
 
 /*Module imports*/
 import { AppRoutingModule } from './app-routing.module';
-import {MatSidenavModule} from "@angular/material/sidenav";
+import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatIconModule } from "@angular/material/icon";
 import { MatCardModule } from "@angular/material/card";
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { GalleryModule } from 'ng-gallery';
-import { LightboxModule } from 'ng-gallery/lightbox';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { MatMenuModule } from "@angular/material/menu";
 import { MatButtonModule } from "@angular/material/button";
-import {MatTableModule} from "@angular/material/table";
+import { MatTableModule } from "@angular/material/table";
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
@@ -33,7 +31,6 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
 import { EarthquakesPageComponent } from './earthquakes-page/earthquakes-page.component';
 import { IpAddressPageComponent } from './ip-address-page/ip-address-page.component';
 import { GameServerPingPageComponent } from './game-server-ping-page/game-server-ping-page.component';
-import { ProjectsPageComponent } from './projects-page/projects-page.component';
 
 @NgModule({
   declarations: [
@@ -44,8 +41,7 @@ import { ProjectsPageComponent } from './projects-page/projects-page.component';
     ContactPageComponent,
     EarthquakesPageComponent,
     IpAddressPageComponent,
-    GameServerPingPageComponent,
-    ProjectsPageComponent
+    GameServerPingPageComponent
   ],
   imports: [
     BrowserModule,
@@ -56,8 +52,6 @@ import { ProjectsPageComponent } from './projects-page/projects-page.component';
     MatSidenavModule,
     MatToolbarModule,
     FlexLayoutModule,
-    GalleryModule.withConfig({}),
-    LightboxModule,
     MatButtonModule,
     YouTubePlayerModule,
     MatMenuModule,

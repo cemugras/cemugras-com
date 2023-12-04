@@ -142,8 +142,9 @@ export class EarthquakesPageComponent implements OnInit{
       const data = initialMarkers[index];
       const marker = this.generateMarker(data, index);
       marker.setIcon(new Icon({
-        iconUrl: 'https://icon-library.com/images/round-icon/round-icon-8.jpg',
-        iconSize: [20, 20]
+        //iconUrl: 'https://icon-library.com/images/round-icon/round-icon-8.jpg',
+        iconUrl: 'https://static.vecteezy.com/system/resources/previews/008/506/364/non_2x/3d-illustration-of-location-icon-free-png.png',
+        iconSize: [25, 30]
       }));
       marker.addTo(this.map).bindPopup(data.label);
       this.map.panTo(data.position);

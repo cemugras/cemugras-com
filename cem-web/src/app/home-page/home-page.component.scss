@@ -2,21 +2,16 @@
 $general-background-color: rgba(0, 0, 0, 0.6);
 $general-white-color: rgb(255, 255, 255);
 
-.container-web {
-  padding-top: 100px;
+.section-web {
+  margin-top: 8vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  .hero-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-  .hero-div-img {
-    width: 50%;
+  .section-div-img {
+    width: 90vw;
+    height: 45vh;
     animation: animTopToBottom 2s ease 0s 1 normal forwards;
     display: flex;
     align-items: center;
@@ -24,10 +19,12 @@ $general-white-color: rgb(255, 255, 255);
     img {
       height: 100%;
       width: 100%;
+      background-color: $general-background-color;
     }
   }
-  .hero-div-text {
-    width: 50%;
+  .section-div-text {
+    width: 90vw;
+    min-height: 30vh;
     background-color: $general-background-color;
     color: $general-white-color;
     font-size: 1vw;
@@ -36,71 +33,62 @@ $general-white-color: rgb(255, 255, 255);
     justify-content: center;
     align-items: center;
     animation: animBottomToTop 2s ease 0s 1 normal forwards;
-  
-    .hero-div-sub-text {
+
+    h1{
+      margin-bottom: 20px;
+    }
+
+    .section-div-sub-text {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
-  
+
       .middle-pipe {
         padding-left: 2vw;
         padding-right: 2vw;
       }
     }
   }
-
-  .skill-container {
-    display: flex;
+  .card-container {
     flex-direction: row;
-    position: absolute;
-    bottom: 0;
-
-    .skill-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 15px;
+    .card {
+      height: 25vw;
+      width: 30vw;
       img {
-        height: 5vh;
-        width: 5vh;
-        border: 5px solid $general-background-color;
-        border-radius: 50%;
-        transition: transform 0.8s;
-        margin: 15px;
+        height: 10vw;
       }
-      img:hover {
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-      }
-      p {
-        color: $general-white-color;
+      .div-button {
+        .button-animatic {
+          width: 15vw;
+        }
       }
     }
   }
 }
 
-.container-mobile {
-  padding-top: 80px;
+.section-mobile {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 
-  .hero-div-mobile {
-    min-width: 100%;
-    background-color: $general-background-color;
-  }
-  .hero-div-img-mobile {
+  .section-div-img-mobile {
     width: 100%;
-    height: auto;
     animation: animTopToBottom 2s ease 0s 1 normal forwards;
-
+    background-color: $general-background-color;
     img {
-      height: 100%;
+      min-height: 100%;
       width: 100%;
     }
   }
-  .hero-div-text-mobile {
+  .section-div-text-mobile {
     width: 100%;
+    height: 20vh;
+    background-color: $general-background-color;
+    padding-top: 20px;
+    padding-bottom: 20px;
     color: $general-white-color;
     font-size: 4vw;
     display: flex;
@@ -108,38 +96,118 @@ $general-white-color: rgb(255, 255, 255);
     justify-content: center;
     align-items: center;
     animation: animBottomToTop 2s ease 0s 1 normal forwards;
-  
-    .hero-div-sub-text {
+
+    h1{
+      margin-bottom: 20px;
+    }
+    .section-div-sub-text {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       font-size: 4vw;
+      p{
+        margin-bottom: 20px;
+      }
     }
   }
-
-  .skill-container-mobile {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    bottom: 5vh;
-    .skill-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+  .card-container {
+    flex-direction: column;
+    .card {
+      min-height: 60vh;
+      width: 80vw;
       img {
-        height: 4vh;
-        width: 4vh;
-        border: 3px solid $general-background-color;
-        border-radius: 50%;
+        height: 30vw;
+      }
+      .div-button {
+        .button-animatic {
+          width: 50vw;
+        }
       }
     }
   }
 }
 
+.card-container {
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .card {
+    display: flex;
+    flex-direction: column;
+    background-color: $general-background-color;
+    color: $general-white-color;
+    margin: 10px;
+    .div-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      flex-grow: 1;
+      .button-animatic {
+        position: absolute;
+        bottom: 2vh;
+        background-color: rgba(63, 63, 63, 0.96);
+        padding: 10px 10px 10px 10px;
+        border-radius: 20px 20px 20px 20px;
+        font-size: 12px;
+        cursor: pointer;
+        color: $general-white-color;
+      }
+      .button-animatic:not([disabled]):hover {
+        transform: translateX(1px);
+        box-shadow: 1px 0 10px $general-white-color;
+      }
+    }
+    .card-title {
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+      color: $general-white-color;
+    }
+  }
+}
+
+.section-title {
+  height: 5vh;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $general-background-color;
+  border-radius: 30px;
+  cursor: pointer;
+
+  p {
+    font-size: 20px;
+    color: $general-white-color;
+  }
+  img {
+    height: 100%;
+  }
+}
+
+.top-scroller {
+  height: 5vh;
+  cursor: pointer;
+  img {
+    background-color: $general-background-color;
+    border-radius: 40px;
+    height: 100%;
+    rotate: 180deg;
+  }
+  img:hover {
+    box-shadow: 1px 0 10px $general-white-color;
+  }
+}
+
 .font-features {
   font-family: 'Orbitron', sans-serif;
+  .tab {
+    margin-left: 16px;
+  }
 }
 
 .left-to-right {

@@ -16,6 +16,8 @@ Chart.register(...registerables);
 })
 export class GameServerPingPageComponent implements OnInit{
   currentScreenSize!: string;
+  lolIconUrl = 'https://cdn3.emoji.gg/emojis/3907_lol.png';
+  csIconUrl = 'https://www.freeiconspng.com/thumbs/csgo-icon/csgo-icon-4.png';
 
   // Definition of ping values for charts
   public pingLolEuWest = 0;

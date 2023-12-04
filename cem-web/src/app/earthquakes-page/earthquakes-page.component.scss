@@ -1,24 +1,24 @@
-$general-bg-color: rgba(0, 0, 0, 0.2);
+$general-bg-color: rgba(0, 0, 0, 0.4);
 $general-bg-gray-color: rgb(63, 63, 63);
 $general-white-color: rgb(255, 255, 255);
 $general-green-color: rgba(32, 73, 18, 0.73);
 
 .main-container {
   margin-top: 5%;
-  margin-left: 10%;
-  margin-right: 5%;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 
 .main-container-mobile {
-  margin-top: 10%;
+  margin-top: 10vh;
 
   /* Set up proportionate scaling */
   height: auto;
   position: absolute;
 
   /* Set up positioning */
-  left: 1vw;
-  right: 1vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
 .selector {

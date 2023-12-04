@@ -1,11 +1,9 @@
 {
   "appComponent": {
-    "about": "Hakkımda",
     "contact": "İletişim",
     "donate": "Bağış",
     "homePage": "Anasayfa",
-    "projectsPage": "Projeler",
-    "aboutPage": "About"
+    "aboutPage": "Hakkımda"
   },
   "aboutComponent": {
     "paragraphOne": "Cem ile tanışın, a software engineer graduated from Maltepe University Software (50% Scholarship) (English) Department who is chilling with creating free open source applications for web & mobile platforms.",
@@ -24,9 +22,7 @@
       "title": "Depremler",
       "header": "Türkiye",
       "contentOne": "Türkiye'deki son depremler.",
-      "contentTwo": "Bu proje geliştirme aşamasındadır.",
-      "contentThree": "Projeyi aşağıdaki butona tıklayarak kullanabilirsiniz.",
-      "contentFour": "Bu özelliği kullanırken bir sorun/fikir ortaya çıkarsa lütfen iletişime geçiniz."
+      "contentTwo": "Bu proje geliştirme aşamasındadır."
     },
     "myIp": {
       "title": "IP Adresim",
@@ -35,34 +31,32 @@
     },
     "gamePing": {
       "title": "Oyun Sunucuları Ping",
-      "contentOne": "Oyun sunucularındaki ping değerlerinizi bağlandığınız internet altyapısı ile kontrol edin.",
+      "contentOne": "Bazı oyunlar için pinginizi kontrol edin.",
       "contentTwo": "Güncel olarak özelliğin desteklediği oyunlar:"
+    }
+  },
+  "blogComponent": {
+    "responsiveDesignComponent": {
+      "title": "Duyarlı Geliştirme",
+      "shortContent": {
+        "contentOne": "Web geliştirmenin temel özelliklerinden biridir.",
+        "contentTwo": "Duyarlı web sayfaları çeşitli cihazlarda ve ekran boyutlarında sorunsuz bir şekilde çalışır.",
+        "contentThree": "Bir sitenin arama motoru optimizasyonunu (SEO) geliştirmede önemli bir rol oynar."
+      }
     },
-    "mia": {
-      "title": "Mia",
-      "header": "Smokin",
-      "contentOne": "Ben Mia. Günde neredeyse 16 saat uyurum, daha az uyursam; bir leopar gibi sinirli olurum.",
-      "contentTwo": "En önemli hobilerimden biri sinek yakalamaktır.",
-      "contentThree": "Instagram hesabımı aşağıdaki butona tıklayarak inceleyebilirsiniz :)",
-      "instagram": "Instagram"
+    "webSecurityComponent": {
+      "title": "Web Güvenliği",
+      "shortContent": {
+        "contentOne": "Web sitelerini ve web uygulamalarını çeşitli siber tehditlerden korumaya odaklanan web geliştirmenin kritik bir yönüdür.",
+        "contentTwo": "Web güvenliği bilgisi, siber tehditlerin sürekli geliştiği bir ortamda sağlam ve dayanıklı web uygulamaları oluşturmak için gereklidir."
+      }
     },
-    "cyprus": {
-      "title": "Kıbrıs Gezisi",
-      "header": "Ekim 2022",
-      "contentOne": "Kıbrıs gezisinden bazı fotoğraflar.",
-      "photos": "Fotoğraflar"
-    },
-    "starWars": {
-      "title": "StarWars Oyun",
-      "header": "MzM Oyun Grubu",
-      "contentOne": "MzM Oyun Grubu ile Star Wars Eski Cumhuriyet oyun videosu.",
-      "contentTwo": "Eski Sith'in Yolu : Darth Daihatsu"
-    },
-    "troy": {
-      "title": "Truva Gezisi",
-      "header": "Aralık 2022",
-      "contentOne": "Truva antik şehrinden bazı fotoğraflar.",
-      "photos": "Fotoğraflar"
+    "progressiveWebAppComponent": {
+      "title": "Aşamalı Web Uygulaması",
+      "shortContent": {
+        "contentOne": "Kullanıcılara daha uygulama benzeri bir deneyim sağlamak için modern web teknolojilerini kullanan bir web uygulaması türüdür.",
+        "contentTwo": "Çevrimdışı çalışmayı, hızlı yüklemeyi ve anlık bildirimler gibi özellikler sunmayı amaçlamaktadır."
+      }
     }
   },
   "eqComponent": {
