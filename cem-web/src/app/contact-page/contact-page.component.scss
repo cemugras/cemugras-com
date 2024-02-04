@@ -5,8 +5,14 @@ $table-background-color: rgba(0, 0, 0, 0.2);
 
 .table-div-web {
   padding-top: 10%;
-  padding-left: 30%;
-  padding-right: 30%;
+  padding-left: 45%;
+  padding-right: 45%;
+
+  .div-button {
+    .button-animatic {
+      width: 5vw;
+    }
+  }
 }
 
 .table-div-mobile {
@@ -14,6 +20,28 @@ $table-background-color: rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   padding-top: 50px;
+
+  .div-button {
+    .button-animatic {
+      width: 25vw;
+    }
+  }
+}
+
+.div-button {
+  .button-animatic {
+    background-color: rgba(63, 63, 63, 0.96);
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px 20px 20px 20px;
+    font-size: 12px;
+    cursor: pointer;
+    color: $general-white-color;
+  }
+
+  .button-animatic:not([disabled]):hover {
+    transform: translateX(1px);
+    box-shadow: 1px 0 10px $general-white-color;
+  }
 }
 
 .table-background-color {
@@ -29,13 +57,6 @@ $table-background-color: rgba(0, 0, 0, 0.2);
 }
 
 img {
-  width: 100%;
   max-width: 30px;
   height: auto;
-}
-
-th, td {
-  overflow: hidden;
-  max-width: 45vw;
-  text-overflow: ellipsis;
 }

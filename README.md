@@ -1,8 +1,13 @@
-# CemWeb
+# cemugras.com
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
 
-`npm install -g @angular/cli@15.0.3`
+| Package    | Version |
+|------------|---------|
+| typescript | 4.8.4   |
+| rxjs       | 7.5.7   |
+
+`npm install -g @angular/cli@15.2.10`
 
 The project is on live with the following URL: https://cemugras.com
 
@@ -76,19 +81,19 @@ If environment is setting first time, start with #1 otherwise start with #3
 2) `npm install -g firebase-tools` -> if command not found: firebase
 
 ## Features Inprogress
-- [x] Mobile responsive styles
-- [x] Earthquakes page
+- [x] Mobile Responsive Styles
+- [x] Earthquakes Page
 - [x] Language Support (TR/EN)
-- [x] Side Bar refactored for listing features
-- [x] What is My IP page with map
-- [x] Game server ping page
+- [x] What is My IP Page & Map
+- [x] Game Server Ping Page
 - [x] Online Games Server Ping Page
 - [x] Projects Page
-- [ ] Currency Page
-- [ ] Domain Check Page
-- [ ] QR Code Generator Page
-- [ ] Yes/No Game Page
+- ### Feature Independent Projects
+- [ ] Currency Project
+- [ ] Domain Check Project
+- [ ] QR Code Generator Project
+- [ ] Yes/No Game Project
 - [ ] Universities Page by Countries
-- [ ] Flight page
-- [ ] Weather Page
-- [ ] Epic Games Free Games Component (Will include free games list with dates.)
+- [ ] Flight Project
+- [ ] Weather Project
+- [ ] Epic Games Free Games Project (Will include free games list with dates.)
