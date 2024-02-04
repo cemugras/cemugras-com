@@ -13,7 +13,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {name: 'HackerRank', url: 'hackerrank.com/cemugrs', icon: '/assets/sidebar/hackerrank-icon.png'},
   {name: 'Google Play', url: 'play.google.com/store/apps/developer?id=Cem+Ugras', icon: '/assets/sidebar/googleplay-icon.png'},
   {name: 'Youtube', url: 'youtube.com/@mzm1187', icon: '/assets/sidebar/youtube-icon.png'},
-  {name: 'Steam', url: 'steamcommunity.com/id/cembabbe/', icon: '/assets/sidebar/steam-icon.png'},
+  {name: 'Steam', url: 'steamcommunity.com/id/payday2day/', icon: '/assets/sidebar/steam-icon.png'},
   {name: 'GitHub', url: 'github.com/cemugras', icon: '/assets/sidebar/github-icon.png'},
   {name: 'Donate', url: 'www.buymeacoffee.com/cemugras', icon: '/assets/sidebar/donate-icon.png'}
 ];
@@ -27,7 +27,7 @@ export class ContactPageComponent {
   currentScreenSize!: string;
 
   // Table components
-  displayedColumns: string[] = ['icon', 'name', 'url'];
+  displayedColumns: string[] = ['icon', 'name'];
   dataSource = ELEMENT_DATA;
 
   constructor() {
@@ -38,6 +38,6 @@ export class ContactPageComponent {
   }
 
   goToLink(siteUrl: string) {
-    window.open("//" + siteUrl, '_blank');
+    window.open("//" + siteUrl, '_self');
   }
 }
