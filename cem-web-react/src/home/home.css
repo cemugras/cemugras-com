@@ -1,0 +1,38 @@
+.home {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+
+    .card-hero {
+        width: 90vw;
+        border-radius: 10px;
+        text-align: center;
+        .card{
+            .card-image{
+                height: 40vh;
+            }
+            .card-text {
+                .card-info {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .card-projects {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 20px;
+        margin-top: 20px;
+        .card{
+            width: 30vw;
+        }
+        .card-image{
+            height: 200px;
+        }
+    }
+}
